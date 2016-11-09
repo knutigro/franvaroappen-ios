@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		492BFFCA1DD34C7E00867896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BFFC91DD34C7E00867896 /* AppDelegate.swift */; };
+		492BFFCC1DD34C7E00867896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BFFCB1DD34C7E00867896 /* ViewController.swift */; };
+		492BFFCF1DD34C7E00867896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492BFFCD1DD34C7E00867896 /* Main.storyboard */; };
+		492BFFD21DD34C7E00867896 /* FranvaroAppen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 492BFFD01DD34C7E00867896 /* FranvaroAppen.xcdatamodeld */; };
+		492BFFD41DD34C7E00867896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492BFFD31DD34C7E00867896 /* Assets.xcassets */; };
+		492BFFD71DD34C7E00867896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492BFFD51DD34C7E00867896 /* LaunchScreen.storyboard */; };
+		492BFFE21DD34C7E00867896 /* FranvaroAppenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BFFE11DD34C7E00867896 /* FranvaroAppenTests.swift */; };
+		492BFFED1DD34C7E00867896 /* FranvaroAppenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BFFEC1DD34C7E00867896 /* FranvaroAppenUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		492BFFDE1DD34C7E00867896 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 492BFFBE1DD34C7E00867896 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 492BFFC51DD34C7E00867896;
+			remoteInfo = FranvaroAppen;
+		};
+		492BFFE91DD34C7E00867896 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 492BFFBE1DD34C7E00867896 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 492BFFC51DD34C7E00867896;
+			remoteInfo = FranvaroAppen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		492BFFC61DD34C7E00867896 /* FranvaroAppen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FranvaroAppen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		492BFFC91DD34C7E00867896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		492BFFCB1DD34C7E00867896 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		492BFFCE1DD34C7E00867896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		492BFFD11DD34C7E00867896 /* FranvaroAppen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FranvaroAppen.xcdatamodel; sourceTree = "<group>"; };
+		492BFFD31DD34C7E00867896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		492BFFD61DD34C7E00867896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		492BFFD81DD34C7E00867896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		492BFFDD1DD34C7E00867896 /* FranvaroAppenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FranvaroAppenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		492BFFE11DD34C7E00867896 /* FranvaroAppenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranvaroAppenTests.swift; sourceTree = "<group>"; };
+		492BFFE31DD34C7E00867896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		492BFFE81DD34C7E00867896 /* FranvaroAppenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FranvaroAppenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		492BFFEC1DD34C7E00867896 /* FranvaroAppenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FranvaroAppenUITests.swift; sourceTree = "<group>"; };
+		492BFFEE1DD34C7E00867896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		492BFFC31DD34C7E00867896 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		492BFFDA1DD34C7E00867896 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		492BFFE51DD34C7E00867896 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		492BFFBD1DD34C7E00867896 = {
+			isa = PBXGroup;
+			children = (
+				492BFFC81DD34C7E00867896 /* FranvaroAppen */,
+				492BFFE01DD34C7E00867896 /* FranvaroAppenTests */,
+				492BFFEB1DD34C7E00867896 /* FranvaroAppenUITests */,
+				492BFFC71DD34C7E00867896 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		492BFFC71DD34C7E00867896 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				492BFFC61DD34C7E00867896 /* FranvaroAppen.app */,
+				492BFFDD1DD34C7E00867896 /* FranvaroAppenTests.xctest */,
+				492BFFE81DD34C7E00867896 /* FranvaroAppenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		492BFFC81DD34C7E00867896 /* FranvaroAppen */ = {
+			isa = PBXGroup;
+			children = (
+				492BFFC91DD34C7E00867896 /* AppDelegate.swift */,
+				492BFFCB1DD34C7E00867896 /* ViewController.swift */,
+				492BFFCD1DD34C7E00867896 /* Main.storyboard */,
+				492BFFD31DD34C7E00867896 /* Assets.xcassets */,
+				492BFFD51DD34C7E00867896 /* LaunchScreen.storyboard */,
+				492BFFD81DD34C7E00867896 /* Info.plist */,
+				492BFFD01DD34C7E00867896 /* FranvaroAppen.xcdatamodeld */,
+			);
+			path = FranvaroAppen;
+			sourceTree = "<group>";
+		};
+		492BFFE01DD34C7E00867896 /* FranvaroAppenTests */ = {
+			isa = PBXGroup;
+			children = (
+				492BFFE11DD34C7E00867896 /* FranvaroAppenTests.swift */,
+				492BFFE31DD34C7E00867896 /* Info.plist */,
+			);
+			path = FranvaroAppenTests;
+			sourceTree = "<group>";
+		};
+		492BFFEB1DD34C7E00867896 /* FranvaroAppenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				492BFFEC1DD34C7E00867896 /* FranvaroAppenUITests.swift */,
+				492BFFEE1DD34C7E00867896 /* Info.plist */,
+			);
+			path = FranvaroAppenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		492BFFC51DD34C7E00867896 /* FranvaroAppen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 492BFFF11DD34C7E00867896 /* Build configuration list for PBXNativeTarget "FranvaroAppen" */;
+			buildPhases = (
+				492BFFC21DD34C7E00867896 /* Sources */,
+				492BFFC31DD34C7E00867896 /* Frameworks */,
+				492BFFC41DD34C7E00867896 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FranvaroAppen;
+			productName = FranvaroAppen;
+			productReference = 492BFFC61DD34C7E00867896 /* FranvaroAppen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		492BFFDC1DD34C7E00867896 /* FranvaroAppenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 492BFFF41DD34C7E00867896 /* Build configuration list for PBXNativeTarget "FranvaroAppenTests" */;
+			buildPhases = (
+				492BFFD91DD34C7E00867896 /* Sources */,
+				492BFFDA1DD34C7E00867896 /* Frameworks */,
+				492BFFDB1DD34C7E00867896 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				492BFFDF1DD34C7E00867896 /* PBXTargetDependency */,
+			);
+			name = FranvaroAppenTests;
+			productName = FranvaroAppenTests;
+			productReference = 492BFFDD1DD34C7E00867896 /* FranvaroAppenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		492BFFE71DD34C7E00867896 /* FranvaroAppenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 492BFFF71DD34C7E00867896 /* Build configuration list for PBXNativeTarget "FranvaroAppenUITests" */;
+			buildPhases = (
+				492BFFE41DD34C7E00867896 /* Sources */,
+				492BFFE51DD34C7E00867896 /* Frameworks */,
+				492BFFE61DD34C7E00867896 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				492BFFEA1DD34C7E00867896 /* PBXTargetDependency */,
+			);
+			name = FranvaroAppenUITests;
+			productName = FranvaroAppenUITests;
+			productReference = 492BFFE81DD34C7E00867896 /* FranvaroAppenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		492BFFBE1DD34C7E00867896 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Knut Inge Grosland";
+				TargetAttributes = {
+					492BFFC51DD34C7E00867896 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2PRW676NCQ;
+						ProvisioningStyle = Automatic;
+					};
+					492BFFDC1DD34C7E00867896 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2PRW676NCQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 492BFFC51DD34C7E00867896;
+					};
+					492BFFE71DD34C7E00867896 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2PRW676NCQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 492BFFC51DD34C7E00867896;
+					};
+				};
+			};
+			buildConfigurationList = 492BFFC11DD34C7E00867896 /* Build configuration list for PBXProject "FranvaroAppen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 492BFFBD1DD34C7E00867896;
+			productRefGroup = 492BFFC71DD34C7E00867896 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				492BFFC51DD34C7E00867896 /* FranvaroAppen */,
+				492BFFDC1DD34C7E00867896 /* FranvaroAppenTests */,
+				492BFFE71DD34C7E00867896 /* FranvaroAppenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		492BFFC41DD34C7E00867896 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				492BFFD71DD34C7E00867896 /* LaunchScreen.storyboard in Resources */,
+				492BFFD41DD34C7E00867896 /* Assets.xcassets in Resources */,
+				492BFFCF1DD34C7E00867896 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		492BFFDB1DD34C7E00867896 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		492BFFE61DD34C7E00867896 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		492BFFC21DD34C7E00867896 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				492BFFCC1DD34C7E00867896 /* ViewController.swift in Sources */,
+				492BFFCA1DD34C7E00867896 /* AppDelegate.swift in Sources */,
+				492BFFD21DD34C7E00867896 /* FranvaroAppen.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		492BFFD91DD34C7E00867896 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				492BFFE21DD34C7E00867896 /* FranvaroAppenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		492BFFE41DD34C7E00867896 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				492BFFED1DD34C7E00867896 /* FranvaroAppenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		492BFFDF1DD34C7E00867896 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 492BFFC51DD34C7E00867896 /* FranvaroAppen */;
+			targetProxy = 492BFFDE1DD34C7E00867896 /* PBXContainerItemProxy */;
+		};
+		492BFFEA1DD34C7E00867896 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 492BFFC51DD34C7E00867896 /* FranvaroAppen */;
+			targetProxy = 492BFFE91DD34C7E00867896 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		492BFFCD1DD34C7E00867896 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				492BFFCE1DD34C7E00867896 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		492BFFD51DD34C7E00867896 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				492BFFD61DD34C7E00867896 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		492BFFEF1DD34C7E00867896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		492BFFF01DD34C7E00867896 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		492BFFF21DD34C7E00867896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2PRW676NCQ;
+				INFOPLIST_FILE = FranvaroAppen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocmoc.FranvaroAppen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		492BFFF31DD34C7E00867896 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2PRW676NCQ;
+				INFOPLIST_FILE = FranvaroAppen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocmoc.FranvaroAppen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		492BFFF51DD34C7E00867896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2PRW676NCQ;
+				INFOPLIST_FILE = FranvaroAppenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocmoc.FranvaroAppenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FranvaroAppen.app/FranvaroAppen";
+			};
+			name = Debug;
+		};
+		492BFFF61DD34C7E00867896 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2PRW676NCQ;
+				INFOPLIST_FILE = FranvaroAppenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocmoc.FranvaroAppenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FranvaroAppen.app/FranvaroAppen";
+			};
+			name = Release;
+		};
+		492BFFF81DD34C7E00867896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2PRW676NCQ;
+				INFOPLIST_FILE = FranvaroAppenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocmoc.FranvaroAppenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FranvaroAppen;
+			};
+			name = Debug;
+		};
+		492BFFF91DD34C7E00867896 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2PRW676NCQ;
+				INFOPLIST_FILE = FranvaroAppenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocmoc.FranvaroAppenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FranvaroAppen;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		492BFFC11DD34C7E00867896 /* Build configuration list for PBXProject "FranvaroAppen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				492BFFEF1DD34C7E00867896 /* Debug */,
+				492BFFF01DD34C7E00867896 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		492BFFF11DD34C7E00867896 /* Build configuration list for PBXNativeTarget "FranvaroAppen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				492BFFF21DD34C7E00867896 /* Debug */,
+				492BFFF31DD34C7E00867896 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		492BFFF41DD34C7E00867896 /* Build configuration list for PBXNativeTarget "FranvaroAppenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				492BFFF51DD34C7E00867896 /* Debug */,
+				492BFFF61DD34C7E00867896 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		492BFFF71DD34C7E00867896 /* Build configuration list for PBXNativeTarget "FranvaroAppenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				492BFFF81DD34C7E00867896 /* Debug */,
+				492BFFF91DD34C7E00867896 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		492BFFD01DD34C7E00867896 /* FranvaroAppen.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				492BFFD11DD34C7E00867896 /* FranvaroAppen.xcdatamodel */,
+			);
+			currentVersion = 492BFFD11DD34C7E00867896 /* FranvaroAppen.xcdatamodel */;
+			path = FranvaroAppen.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 492BFFBE1DD34C7E00867896 /* Project object */;
+}
