@@ -7,11 +7,27 @@
 //
 
 import UIKit
+import CoreData
 
 struct Child {
     
-    var firstName: String
-    var lastName: String
+    var name: String
     var personalNumber: String
     var image: UIImage?
 }
+
+extension Child {
+    
+    static func newWith(managedObject: NSManagedObject) -> Child {
+        let name = managedObject.value(forKey: "name") as? String ?? ""
+        let personalNumber = managedObject.value(forKey: "personal_number") as? String ?? ""
+        var image: UIImage?
+        if let imageData = managedObject.value(forKey: "photo") as? Data {
+            image = UIImage(data: imageData)
+        }
+    
+        return Child(name: name, personalNumber: personalNumber, image: image)
+    }
+}
+
+
