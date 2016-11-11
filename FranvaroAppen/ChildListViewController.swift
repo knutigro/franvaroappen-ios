@@ -38,6 +38,10 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         } else if children.count == 1 {
             performSegueWithIdentifier(.OpenChildMenuNoAnimation, sender: children.first)
         }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.NSManagedObjectContextObjectsDidChange, object: nil, queue: nil) { [weak self] note in
+            self?.updateData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -139,13 +143,8 @@ extension ChildListViewController {
 
 extension ChildListViewController: DZNEmptyDataSetSource {
     
-    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString {
-        return NSAttributedString(string: "Ingen barn")
-    }
-    
     func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControlState) -> NSAttributedString {
-        return NSAttributedString(string: "Lägg till barn", attributes: [NSForegroundColorAttributeName:UIColor.black,
-                                                                                                               NSFontAttributeName: UIFont.systemFont(ofSize: 22)])
+        return NSAttributedString(string: "Lägg till barn", attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 24)])
     }
 }
 

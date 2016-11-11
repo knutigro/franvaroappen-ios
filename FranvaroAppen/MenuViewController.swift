@@ -70,14 +70,14 @@ class MenuViewController: UITableViewController, SegueHandlerType {
                 controller.delegate = self
             }
         case .OpenReportSickLeave:
-            if let controller = segue.destination as? SendInfoViewController {
-                controller.title = "Sjukfrånvaro"
+            if let controller = segue.destination as? ReportViewController {
                 controller.child = child
+                controller.reportType = .sickLeave
             }
         case .OpenReportOtherAbsence:
-            if let controller = segue.destination as? SendInfoViewController {
-                controller.title = "Ledighet"
+            if let controller = segue.destination as? ReportViewController {
                 controller.child = child
+                controller.reportType = .absence
             }
         case .OpenSendInfo:
             if let controller = segue.destination as? SendInfoViewController {

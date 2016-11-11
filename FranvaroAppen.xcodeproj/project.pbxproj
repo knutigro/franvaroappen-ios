@@ -23,6 +23,7 @@
 		493B14B31DD3E22B007882C5 /* ChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B21DD3E22B007882C5 /* ChildCell.swift */; };
 		493B14B51DD3E530007882C5 /* ChildListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B41DD3E530007882C5 /* ChildListViewController.swift */; };
 		493B14B91DD4A6B9007882C5 /* ChildGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B81DD4A6B9007882C5 /* ChildGridCell.swift */; };
+		496C35F41DD65FF300BE4E20 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C35F31DD65FF300BE4E20 /* DatePickerViewController.swift */; };
 		4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADD1DD5FDD90053BC98 /* Theme.swift */; };
 		4987BAE01DD5FE780053BC98 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADF1DD5FE780053BC98 /* UIColor+App.swift */; };
 		4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE11DD600920053BC98 /* NavigationController.swift */; };
@@ -76,6 +77,7 @@
 		493B14B21DD3E22B007882C5 /* ChildCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCell.swift; sourceTree = "<group>"; };
 		493B14B41DD3E530007882C5 /* ChildListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildListViewController.swift; sourceTree = "<group>"; };
 		493B14B81DD4A6B9007882C5 /* ChildGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildGridCell.swift; sourceTree = "<group>"; };
+		496C35F31DD65FF300BE4E20 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		4987BADD1DD5FDD90053BC98 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4987BADF1DD5FE780053BC98 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		4987BAE11DD600920053BC98 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				493B14AF1DD3831F007882C5 /* EditChildViewController.swift */,
 				49C63E581DD5E7530087A148 /* InfoViewController.swift */,
 				4987BAE31DD612F10053BC98 /* ReportViewController.swift */,
+				496C35F31DD65FF300BE4E20 /* DatePickerViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				492BFFCA1DD34C7E00867896 /* AppDelegate.swift in Sources */,
 				492BFFD21DD34C7E00867896 /* FranvaroAppen.xcdatamodeld in Sources */,
 				492B00031DD369BB00867896 /* Child.swift in Sources */,
+				496C35F41DD65FF300BE4E20 /* DatePickerViewController.swift in Sources */,
 				49C63E591DD5E7530087A148 /* InfoViewController.swift in Sources */,
 				492BFFFE1DD363A900867896 /* SendInfoViewController.swift in Sources */,
 				4987BAE01DD5FE780053BC98 /* UIColor+App.swift in Sources */,

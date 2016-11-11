@@ -8,12 +8,19 @@
 
 import StaticDataTableViewController
 import UIKit
+import MessageUI
 
 class ReportViewController: StaticDataTableViewController, SegueHandlerType {
     
     enum ReportType {
-        case SickLeave
-        case Absence
+        case sickLeave
+        case absence
+    }
+    
+    enum DateSelect {
+        case none
+        case from
+        case to
     }
     
     @IBOutlet weak var daySwitch: UISwitch?
@@ -23,7 +30,9 @@ class ReportViewController: StaticDataTableViewController, SegueHandlerType {
     @IBOutlet weak var toLabel: UILabel?
     
     var child: Child?
-    var reportType = ReportType.SickLeave
+    var reportType = ReportType.sickLeave
+    var dateSelect = DateSelect.none
+    
     var completeDay = true {
         didSet {
             updateUI()
@@ -64,6 +73,27 @@ class ReportViewController: StaticDataTableViewController, SegueHandlerType {
         updateUI()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segueIdentifierForSegue(segue) {
+        case .OpenFromDatePicker:
+            if let controller = segue.destination as? DatePickerViewController {
+                dateSelect = .from
+                controller.delegate = self
+                controller.date = fromDate
+                controller.title = "Från"
+                controller.datePickerMode = completeDay ? .date : .dateAndTime
+            }
+        case .OpenToDatePicker:
+            if let controller = segue.destination as? DatePickerViewController {
+                dateSelect = .to
+                controller.delegate = self
+                controller.date = toDate
+                controller.title = "Till"
+                controller.datePickerMode = completeDay ? .date : .dateAndTime
+            }
+        }
+    }
+    
     func updateUI() {
         daySwitch?.isOn = completeDay
 
@@ -73,6 +103,15 @@ class ReportViewController: StaticDataTableViewController, SegueHandlerType {
         } else {
             fromLabel?.text = DateFormatter.withTime.string(from: fromDate)
             toLabel?.text = DateFormatter.withTime.string(from: toDate)
+        }
+        
+        switch reportType {
+        case .absence:
+            title = "Ledighet"
+            break
+        case .sickLeave:
+            title = "Sjukfrånvaro"
+            break
         }
     }
 }
@@ -84,4 +123,62 @@ extension ReportViewController {
     @IBAction func switchDidChange(_ mySwitch: UISwitch) {
         completeDay = mySwitch.isOn
     }
+    
+    @IBAction func didTapSendButton(_ objects: AnyObject?) {
+        
+        guard let  personalNumber = child?.personalNumber else {
+            assertionFailure()
+            return;
+        }
+        
+        var message: String
+        
+        switch reportType {
+        case .absence:
+            message = MessageHelper.messageForAbsence(personalNumber: personalNumber, from: fromDate, to: toDate)
+            break
+        case .sickLeave:
+            message = MessageHelper.messageForSickLeave(personalNumber: personalNumber, from: fromDate, to: toDate)
+            break
+        }
+        
+        if (MFMessageComposeViewController.canSendText()) {
+            let controller = MFMessageComposeViewController()
+            controller.body = message
+            controller.recipients = [MessageHelper.PhoneNumber]
+            controller.messageComposeDelegate = self
+            present(controller, animated: true, completion: nil)
+        }
+    }
 }
+
+extension ReportViewController: MFMessageComposeViewControllerDelegate {
+    public func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion:nil)
+    }
+}
+
+// MARK: DatePickerDelegate
+
+extension ReportViewController: DatePickerDelegate {
+    
+    func datePicker(_ controller: DatePickerViewController, didFinishWithDate date: Date?) {
+        guard let date = date else {
+            return
+        }
+        
+        switch dateSelect {
+        case .to:
+            toDate = date
+            break
+        case .from:
+            fromDate = date
+            toDate = date
+            break
+        default:
+            break
+        }
+        updateUI()
+    }
+}
+
