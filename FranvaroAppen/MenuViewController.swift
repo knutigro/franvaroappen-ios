@@ -71,10 +71,12 @@ class MenuViewController: UITableViewController, SegueHandlerType {
             }
         case .OpenReportSickLeave:
             if let controller = segue.destination as? SendInfoViewController {
+                controller.title = "Sjukfrånvaro"
                 controller.child = child
             }
         case .OpenReportOtherAbsence:
             if let controller = segue.destination as? SendInfoViewController {
+                controller.title = "Ledighet"
                 controller.child = child
             }
         case .OpenSendInfo:
@@ -94,10 +96,10 @@ extension MenuViewController {
     @IBAction func didTapEditButton(_ button: UIButton) {
         
         let alert = UIAlertController(title: child?.name, message:nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        alert.addAction(UIAlertAction(title: "Ändra info", style: UIAlertActionStyle.destructive, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: "Ändra info", style: UIAlertActionStyle.default, handler:  { [weak self](action) in
             self?.performSegueWithIdentifier(.OpenEditChild, sender: self)
         }))
-        alert.addAction(UIAlertAction(title: "Byt barn", style: UIAlertActionStyle.destructive, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: "Byt barn", style: UIAlertActionStyle.default, handler:  { [weak self](action) in
             let _ = self?.navigationController?.popViewController(animated: true)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))

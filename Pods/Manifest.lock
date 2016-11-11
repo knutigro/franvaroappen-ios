@@ -1,12 +1,15 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
+  - StaticDataTableViewController (2.0.5)
 
 DEPENDENCIES:
   - DZNEmptyDataSet
+  - StaticDataTableViewController (~> 2.0)
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  StaticDataTableViewController: 7ea8d7bc8c7f0a4e9255a320224462c7346c1d4a
 
-PODFILE CHECKSUM: 95ab6b16badbfa9bd929c9ee763f27438c9e1e76
+PODFILE CHECKSUM: 76c18ced6ef577de5c85bc37cf0fe4c36f03c7f6
 
 COCOAPODS: 1.0.1

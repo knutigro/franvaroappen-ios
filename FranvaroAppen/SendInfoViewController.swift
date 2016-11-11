@@ -11,15 +11,31 @@ import MessageUI
 
 class SendInfoViewController: UIViewController {
     
+    let limit = 160
+    @IBOutlet var textViewBottomContraint: NSLayoutConstraint?
     @IBOutlet weak var textView: UITextView?
+    @IBOutlet weak var textLimitLabel: UILabel?
     var child: Child?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         textView?.becomeFirstResponder()
         textView?.text = ""
         
         assert(child != nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+        textLimitLabel?.text = String(format: "%i / %i", textView?.text.characters.count ?? 0, limit)
+    }
+    
+    func keyboardWillChangeFrame(aNotification:NSNotification) {
+        let info = aNotification.userInfo
+        let infoNSValue = info![UIKeyboardFrameBeginUserInfoKey] as! NSValue
+        let kbSize = infoNSValue.cgRectValue.size
+        let newHeight = kbSize.height
+        textViewBottomContraint?.constant = newHeight + 8
     }
     
     @IBAction func didTapSendButton(_ objects: AnyObject?) {
@@ -53,5 +69,20 @@ class SendInfoViewController: UIViewController {
 extension SendInfoViewController: MFMessageComposeViewControllerDelegate {
     public func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true, completion:nil)
+    }
+}
+
+// MARK: UITextViewDelegate
+
+extension SendInfoViewController: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if range.length + range.location > (textView.text?.characters.count ?? 0) { return false  }
+        
+        let newLength = textView.text.characters.count + text.characters.count - range.length
+        
+        textLimitLabel?.text = String(format: "%i / %i", min(newLength, limit), limit)
+
+        return newLength <= limit
     }
 }

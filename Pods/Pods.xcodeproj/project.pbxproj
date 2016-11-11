@@ -7,78 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13886044A99963A65E7ED8202404296A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		10B9EFA2F143FFDFEBBE3C4DC914A56D /* StaticDataTableViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FEF1C2CAE304B8500D687E7782D5A3 /* StaticDataTableViewController-dummy.m */; };
+		114273548E49C68970823B8F0DB1EBBA /* Pods-FranvaroAppen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0D490DF10896795121212B9D9FFBF4E /* Pods-FranvaroAppen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		211383C2F7064B07AEE68DD30D9D9CAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		22DC2D74E9117167CD17FD04C327EB9D /* DZNEmptyDataSet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE041B611163BC3499113D6CBFD9C6D /* DZNEmptyDataSet-dummy.m */; };
+		22DC2D74E9117167CD17FD04C327EB9D /* DZNEmptyDataSet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E6754C3DC122EE6FA918BB9C5D6D5 /* DZNEmptyDataSet-dummy.m */; };
 		2A30552C795348771C5FD6330E976901 /* Pods-FranvaroAppenTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 403FA9477B8785976025D9EB0BAF73D9 /* Pods-FranvaroAppenTests-dummy.m */; };
-		2E8515B5FBAB9717E7E22936BC5D4DFF /* Pods-FranvaroAppen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC17FAA7E2626649921BA3921581CCB9 /* Pods-FranvaroAppen-dummy.m */; };
-		3BC49A2B50306C45D4EBCAA50600EBE7 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69C7D7B9E7B6E52563319625578F7E /* UIScrollView+EmptyDataSet.m */; };
+		2FF3921F4B376D0893072AD27C361990 /* StaticDataTableViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 689FC4892BA540AD8C8A03E391074BDD /* StaticDataTableViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BC49A2B50306C45D4EBCAA50600EBE7 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8470DD1DCE436BF06B53F2E8B932F0 /* UIScrollView+EmptyDataSet.m */; };
 		3DE07E49121DF5444421352819703A53 /* Pods-FranvaroAppenUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 345F81821396B88124486BA77D5F7F7B /* Pods-FranvaroAppenUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A8F051276D6982F5C81F248B3A463CD /* Pods-FranvaroAppenTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABE20694F3A165B282CBDEE55D26670 /* Pods-FranvaroAppenTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75EC654CB86D71284F7E90CBB84D8831 /* Pods-FranvaroAppen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0D490DF10896795121212B9D9FFBF4E /* Pods-FranvaroAppen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60B3F4DC924CBE5578C7AD3BF878F952 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		72124690ED3EB61416A34FD5182C4587 /* StaticDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55610C13F90ADDA723C5084BE0177E45 /* StaticDataTableViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7F981DEC4D160D6FA5616670316B238F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
-		B116B651388E34E3CE3E9097BC83D47F /* DZNEmptyDataSet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC4470650B86146175BA754A762324C /* DZNEmptyDataSet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8D18BD7D042E9A1F17DC0B4304A5272 /* StaticDataTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7969BE03AECABC729797B9B8591D34FE /* StaticDataTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B116B651388E34E3CE3E9097BC83D47F /* DZNEmptyDataSet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FFB1F8A47F07C60ADF62C5450B01C0D /* DZNEmptyDataSet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE9F89AF424C8FB7D1FB34D4D0DDECFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		E14B01B2BDDA7C86AC2EBC45FCFEF52E /* UIScrollView+EmptyDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B6B21AF41EBE54F12A278D7A573A5A1 /* UIScrollView+EmptyDataSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC1F18E4DFAC2E6159FAB41466D32874 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		DE0316796DDF438EE434A53315A819CF /* Pods-FranvaroAppen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC17FAA7E2626649921BA3921581CCB9 /* Pods-FranvaroAppen-dummy.m */; };
+		E14B01B2BDDA7C86AC2EBC45FCFEF52E /* UIScrollView+EmptyDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EC694633F7C6B45DA4F5A5FB6F2BE6F /* UIScrollView+EmptyDataSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E368C6843AAF884C1873A5713E69B2D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		EA3E8F2E8C975CAEB64757AD756DDE18 /* Pods-FranvaroAppenUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 719A48E9EC71A120A1B4F92A28630BB9 /* Pods-FranvaroAppenUITests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9D4D5686F3596A0C8F27BD228BF6B2FE /* PBXContainerItemProxy */ = {
+		5BFF880305BE5D7402D08F1DB7197897 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 16FB872D0D2D4BA0F378AB34D47CF95F;
 			remoteInfo = DZNEmptyDataSet;
 		};
+		9B6D6DB1C984693468959EC8A9DB4644 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32B16075D08B8A365E4E907874918A61;
+			remoteInfo = StaticDataTableViewController;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		06CE67682631079BAE6CA803184AD9CC /* Pods-FranvaroAppenTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppenTests-frameworks.sh"; sourceTree = "<group>"; };
+		0EC694633F7C6B45DA4F5A5FB6F2BE6F /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		0FFB1F8A47F07C60ADF62C5450B01C0D /* DZNEmptyDataSet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-umbrella.h"; sourceTree = "<group>"; };
 		14BD19252F2FA46C86272BE95D819E2B /* Pods-FranvaroAppenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppenUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		1B6B21AF41EBE54F12A278D7A573A5A1 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		1CCE30CC320B864B84440F50D5942C42 /* DZNEmptyDataSet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-prefix.pch"; sourceTree = "<group>"; };
 		1D5BCBE9AEAC80AF0037B246C7E8B6C5 /* Pods-FranvaroAppen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FranvaroAppen.modulemap"; sourceTree = "<group>"; };
 		21FD210F3AE5ACE70C21674285FDA939 /* Pods-FranvaroAppen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppen.debug.xcconfig"; sourceTree = "<group>"; };
+		231DF0B23321740E09FE3704D6968EFB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F2046A536C44DF6B6A26F90D6881586 /* StaticDataTableViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StaticDataTableViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345F81821396B88124486BA77D5F7F7B /* Pods-FranvaroAppenUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FranvaroAppenUITests-umbrella.h"; sourceTree = "<group>"; };
-		3986FE0BABA19BDCC46C1D1CE37EF9B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C3028135C9859EB85E7E2DB6BA502A4 /* DZNEmptyDataSet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DZNEmptyDataSet.xcconfig; sourceTree = "<group>"; };
 		3E00C2F52FDA338CA2248AA8B1C4642F /* Pods-FranvaroAppen-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FranvaroAppen-acknowledgements.markdown"; sourceTree = "<group>"; };
 		403FA9477B8785976025D9EB0BAF73D9 /* Pods-FranvaroAppenTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FranvaroAppenTests-dummy.m"; sourceTree = "<group>"; };
-		42DFFC138A79C73815643F3B5DC63C5F /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D387D6A525FB0A318A18B0D2FD2CF3 /* Pods-FranvaroAppenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C8E7E8232814D1D0F7E838E1BBBC840 /* Pods-FranvaroAppenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppenTests.release.xcconfig"; sourceTree = "<group>"; };
+		5128FD8F2FE047F9DB24E4DF9DE7D55E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52937F370B471B6ECC9D4540D63FB49A /* Pods_FranvaroAppen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55610C13F90ADDA723C5084BE0177E45 /* StaticDataTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = StaticDataTableViewController.m; sourceTree = "<group>"; };
+		55FEF1C2CAE304B8500D687E7782D5A3 /* StaticDataTableViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StaticDataTableViewController-dummy.m"; sourceTree = "<group>"; };
 		58419C3223E3478B6BBB3568AE275AEE /* Pods-FranvaroAppen-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FranvaroAppen-acknowledgements.plist"; sourceTree = "<group>"; };
 		5F72EDE2004A7C506D0D5E8EB28AD2DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FE041B611163BC3499113D6CBFD9C6D /* DZNEmptyDataSet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DZNEmptyDataSet-dummy.m"; sourceTree = "<group>"; };
+		5FFABFFA4D43213A9F7B7FE2954D2ABC /* Pods_FranvaroAppenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		617F9949189382A1FC29D60036524FB7 /* Pods-FranvaroAppenUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppenUITests-frameworks.sh"; sourceTree = "<group>"; };
 		6320028492C84C0DFE0C379ABCF1FF9D /* Pods-FranvaroAppenTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppenTests-resources.sh"; sourceTree = "<group>"; };
+		689FC4892BA540AD8C8A03E391074BDD /* StaticDataTableViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StaticDataTableViewController-umbrella.h"; sourceTree = "<group>"; };
 		68C8E421605D3FC62B1746610A1E43EE /* Pods-FranvaroAppenTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FranvaroAppenTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6ABE20694F3A165B282CBDEE55D26670 /* Pods-FranvaroAppenTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FranvaroAppenTests-umbrella.h"; sourceTree = "<group>"; };
 		6B44CC5582EE5604D21DB639A070F86C /* Pods-FranvaroAppenTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FranvaroAppenTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		6CAD1179FB915162A28A31490C2BAA18 /* Pods_FranvaroAppenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		707EB80AB624A8B29AC1476B32FED0B5 /* Pods-FranvaroAppen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppen.release.xcconfig"; sourceTree = "<group>"; };
 		719A48E9EC71A120A1B4F92A28630BB9 /* Pods-FranvaroAppenUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FranvaroAppenUITests-dummy.m"; sourceTree = "<group>"; };
-		7B69C7D7B9E7B6E52563319625578F7E /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Source/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
-		7C72C6CE96F8F9225366D53234FBD238 /* Pods_FranvaroAppenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7969BE03AECABC729797B9B8591D34FE /* StaticDataTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = StaticDataTableViewController.h; sourceTree = "<group>"; };
+		7FAA2034C46A547E206A8CEE76456478 /* StaticDataTableViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StaticDataTableViewController.xcconfig; sourceTree = "<group>"; };
 		81219DCEF9809629202D47D89FF96B54 /* Pods-FranvaroAppenTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FranvaroAppenTests.modulemap"; sourceTree = "<group>"; };
 		882F32892BFC8BFC57DB8832BDF37BBD /* Pods-FranvaroAppenUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FranvaroAppenUITests.modulemap"; sourceTree = "<group>"; };
 		8AD882E54374B56364F490DCE8A92896 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D3E6754C3DC122EE6FA918BB9C5D6D5 /* DZNEmptyDataSet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DZNEmptyDataSet-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		975E25E5F340D9FE0B0D0C8F35482699 /* Pods-FranvaroAppen-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppen-frameworks.sh"; sourceTree = "<group>"; };
 		9D9CDCBEC993FA615045F76CBFD409A2 /* Pods-FranvaroAppen-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppen-resources.sh"; sourceTree = "<group>"; };
-		9EC4470650B86146175BA754A762324C /* DZNEmptyDataSet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-umbrella.h"; sourceTree = "<group>"; };
 		A0D490DF10896795121212B9D9FFBF4E /* Pods-FranvaroAppen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FranvaroAppen-umbrella.h"; sourceTree = "<group>"; };
 		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		AE43ACE05CA83ACB5B0F11FF6AAB2CE6 /* DZNEmptyDataSet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DZNEmptyDataSet.modulemap; sourceTree = "<group>"; };
-		B80EAB9ABC7030B90365BC319DA6085C /* DZNEmptyDataSet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-prefix.pch"; sourceTree = "<group>"; };
+		A4414BB06632A4B48779CEAF741B7B7C /* StaticDataTableViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StaticDataTableViewController.modulemap; sourceTree = "<group>"; };
+		B9963C658D6F9914419B057FC1A652D1 /* DZNEmptyDataSet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DZNEmptyDataSet.modulemap; sourceTree = "<group>"; };
+		BB1487A207AF6BC7EC89C48E249CCF6C /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC17FAA7E2626649921BA3921581CCB9 /* Pods-FranvaroAppen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FranvaroAppen-dummy.m"; sourceTree = "<group>"; };
-		CF2B391A1807EA4C1021C6D91F1EDABF /* DZNEmptyDataSet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DZNEmptyDataSet.xcconfig; sourceTree = "<group>"; };
-		D8F881AC075274D527F25600D1C635E3 /* Pods_FranvaroAppen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC8791E1B8A582536426632663ECDF72 /* StaticDataTableViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StaticDataTableViewController-prefix.pch"; sourceTree = "<group>"; };
 		DE3D348B786230F0F365C7AA23204D71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4FE8F0A6A97D7FE17B3BF89946C3F2E /* Pods-FranvaroAppenUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FranvaroAppenUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		EA39FC7DE60FA4CC9495DF919142A396 /* Pods-FranvaroAppenUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FranvaroAppenUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		EB63B4202EB89D33B1393910317F102E /* Pods-FranvaroAppenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EB8470DD1DCE436BF06B53F2E8B932F0 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Source/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		EE5D8A1D436403C472B5C17EB825CECC /* Pods_FranvaroAppenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF96E3554B6B3DC09068AF8DF24140FE /* Pods-FranvaroAppenUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppenUITests-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +112,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6BA230EA201B62540EFE594758682003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC1F18E4DFAC2E6159FAB41466D32874 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		846C419A31B05B1071C6987293D9A502 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,11 +128,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F252D7B4660872A60CBC9DB3E43ED36C /* Frameworks */ = {
+		D03276016C50269B9D762B489A9BAB74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13886044A99963A65E7ED8202404296A /* Foundation.framework in Frameworks */,
+				60B3F4DC924CBE5578C7AD3BF878F952 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,12 +184,16 @@
 			path = "Target Support Files/Pods-FranvaroAppen";
 			sourceTree = "<group>";
 		};
-		391E7CF3BE0B277DC3EF26607E1B9DD1 /* Pods */ = {
+		36B8D770D3FF5DFBF89C1ADFE3AD1BE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8F4C1981A3CD5849D1926B2D86509DA7 /* DZNEmptyDataSet */,
+				BB1487A207AF6BC7EC89C48E249CCF6C /* DZNEmptyDataSet.framework */,
+				52937F370B471B6ECC9D4540D63FB49A /* Pods_FranvaroAppen.framework */,
+				5FFABFFA4D43213A9F7B7FE2954D2ABC /* Pods_FranvaroAppenTests.framework */,
+				EE5D8A1D436403C472B5C17EB825CECC /* Pods_FranvaroAppenUITests.framework */,
+				2F2046A536C44DF6B6A26F90D6881586 /* StaticDataTableViewController.framework */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -169,6 +202,15 @@
 				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		578C4B287B2BB6A92B207AAC0C24FB74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA69FDED303EF3D0FCA4EE383B5F07E4 /* DZNEmptyDataSet */,
+				C8EF58EEA3B37C2D2435AC0056214DC2 /* StaticDataTableViewController */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		6C65CB44099D25DC8BB3D204E1C05A11 /* Targets Support Files */ = {
@@ -181,50 +223,63 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		703D9C643F5601DB9A18AAB3179D7184 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				391E7CF3BE0B277DC3EF26607E1B9DD1 /* Pods */,
-				DA782072B1E9B695152BF3F5F8703630 /* Products */,
-				6C65CB44099D25DC8BB3D204E1C05A11 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		8F4C1981A3CD5849D1926B2D86509DA7 /* DZNEmptyDataSet */ = {
-			isa = PBXGroup;
-			children = (
-				1B6B21AF41EBE54F12A278D7A573A5A1 /* UIScrollView+EmptyDataSet.h */,
-				7B69C7D7B9E7B6E52563319625578F7E /* UIScrollView+EmptyDataSet.m */,
-				B382ACF213B86EE86843BB96A1CE0572 /* Support Files */,
-			);
-			path = DZNEmptyDataSet;
-			sourceTree = "<group>";
-		};
-		B382ACF213B86EE86843BB96A1CE0572 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AE43ACE05CA83ACB5B0F11FF6AAB2CE6 /* DZNEmptyDataSet.modulemap */,
-				CF2B391A1807EA4C1021C6D91F1EDABF /* DZNEmptyDataSet.xcconfig */,
-				5FE041B611163BC3499113D6CBFD9C6D /* DZNEmptyDataSet-dummy.m */,
-				B80EAB9ABC7030B90365BC319DA6085C /* DZNEmptyDataSet-prefix.pch */,
-				9EC4470650B86146175BA754A762324C /* DZNEmptyDataSet-umbrella.h */,
-				3986FE0BABA19BDCC46C1D1CE37EF9B4 /* Info.plist */,
+				B9963C658D6F9914419B057FC1A652D1 /* DZNEmptyDataSet.modulemap */,
+				3C3028135C9859EB85E7E2DB6BA502A4 /* DZNEmptyDataSet.xcconfig */,
+				8D3E6754C3DC122EE6FA918BB9C5D6D5 /* DZNEmptyDataSet-dummy.m */,
+				1CCE30CC320B864B84440F50D5942C42 /* DZNEmptyDataSet-prefix.pch */,
+				0FFB1F8A47F07C60ADF62C5450B01C0D /* DZNEmptyDataSet-umbrella.h */,
+				231DF0B23321740E09FE3704D6968EFB /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DZNEmptyDataSet";
 			sourceTree = "<group>";
 		};
-		DA782072B1E9B695152BF3F5F8703630 /* Products */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				42DFFC138A79C73815643F3B5DC63C5F /* DZNEmptyDataSet.framework */,
-				D8F881AC075274D527F25600D1C635E3 /* Pods_FranvaroAppen.framework */,
-				6CAD1179FB915162A28A31490C2BAA18 /* Pods_FranvaroAppenTests.framework */,
-				7C72C6CE96F8F9225366D53234FBD238 /* Pods_FranvaroAppenUITests.framework */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				578C4B287B2BB6A92B207AAC0C24FB74 /* Pods */,
+				36B8D770D3FF5DFBF89C1ADFE3AD1BE0 /* Products */,
+				6C65CB44099D25DC8BB3D204E1C05A11 /* Targets Support Files */,
 			);
-			name = Products;
+			sourceTree = "<group>";
+		};
+		AB0279BFA164936EF58932690E99DC80 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5128FD8F2FE047F9DB24E4DF9DE7D55E /* Info.plist */,
+				A4414BB06632A4B48779CEAF741B7B7C /* StaticDataTableViewController.modulemap */,
+				7FAA2034C46A547E206A8CEE76456478 /* StaticDataTableViewController.xcconfig */,
+				55FEF1C2CAE304B8500D687E7782D5A3 /* StaticDataTableViewController-dummy.m */,
+				BC8791E1B8A582536426632663ECDF72 /* StaticDataTableViewController-prefix.pch */,
+				689FC4892BA540AD8C8A03E391074BDD /* StaticDataTableViewController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/StaticDataTableViewController";
+			sourceTree = "<group>";
+		};
+		BA69FDED303EF3D0FCA4EE383B5F07E4 /* DZNEmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				0EC694633F7C6B45DA4F5A5FB6F2BE6F /* UIScrollView+EmptyDataSet.h */,
+				EB8470DD1DCE436BF06B53F2E8B932F0 /* UIScrollView+EmptyDataSet.m */,
+				703D9C643F5601DB9A18AAB3179D7184 /* Support Files */,
+			);
+			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
+		C8EF58EEA3B37C2D2435AC0056214DC2 /* StaticDataTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7969BE03AECABC729797B9B8591D34FE /* StaticDataTableViewController.h */,
+				55610C13F90ADDA723C5084BE0177E45 /* StaticDataTableViewController.m */,
+				AB0279BFA164936EF58932690E99DC80 /* Support Files */,
+			);
+			path = StaticDataTableViewController;
 			sourceTree = "<group>";
 		};
 		DCE5F000FA48B30E757E17DF564B137B /* Pods-FranvaroAppenUITests */ = {
@@ -257,11 +312,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4115AB3C32B1FD96665057E7850C5F5B /* Headers */ = {
+		1FFF74E752388529AEBE872C22A7456D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75EC654CB86D71284F7E90CBB84D8831 /* Pods-FranvaroAppen-umbrella.h in Headers */,
+				2FF3921F4B376D0893072AD27C361990 /* StaticDataTableViewController-umbrella.h in Headers */,
+				A8D18BD7D042E9A1F17DC0B4304A5272 /* StaticDataTableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +335,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A8F051276D6982F5C81F248B3A463CD /* Pods-FranvaroAppenTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4420C75956A61011960ABFF36E5BA5D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114273548E49C68970823B8F0DB1EBBA /* Pods-FranvaroAppen-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +371,26 @@
 			);
 			name = DZNEmptyDataSet;
 			productName = DZNEmptyDataSet;
-			productReference = 42DFFC138A79C73815643F3B5DC63C5F /* DZNEmptyDataSet.framework */;
+			productReference = BB1487A207AF6BC7EC89C48E249CCF6C /* DZNEmptyDataSet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1AC83B47D8E747706D40C915D9D2151F /* Pods-FranvaroAppen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E30816EEC892E1CF5C1350C973C79645 /* Build configuration list for PBXNativeTarget "Pods-FranvaroAppen" */;
+			buildPhases = (
+				76568B87E5D39A03A78C504D86CA0889 /* Sources */,
+				D03276016C50269B9D762B489A9BAB74 /* Frameworks */,
+				A4420C75956A61011960ABFF36E5BA5D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD067B04C02009BC2602C784365B7849 /* PBXTargetDependency */,
+				0D47F954A57DC8290B25AF7156B109FE /* PBXTargetDependency */,
+			);
+			name = "Pods-FranvaroAppen";
+			productName = "Pods-FranvaroAppen";
+			productReference = 52937F370B471B6ECC9D4540D63FB49A /* Pods_FranvaroAppen.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		26B1F83B0AD79DCA67A72F42A458641C /* Pods-FranvaroAppenTests */ = {
@@ -324,7 +407,24 @@
 			);
 			name = "Pods-FranvaroAppenTests";
 			productName = "Pods-FranvaroAppenTests";
-			productReference = 6CAD1179FB915162A28A31490C2BAA18 /* Pods_FranvaroAppenTests.framework */;
+			productReference = 5FFABFFA4D43213A9F7B7FE2954D2ABC /* Pods_FranvaroAppenTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		32B16075D08B8A365E4E907874918A61 /* StaticDataTableViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 216F74F417C4FF38DEAFB59BAB7A579F /* Build configuration list for PBXNativeTarget "StaticDataTableViewController" */;
+			buildPhases = (
+				B284CA39827643FEA86B44402408B845 /* Sources */,
+				6BA230EA201B62540EFE594758682003 /* Frameworks */,
+				1FFF74E752388529AEBE872C22A7456D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StaticDataTableViewController;
+			productName = StaticDataTableViewController;
+			productReference = 2F2046A536C44DF6B6A26F90D6881586 /* StaticDataTableViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		570D83EC4146B35205BBD14C636FB9E5 /* Pods-FranvaroAppenUITests */ = {
@@ -341,25 +441,7 @@
 			);
 			name = "Pods-FranvaroAppenUITests";
 			productName = "Pods-FranvaroAppenUITests";
-			productReference = 7C72C6CE96F8F9225366D53234FBD238 /* Pods_FranvaroAppenUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		667235AC38B2927068058212834B7692 /* Pods-FranvaroAppen */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A4443F0F55D2E3BC74FE12A1A0B9B2A /* Build configuration list for PBXNativeTarget "Pods-FranvaroAppen" */;
-			buildPhases = (
-				1D5FA325A2B8C37DA2D00C71C97546C1 /* Sources */,
-				F252D7B4660872A60CBC9DB3E43ED36C /* Frameworks */,
-				4115AB3C32B1FD96665057E7850C5F5B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8707D52A921E952D0054B139BD7BEA4B /* PBXTargetDependency */,
-			);
-			name = "Pods-FranvaroAppen";
-			productName = "Pods-FranvaroAppen";
-			productReference = D8F881AC075274D527F25600D1C635E3 /* Pods_FranvaroAppen.framework */;
+			productReference = EE5D8A1D436403C472B5C17EB825CECC /* Pods_FranvaroAppenUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -379,32 +461,42 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DA782072B1E9B695152BF3F5F8703630 /* Products */;
+			productRefGroup = 36B8D770D3FF5DFBF89C1ADFE3AD1BE0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				16FB872D0D2D4BA0F378AB34D47CF95F /* DZNEmptyDataSet */,
-				667235AC38B2927068058212834B7692 /* Pods-FranvaroAppen */,
+				1AC83B47D8E747706D40C915D9D2151F /* Pods-FranvaroAppen */,
 				26B1F83B0AD79DCA67A72F42A458641C /* Pods-FranvaroAppenTests */,
 				570D83EC4146B35205BBD14C636FB9E5 /* Pods-FranvaroAppenUITests */,
+				32B16075D08B8A365E4E907874918A61 /* StaticDataTableViewController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1D5FA325A2B8C37DA2D00C71C97546C1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E8515B5FBAB9717E7E22936BC5D4DFF /* Pods-FranvaroAppen-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5447A1898964EF11D84CD467CE5A5554 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2A30552C795348771C5FD6330E976901 /* Pods-FranvaroAppenTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76568B87E5D39A03A78C504D86CA0889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE0316796DDF438EE434A53315A819CF /* Pods-FranvaroAppen-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B284CA39827643FEA86B44402408B845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B9EFA2F143FFDFEBBE3C4DC914A56D /* StaticDataTableViewController-dummy.m in Sources */,
+				72124690ED3EB61416A34FD5182C4587 /* StaticDataTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +520,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8707D52A921E952D0054B139BD7BEA4B /* PBXTargetDependency */ = {
+		0D47F954A57DC8290B25AF7156B109FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StaticDataTableViewController;
+			target = 32B16075D08B8A365E4E907874918A61 /* StaticDataTableViewController */;
+			targetProxy = 9B6D6DB1C984693468959EC8A9DB4644 /* PBXContainerItemProxy */;
+		};
+		AD067B04C02009BC2602C784365B7849 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DZNEmptyDataSet;
 			target = 16FB872D0D2D4BA0F378AB34D47CF95F /* DZNEmptyDataSet */;
-			targetProxy = 9D4D5686F3596A0C8F27BD228BF6B2FE /* PBXContainerItemProxy */;
+			targetProxy = 5BFF880305BE5D7402D08F1DB7197897 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -470,9 +568,42 @@
 			};
 			name = Release;
 		};
+		25092030DD65D4A54CAE8DDDACE1288A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21FD210F3AE5ACE70C21674285FDA939 /* Pods-FranvaroAppen.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FranvaroAppen/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FranvaroAppen;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		2D70797F4D691FBA8793F14AF4CDCC15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF2B391A1807EA4C1021C6D91F1EDABF /* DZNEmptyDataSet.xcconfig */;
+			baseConfigurationReference = 3C3028135C9859EB85E7E2DB6BA502A4 /* DZNEmptyDataSet.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -501,7 +632,7 @@
 		};
 		401181344D9E4A1081ADD0D967E37A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF2B391A1807EA4C1021C6D91F1EDABF /* DZNEmptyDataSet.xcconfig */;
+			baseConfigurationReference = 3C3028135C9859EB85E7E2DB6BA502A4 /* DZNEmptyDataSet.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -528,9 +659,9 @@
 			};
 			name = Debug;
 		};
-		8A5C18F54DBEBD2E8E3F4E472AA0885F /* Debug */ = {
+		A6A6D90A249FDE02B8F6D3898ABCC8B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21FD210F3AE5ACE70C21674285FDA939 /* Pods-FranvaroAppen.debug.xcconfig */;
+			baseConfigurationReference = 7FAA2034C46A547E206A8CEE76456478 /* StaticDataTableViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -541,18 +672,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FranvaroAppen/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/StaticDataTableViewController/StaticDataTableViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StaticDataTableViewController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.modulemap";
+				MODULEMAP_FILE = "Target Support Files/StaticDataTableViewController/StaticDataTableViewController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FranvaroAppen;
+				PRODUCT_NAME = StaticDataTableViewController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -599,9 +726,9 @@
 			};
 			name = Release;
 		};
-		DBE7F615A18CCF6EC652DED103CD8F2E /* Release */ = {
+		DBE9A830B0B1316603BEF5F9F7676D86 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 707EB80AB624A8B29AC1476B32FED0B5 /* Pods-FranvaroAppen.release.xcconfig */;
+			baseConfigurationReference = 7FAA2034C46A547E206A8CEE76456478 /* StaticDataTableViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -612,18 +739,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FranvaroAppen/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/StaticDataTableViewController/StaticDataTableViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StaticDataTableViewController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.modulemap";
+				MODULEMAP_FILE = "Target Support Files/StaticDataTableViewController/StaticDataTableViewController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FranvaroAppen;
+				PRODUCT_NAME = StaticDataTableViewController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -697,6 +820,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		E5348149EEF1E001E6835E936A5FFE96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 707EB80AB624A8B29AC1476B32FED0B5 /* Pods-FranvaroAppen.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FranvaroAppen/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FranvaroAppen;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		ED1245E3CB53A4FE2BF5C6E2A114885C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -785,11 +941,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A4443F0F55D2E3BC74FE12A1A0B9B2A /* Build configuration list for PBXNativeTarget "Pods-FranvaroAppen" */ = {
+		216F74F417C4FF38DEAFB59BAB7A579F /* Build configuration list for PBXNativeTarget "StaticDataTableViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A5C18F54DBEBD2E8E3F4E472AA0885F /* Debug */,
-				DBE7F615A18CCF6EC652DED103CD8F2E /* Release */,
+				A6A6D90A249FDE02B8F6D3898ABCC8B8 /* Debug */,
+				DBE9A830B0B1316603BEF5F9F7676D86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -808,6 +964,15 @@
 			buildConfigurations = (
 				401181344D9E4A1081ADD0D967E37A19 /* Debug */,
 				2D70797F4D691FBA8793F14AF4CDCC15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E30816EEC892E1CF5C1350C973C79645 /* Build configuration list for PBXNativeTarget "Pods-FranvaroAppen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25092030DD65D4A54CAE8DDDACE1288A /* Debug */,
+				E5348149EEF1E001E6835E936A5FFE96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
