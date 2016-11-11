@@ -14,6 +14,7 @@ class EditChildViewController: UITableViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var personalNumberTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView?
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
 
     var childEntity: NSManagedObject?
 
@@ -22,8 +23,8 @@ class EditChildViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Mitt barn"
-        
+        self.navigationItem.backBarButtonItem = self.cancelButton
+
         view.layoutIfNeeded()
         
         if let imageView = imageView {
@@ -33,11 +34,22 @@ class EditChildViewController: UITableViewController {
         imageView?.layer.borderWidth = 1
         imageView?.layer.borderColor = UIColor.white.cgColor
         
-        nameTextField.text = childEntity?.value(forKey: "name") as? String ?? ""
-        personalNumberTextField.text = childEntity?.value(forKey: "personal_number") as? String ?? ""
-        if let imageData = childEntity?.value(forKey: "photo") as? Data, let image = UIImage(data: imageData){
-            imageView?.image = image
+        var child: Child?
+        if let childEntity = childEntity {
+            child = Child.newWith(managedObject: childEntity)
         }
+        
+        if let child = child {
+            self.title = child.name
+            nameTextField.text = child.name
+            personalNumberTextField.text = child.personalNumber
+            imageView?.image = child.image
+        } else {
+            self.title = "Lägg till barn"
+            nameTextField.text = ""
+            personalNumberTextField.text = ""
+        }
+
     }
     
     func showAlert(message: String) {
@@ -52,6 +64,10 @@ class EditChildViewController: UITableViewController {
 // MARK: Actions
 
 extension EditChildViewController {
+    
+    @IBAction func didTapCancel(_ objects: AnyObject?) {
+        let _ = self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func didTapSave(_ objects: AnyObject?) {
         

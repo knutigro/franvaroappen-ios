@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "492BFFC51DD34C7E00867896"
-               BuildableName = "FranvaroAppen.app"
+               BuildableName = "Fra&#x30a;nvaro.app"
                BlueprintName = "FranvaroAppen"
                ReferencedContainer = "container:FranvaroAppen.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "492BFFC51DD34C7E00867896"
-            BuildableName = "FranvaroAppen.app"
+            BuildableName = "Fra&#x30a;nvaro.app"
             BlueprintName = "FranvaroAppen"
             ReferencedContainer = "container:FranvaroAppen.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "492BFFC51DD34C7E00867896"
-            BuildableName = "FranvaroAppen.app"
+            BuildableName = "Fra&#x30a;nvaro.app"
             BlueprintName = "FranvaroAppen"
             ReferencedContainer = "container:FranvaroAppen.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "492BFFC51DD34C7E00867896"
-            BuildableName = "FranvaroAppen.app"
+            BuildableName = "Fra&#x30a;nvaro.app"
             BlueprintName = "FranvaroAppen"
             ReferencedContainer = "container:FranvaroAppen.xcodeproj">
          </BuildableReference>

@@ -13,10 +13,13 @@ import DZNEmptyDataSet
 class ChildListViewController: UITableViewController, SegueHandlerType {
     
     var children = [NSManagedObject]()
+    var viewControllerIsFirstTimeLoading = true
     
     enum SegueIdentifier: String {
         case OpenAddChild = "OpenAddChild"
-        case OpenEditChild = "OpenEditChild"
+        case OpenAddChildNoAnimation = "OpenAddChildNoAnimation"
+        case OpenChildMenu = "OpenChildMenu"
+        case OpenChildMenuNoAnimation = "OpenChildMenuNoAnimation"
     }
 
     // MARK: View
@@ -27,22 +30,34 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         
         self.tableView.emptyDataSetSource = self
         self.tableView.emptyDataSetDelegate = self
+        
+        updateData()
+        
+        if children.count == 0 {
+            performSegueWithIdentifier(.OpenAddChildNoAnimation, sender: nil)
+        } else if children.count == 1 {
+            performSegueWithIdentifier(.OpenChildMenuNoAnimation, sender: children.first)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateData()
+        
+        if viewControllerIsFirstTimeLoading {
+            viewControllerIsFirstTimeLoading = false
+        } else {
+            updateData()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segueIdentifierForSegue(segue) {
-        case .OpenAddChild:
+        case .OpenAddChild, .OpenAddChildNoAnimation:
             if let controller = segue.destination as? EditChildViewController {
                 controller.title = "Lägg till barn"
             }
-        case .OpenEditChild:
-            if let controller = segue.destination as? EditChildViewController {
-                controller.title = "Ändra barn"
+        case .OpenChildMenu, .OpenChildMenuNoAnimation:
+            if let controller = segue.destination as? MenuViewController {
                 controller.childEntity = sender as? NSManagedObject
             }
         }
@@ -105,7 +120,7 @@ extension ChildListViewController {
 extension ChildListViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegueWithIdentifier(.OpenEditChild, sender: children[indexPath.row])
+        performSegueWithIdentifier(.OpenChildMenu, sender: children[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

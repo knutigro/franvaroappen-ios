@@ -22,10 +22,7 @@
 		493B14B01DD3831F007882C5 /* EditChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14AF1DD3831F007882C5 /* EditChildViewController.swift */; };
 		493B14B31DD3E22B007882C5 /* ChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B21DD3E22B007882C5 /* ChildCell.swift */; };
 		493B14B51DD3E530007882C5 /* ChildListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B41DD3E530007882C5 /* ChildListViewController.swift */; };
-		493B14B71DD4A5AE007882C5 /* ChildrenCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B61DD4A5AE007882C5 /* ChildrenCollectionViewController.swift */; };
 		493B14B91DD4A6B9007882C5 /* ChildGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B81DD4A6B9007882C5 /* ChildGridCell.swift */; };
-		493B14BB1DD4CF76007882C5 /* EmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14BA1DD4CF76007882C5 /* EmbedViewController.swift */; };
-		493B14BD1DD525C0007882C5 /* MainEmbedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14BC1DD525C0007882C5 /* MainEmbedViewController.swift */; };
 		49D48FD185D1FB8BE8077422 /* Pods_FranvaroAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A845E52E9986868944A57 /* Pods_FranvaroAppen.framework */; };
 		753FCDF5FD1664F2A50A12C4 /* Pods_FranvaroAppenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A035787C726D3FC6A3FCC46 /* Pods_FranvaroAppenTests.framework */; };
 		7DF8D251DA97E98208E382D0 /* Pods_FranvaroAppenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD11E43C30475B03AD84F37 /* Pods_FranvaroAppenUITests.framework */; };
@@ -72,10 +69,7 @@
 		493B14AF1DD3831F007882C5 /* EditChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditChildViewController.swift; sourceTree = "<group>"; };
 		493B14B21DD3E22B007882C5 /* ChildCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCell.swift; sourceTree = "<group>"; };
 		493B14B41DD3E530007882C5 /* ChildListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildListViewController.swift; sourceTree = "<group>"; };
-		493B14B61DD4A5AE007882C5 /* ChildrenCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenCollectionViewController.swift; sourceTree = "<group>"; };
 		493B14B81DD4A6B9007882C5 /* ChildGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildGridCell.swift; sourceTree = "<group>"; };
-		493B14BA1DD4CF76007882C5 /* EmbedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbedViewController.swift; sourceTree = "<group>"; };
-		493B14BC1DD525C0007882C5 /* MainEmbedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEmbedViewController.swift; sourceTree = "<group>"; };
 		4BD11E43C30475B03AD84F37 /* Pods_FranvaroAppenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B646E7CE0CABD0C8B32E549 /* Pods-FranvaroAppenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B77778A8AC0B4F9245EEC36 /* Pods-FranvaroAppen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,13 +184,10 @@
 			children = (
 				493B14B11DD3E219007882C5 /* Cells */,
 				492BFFCD1DD34C7E00867896 /* Main.storyboard */,
+				493B14B41DD3E530007882C5 /* ChildListViewController.swift */,
 				492BFFCB1DD34C7E00867896 /* MenuViewController.swift */,
-				493B14BA1DD4CF76007882C5 /* EmbedViewController.swift */,
-				493B14BC1DD525C0007882C5 /* MainEmbedViewController.swift */,
 				492BFFFD1DD363A900867896 /* SendInfoViewController.swift */,
 				493B14AF1DD3831F007882C5 /* EditChildViewController.swift */,
-				493B14B41DD3E530007882C5 /* ChildListViewController.swift */,
-				493B14B61DD4A5AE007882C5 /* ChildrenCollectionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -506,10 +497,7 @@
 				493B14B01DD3831F007882C5 /* EditChildViewController.swift in Sources */,
 				492B00001DD3667D00867896 /* MessageHelper.swift in Sources */,
 				493B14B91DD4A6B9007882C5 /* ChildGridCell.swift in Sources */,
-				493B14BD1DD525C0007882C5 /* MainEmbedViewController.swift in Sources */,
 				493B14B31DD3E22B007882C5 /* ChildCell.swift in Sources */,
-				493B14B71DD4A5AE007882C5 /* ChildrenCollectionViewController.swift in Sources */,
-				493B14BB1DD4CF76007882C5 /* EmbedViewController.swift in Sources */,
 				492BFFCC1DD34C7E00867896 /* MenuViewController.swift in Sources */,
 				492BFFCA1DD34C7E00867896 /* AppDelegate.swift in Sources */,
 				492BFFD21DD34C7E00867896 /* FranvaroAppen.xcdatamodeld in Sources */,
