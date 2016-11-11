@@ -9,6 +9,18 @@
 import UIKit
 import CoreData
 
+extension String {
+    func isPersonalNumber() -> Bool {
+        let pat = "\\d\\d\\d\\d\\d\\d-\\d\\d\\d\\d"
+        let regex = try! NSRegularExpression(pattern: pat, options: [])
+        return regex.numberOfMatches(in: self, options: [], range: NSRange(location: 0, length: self.characters.count)) == 1
+    }
+}
+
+protocol EditChildViewControllerDelegate {
+    func editChildViewController(_ controller: EditChildViewController, didFinishWithChild child: NSManagedObject?);
+}
+
 class EditChildViewController: UITableViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -17,6 +29,7 @@ class EditChildViewController: UITableViewController {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
 
     var childEntity: NSManagedObject?
+    var delegate: EditChildViewControllerDelegate?
 
     // MARK: View
     
@@ -80,7 +93,12 @@ extension EditChildViewController {
         }
         
         guard !personalNumber.isEmpty else {
-            showAlert(message: "Personnummer kan inte vara tomt")
+            showAlert(message: "Person nummer kan inte vara tomt")
+            return
+        }
+        
+        guard personalNumber.isPersonalNumber() else {
+            showAlert(message: "Person nummer måste ha formen ÅÅMMDD-NNNN.")
             return
         }
 
@@ -127,6 +145,7 @@ extension EditChildViewController {
         
         do {
             try managedContext.save()
+            delegate?.editChildViewController(self, didFinishWithChild: childEnity)
             let _ = navigationController?.popViewController(animated: true)
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
@@ -148,3 +167,34 @@ extension EditChildViewController: UIImagePickerControllerDelegate, UINavigation
         dismiss(animated: true, completion: nil)
     }
 }
+
+// MARK: UITextFieldDelegate
+
+extension EditChildViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if range.length + range.location > (textField.text?.characters.count ?? 0) { return false  }
+        
+        if textField == nameTextField {
+            if let text = nameTextField?.text {
+                let newValue = (text as NSString).replacingCharacters(in: range, with: string)
+                self.title = newValue
+            }
+            return true
+        } else if textField == personalNumberTextField {
+            if string == "" { return true }
+            if (range.location <= 5) {
+                return Int(string) != nil
+            } else if (range.location == 6) {
+                return string == "-"
+            } else if (range.location <= 10) {
+                return Int(string) != nil
+            } else {
+                return false
+            }
+        }
+        
+        return true
+    }
+}
+

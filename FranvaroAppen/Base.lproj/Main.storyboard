@@ -26,20 +26,106 @@
             </objects>
             <point key="canvasLocation" x="-1047" y="-684"/>
         </scene>
-        <!--LInd Grösland-->
+        <!--Om sms tjänsten-->
+        <scene sceneID="QJj-T1-J7E">
+            <objects>
+                <viewController id="8aw-cZ-Ej4" customClass="InfoViewController" customModule="Frånvaro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5YB-bZ-dCw"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Gu-Cm-LLd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qcF-JK-5zq">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7CW-pg-lxE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8aw-cZ-Ej4" id="bX8-sd-g3J"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XHa-Hw-6NQ">
+                                <rect key="frame" x="177" y="291" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XHa-Hw-6NQ" firstAttribute="centerX" secondItem="qcF-JK-5zq" secondAttribute="centerX" id="0QI-EV-4Wd"/>
+                            <constraint firstItem="7CW-pg-lxE" firstAttribute="leading" secondItem="qcF-JK-5zq" secondAttribute="leading" id="1em-Bv-1Oh"/>
+                            <constraint firstAttribute="trailing" secondItem="7CW-pg-lxE" secondAttribute="trailing" id="AJm-LN-4ZT"/>
+                            <constraint firstItem="9Gu-Cm-LLd" firstAttribute="top" secondItem="7CW-pg-lxE" secondAttribute="bottom" id="R1I-fS-aom"/>
+                            <constraint firstItem="7CW-pg-lxE" firstAttribute="top" secondItem="5YB-bZ-dCw" secondAttribute="bottom" id="crU-aa-QCQ"/>
+                            <constraint firstItem="XHa-Hw-6NQ" firstAttribute="centerY" secondItem="qcF-JK-5zq" secondAttribute="centerY" id="dFa-dn-nAv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Om sms tjänsten" id="sc7-XM-qBI"/>
+                    <connections>
+                        <outlet property="actInd" destination="XHa-Hw-6NQ" id="sYd-mt-xgz"/>
+                        <outlet property="webView" destination="7CW-pg-lxE" id="0ob-XA-B8S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFB-TD-MmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-919.20000000000005" y="242.42878560719643"/>
+        </scene>
+        <!--Om appen-->
+        <scene sceneID="IKO-gb-cMy">
+            <objects>
+                <viewController id="jJD-n5-Pdv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C4n-5M-kbg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ieR-hy-cmn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WAq-hd-axT">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JkO-Zj-V5a">
+                                <rect key="frame" x="8" y="30" width="359" height="335"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="IfA-Id-svN"/>
+                                </constraints>
+                                <string key="text">Denne app är inte gjord på uppdrag av Lidköping kommun, men av en förälder som gillar göra appar.
+
+Kom gärna med tips angående förbättringar eller förslag på andra appar som behövs.
+
+Knut Inge Grösland
+hei@knutinge.com
+knutigro.github.io</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JkO-Zj-V5a" secondAttribute="trailing" constant="8" id="0u9-5j-cH4"/>
+                            <constraint firstItem="JkO-Zj-V5a" firstAttribute="leading" secondItem="WAq-hd-axT" secondAttribute="leading" constant="8" id="1Gb-FF-lk9"/>
+                            <constraint firstItem="JkO-Zj-V5a" firstAttribute="top" secondItem="C4n-5M-kbg" secondAttribute="bottom" constant="30" id="nUr-1G-yBx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Om appen" id="tOX-wt-5jz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRI-ZF-1vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.40000000000001" y="850.52473763118451"/>
+        </scene>
+        <!--Lind Grösland-->
         <scene sceneID="iN9-Ug-hYG">
             <objects>
                 <tableViewController id="CFE-nm-E4L" customClass="MenuViewController" customModule="Frånvaro" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="bUE-J1-85M">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="1" sectionFooterHeight="1" id="bUE-J1-85M">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="T2c-rk-aI6">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-b8-9MM">
-                                    <rect key="frame" x="127.5" y="20" width="120" height="120"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-b8-9MM">
+                                    <rect key="frame" x="127.5" y="15" width="120" height="120"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="120" id="Gc0-eb-pfm"/>
                                         <constraint firstAttribute="height" constant="120" id="aAX-iE-WT0"/>
@@ -49,17 +135,17 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="JOp-b8-9MM" firstAttribute="centerX" secondItem="T2c-rk-aI6" secondAttribute="centerX" id="bqo-uX-P1j"/>
-                                <constraint firstItem="JOp-b8-9MM" firstAttribute="centerY" secondItem="T2c-rk-aI6" secondAttribute="centerY" id="iVo-iz-R3o"/>
+                                <constraint firstItem="JOp-b8-9MM" firstAttribute="centerY" secondItem="T2c-rk-aI6" secondAttribute="centerY" constant="10" id="iVo-iz-R3o"/>
                             </constraints>
                         </view>
                         <sections>
-                            <tableViewSection id="Uzq-Ca-3y8">
+                            <tableViewSection headerTitle="Sms tjänst" id="Uzq-Ca-3y8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="YS0-G0-R4g">
-                                        <rect key="frame" x="0.0" y="160" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="186" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YS0-G0-R4g" id="NEY-ag-Ydw">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anmäl sjukfrånvaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t5-Nm-fa8">
@@ -78,10 +164,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="ymo-5q-qZ4">
-                                        <rect key="frame" x="0.0" y="240" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="236" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ymo-5q-qZ4" id="ddM-zC-wqY">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anmäl ledighet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79T-ot-vZO">
@@ -100,10 +186,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="O0T-fx-pMv">
-                                        <rect key="frame" x="0.0" y="320" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="286" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0T-fx-pMv" id="Vnn-q4-T9C">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skicka information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpe-uM-fwg">
@@ -123,13 +209,67 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Om" id="cGK-o4-V5G">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="eaR-Ao-Wi8">
+                                        <rect key="frame" x="0.0" y="376" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eaR-Ao-Wi8" id="eWL-RI-sXC">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Om sms tjänsten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mki-Dd-KGJ">
+                                                    <rect key="frame" x="8" y="0.0" width="326" height="59.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mki-Dd-KGJ" firstAttribute="leading" secondItem="eWL-RI-sXC" secondAttribute="leading" constant="8" id="1sG-Gt-5Gi"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mki-Dd-KGJ" secondAttribute="bottom" id="PHh-xN-RPD"/>
+                                                <constraint firstItem="Mki-Dd-KGJ" firstAttribute="top" secondItem="eWL-RI-sXC" secondAttribute="top" id="vu0-WK-djo"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mki-Dd-KGJ" secondAttribute="trailing" constant="8" id="ybY-iR-Gcy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8aw-cZ-Ej4" kind="show" identifier="OpenInfo" id="BxP-9a-iXP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="IYC-tk-frV">
+                                        <rect key="frame" x="0.0" y="426" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IYC-tk-frV" id="sFV-Hr-uSh">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Om appen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVE-Z4-Xf7">
+                                                    <rect key="frame" x="8" y="0.0" width="326" height="59.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yVE-Z4-Xf7" firstAttribute="leading" secondItem="sFV-Hr-uSh" secondAttribute="leading" constant="8" id="8dF-hq-iSa"/>
+                                                <constraint firstItem="yVE-Z4-Xf7" firstAttribute="top" secondItem="sFV-Hr-uSh" secondAttribute="top" id="LQ7-WI-lTS"/>
+                                                <constraint firstAttribute="bottom" secondItem="yVE-Z4-Xf7" secondAttribute="bottom" id="Qor-Jg-aXS"/>
+                                                <constraint firstAttribute="trailing" secondItem="yVE-Z4-Xf7" secondAttribute="trailing" constant="8" id="gCh-vH-Bi7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="jJD-n5-Pdv" kind="show" identifier="OpenAbout" id="AjX-SG-NdA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="CFE-nm-E4L" id="BQv-nX-4o6"/>
                             <outlet property="delegate" destination="CFE-nm-E4L" id="GLA-h3-X5Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="LInd Grösland" id="lPC-5w-8sr">
+                    <navigationItem key="navigationItem" title="Lind Grösland" id="lPC-5w-8sr">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="9VR-K4-G1Y">
                             <connections>
                                 <action selector="didTapEditButton:" destination="CFE-nm-E4L" id="dn5-FB-jLq"/>
@@ -539,12 +679,12 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ÅÅMMDD-NNNN" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L68-Zy-N5V">
                                                     <rect key="frame" x="120" y="0.0" width="245" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numbersAndPunctuation"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="t7v-Rz-Ho7" id="qDJ-Ag-UcI"/>
                                                     </connections>
                                                 </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personnummer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPa-a0-zcj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person nummer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPa-a0-zcj">
                                                     <rect key="frame" x="10" y="0.0" width="110" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="9ra-ql-jci"/>
@@ -603,9 +743,9 @@
         <image name="default-user-50" width="50" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iw0-2x-eOi"/>
-        <segue reference="6g2-oq-Fpi"/>
+        <segue reference="PZO-46-r9v"/>
         <segue reference="2Qw-cb-1qL"/>
+        <segue reference="dec-iw-trP"/>
         <segue reference="Up9-od-3Um"/>
     </inferredMetricsTieBreakers>
 </document>

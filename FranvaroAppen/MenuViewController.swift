@@ -32,6 +32,8 @@ class MenuViewController: UITableViewController, SegueHandlerType {
         case OpenSendInfo = "OpenSendInfo"
         case OpenChildList = "OpenChildList"
         case OpenEditChild = "OpenEditChild"
+        case OpenInfo = "OpenInfo"
+        case OpenAbout = "OpenAbout"
     }
 
     override func viewDidLoad() {
@@ -52,7 +54,10 @@ class MenuViewController: UITableViewController, SegueHandlerType {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        updateUI()
+    }
+    
+    func updateUI() {
         self.title = child?.name
         childImageView?.image = child?.image
     }
@@ -62,6 +67,7 @@ class MenuViewController: UITableViewController, SegueHandlerType {
         case .OpenEditChild:
             if let controller = segue.destination as? EditChildViewController {
                 controller.childEntity = childEntity
+                controller.delegate = self
             }
         case .OpenReportSickLeave:
             if let controller = segue.destination as? SendInfoViewController {
@@ -108,25 +114,36 @@ extension MenuViewController {
 
 // MARK: TableViewDelegate
 
+extension MenuViewController: EditChildViewControllerDelegate {
+    func editChildViewController(_ controller: EditChildViewController, didFinishWithChild child: NSManagedObject?) {
+        self.childEntity = child
+    }
+}
+
+// MARK: TableViewDelegate
+
 extension MenuViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        if (child == nil) {
-            let alert = UIAlertController(title: nil,
-                                          message: "Inget barn vald.",
-                                          preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
-            return
-        } else {
-            if cell == reportSickLeaveCell {
-                performSegueWithIdentifier(.OpenReportSickLeave, sender: cell)
-            } else if cell == reportOtherAbsenceCell {
-                performSegueWithIdentifier(.OpenReportOtherAbsence, sender: cell)
-            } else if cell == sendInfoCell {
-                performSegueWithIdentifier(.OpenSendInfo, sender: cell)
+        
+        if (indexPath.section == 0) {
+            let cell = tableView.cellForRow(at: indexPath)
+            if (child == nil) {
+                let alert = UIAlertController(title: nil,
+                                              message: "Inget barn vald.",
+                                              preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+                return
+            } else {
+                if cell == reportSickLeaveCell {
+                    performSegueWithIdentifier(.OpenReportSickLeave, sender: cell)
+                } else if cell == reportOtherAbsenceCell {
+                    performSegueWithIdentifier(.OpenReportOtherAbsence, sender: cell)
+                } else if cell == sendInfoCell {
+                    performSegueWithIdentifier(.OpenSendInfo, sender: cell)
+                }
             }
         }
         
