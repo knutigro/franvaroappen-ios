@@ -31,8 +31,6 @@ class EmbedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        assert(defaultSegueIdentifier != nil, "defaultSegueIdentifier must be defined for FPEmbedViewController.")
         
         // embed default segue
         if let defaultSegueIdentifier = defaultSegueIdentifier {

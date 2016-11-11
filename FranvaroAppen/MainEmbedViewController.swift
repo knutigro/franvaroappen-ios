@@ -30,18 +30,18 @@ class MainEmbedViewController: EmbedViewController, SegueHandlerType {
         switch segueIdentifierForSegue(segue) {
         case .EmbedMenu:
             if let controller = segue.destination as? MenuViewController {
-                controller.title = "Lägg till barn"
+                self.title = "Lägg till barn"
                 if let child = children.first {
                     controller.child = Child.newWith(managedObject: child)
                 }
             }
         case .EmbedChildSelect:
             if let controller = segue.destination as? ChildListViewController {
-                controller.title = "Välj barn"
+                self.title = "Välj barn"
             }
         case .EmbedAddChild:
             if let controller = segue.destination as? EditChildViewController {
-                controller.title = "Lägg till barn"
+                self.title = "Lägg till barn"
             }
         }
     }
