@@ -54,6 +54,11 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.track(screen: "Child list")
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segueIdentifierForSegue(segue) {
         case .OpenAddChild, .OpenAddChildNoAnimation:

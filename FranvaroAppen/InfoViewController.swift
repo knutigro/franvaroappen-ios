@@ -21,6 +21,11 @@ class InfoViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.track(screen: "About sms")
+    }
+
     func webViewDidFinishLoad(_ webView: UIWebView) {
         actInd?.stopAnimating()
     }

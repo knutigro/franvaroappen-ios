@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4925AC211DD7C47200BE8881 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4925AC201DD7C47200BE8881 /* Analytics.swift */; };
 		492B00001DD3667D00867896 /* MessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BFFFF1DD3667D00867896 /* MessageHelper.swift */; };
 		492B00031DD369BB00867896 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B00021DD369BB00867896 /* Child.swift */; };
 		492BFFCA1DD34C7E00867896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BFFC91DD34C7E00867896 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		0403B388726FCC299A793C78 /* Pods-FranvaroAppen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppen.release.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.release.xcconfig"; sourceTree = "<group>"; };
 		0BE0AFD309BBAFC2D3FDAA52 /* Pods-FranvaroAppenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4925AC201DD7C47200BE8881 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		492B00021DD369BB00867896 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		492BFFC61DD34C7E00867896 /* Frånvaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Frånvaro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		492BFFC91DD34C7E00867896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				492BFFFF1DD3667D00867896 /* MessageHelper.swift */,
 				4987BADD1DD5FDD90053BC98 /* Theme.swift */,
 				4987BADF1DD5FE780053BC98 /* UIColor+App.swift */,
+				4925AC201DD7C47200BE8881 /* Analytics.swift */,
 				493B14AE1DD36F9A007882C5 /* ViewControllers */,
 				492B00011DD369A900867896 /* Models */,
 				492BFFFA1DD35E1400867896 /* Categories */,
@@ -530,6 +533,7 @@
 				4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */,
 				493B14B91DD4A6B9007882C5 /* ChildGridCell.swift in Sources */,
 				493B14B31DD3E22B007882C5 /* ChildCell.swift in Sources */,
+				4925AC211DD7C47200BE8881 /* Analytics.swift in Sources */,
 				4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */,
 				492BFFCC1DD34C7E00867896 /* MenuViewController.swift in Sources */,
 				492BFFCA1DD34C7E00867896 /* AppDelegate.swift in Sources */,

@@ -30,6 +30,11 @@ class SendInfoViewController: UIViewController {
         textLimitLabel?.text = String(format: "%i / %i", textView?.text.characters.count ?? 0, limit)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.track(screen: "Send Info")
+    }
+    
     func keyboardWillChangeFrame(aNotification:NSNotification) {
         let info = aNotification.userInfo
         let infoNSValue = info![UIKeyboardFrameBeginUserInfoKey] as! NSValue
@@ -57,6 +62,8 @@ class SendInfoViewController: UIViewController {
         }
         
         if (MFMessageComposeViewController.canSendText()) {
+            Analytics.track(screen: "Sms")
+
             let controller = MFMessageComposeViewController()
             controller.body = MessageHelper.messageForInformation(personalNumber: personalNumber, message: message)
             controller.recipients = [MessageHelper.PhoneNumber]
@@ -68,6 +75,22 @@ class SendInfoViewController: UIViewController {
 
 extension SendInfoViewController: MFMessageComposeViewControllerDelegate {
     public func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        
+        var res = ""
+        switch result {
+        case .cancelled:
+            res = Analytics.MessageComposeResult.cancelled.rawValue
+            break
+        case .failed:
+            res = Analytics.MessageComposeResult.failed.rawValue
+            break
+        case .sent:
+            res = Analytics.MessageComposeResult.sent.rawValue
+            break
+        }
+        
+        Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res])
+        
         self.dismiss(animated: true, completion:nil)
     }
 }

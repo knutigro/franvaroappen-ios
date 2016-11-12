@@ -8,6 +8,7 @@ target 'FranvaroAppen' do
   # Pods for FranvaroAppen
   pod 'DZNEmptyDataSet'
   pod 'StaticDataTableViewController', '~> 2.0'
+  pod 'Localytics', '~> 4.0'
 
   target 'FranvaroAppenTests' do
     inherit! :search_paths

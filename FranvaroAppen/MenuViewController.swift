@@ -57,6 +57,11 @@ class MenuViewController: UITableViewController, SegueHandlerType {
         updateUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.track(screen: "Menu")
+    }
+    
     func updateUI() {
         self.title = child?.name
         childImageView?.image = child?.image
@@ -83,6 +88,8 @@ class MenuViewController: UITableViewController, SegueHandlerType {
             if let controller = segue.destination as? SendInfoViewController {
                 controller.child = child
             }
+        case .OpenAbout:
+            Analytics.track(screen: "About app")
         default:
             break;
         }

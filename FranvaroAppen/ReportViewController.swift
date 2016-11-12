@@ -73,6 +73,11 @@ class ReportViewController: StaticDataTableViewController, SegueHandlerType {
         updateUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.track(screen: "Report")
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segueIdentifierForSegue(segue) {
         case .OpenFromDatePicker:
@@ -143,6 +148,8 @@ extension ReportViewController {
         }
         
         if (MFMessageComposeViewController.canSendText()) {
+            Analytics.track(screen: "Sms")
+
             let controller = MFMessageComposeViewController()
             controller.body = message
             controller.recipients = [MessageHelper.PhoneNumber]
@@ -154,6 +161,22 @@ extension ReportViewController {
 
 extension ReportViewController: MFMessageComposeViewControllerDelegate {
     public func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        
+        var res = ""
+        switch result {
+        case .cancelled:
+            res = Analytics.MessageComposeResult.cancelled.rawValue
+            break
+        case .failed:
+            res = Analytics.MessageComposeResult.failed.rawValue
+            break
+        case .sent:
+            res = Analytics.MessageComposeResult.sent.rawValue
+            break
+        }
+        
+        Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res])
+
         self.dismiss(animated: true, completion:nil)
     }
 }
