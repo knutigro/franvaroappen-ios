@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10B9EFA2F143FFDFEBBE3C4DC914A56D /* StaticDataTableViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF9D24853C9749A5C773FECF14803B /* StaticDataTableViewController-dummy.m */; };
+		10B9EFA2F143FFDFEBBE3C4DC914A56D /* StaticDataTableViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8848A9C72789133E570F951AF1D07325 /* StaticDataTableViewController-dummy.m */; };
 		114273548E49C68970823B8F0DB1EBBA /* Pods-FranvaroAppen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0D490DF10896795121212B9D9FFBF4E /* Pods-FranvaroAppen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		211383C2F7064B07AEE68DD30D9D9CAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		22DC2D74E9117167CD17FD04C327EB9D /* DZNEmptyDataSet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAA33948C5FF9B666F9D8487C2FF1E5 /* DZNEmptyDataSet-dummy.m */; };
+		22DC2D74E9117167CD17FD04C327EB9D /* DZNEmptyDataSet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC280F67E700CA3EAD1D860AA2EDA27 /* DZNEmptyDataSet-dummy.m */; };
 		2A30552C795348771C5FD6330E976901 /* Pods-FranvaroAppenTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 403FA9477B8785976025D9EB0BAF73D9 /* Pods-FranvaroAppenTests-dummy.m */; };
-		2FF3921F4B376D0893072AD27C361990 /* StaticDataTableViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82E99DB40F1C9DC640B5ED24857B1339 /* StaticDataTableViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BC49A2B50306C45D4EBCAA50600EBE7 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F30B82A6D815B404E87F5256BB1296E0 /* UIScrollView+EmptyDataSet.m */; };
+		2FF3921F4B376D0893072AD27C361990 /* StaticDataTableViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F21515447F823B785983AA3C28A05C7F /* StaticDataTableViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BC49A2B50306C45D4EBCAA50600EBE7 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 94139C0349FC2AFF64D20757CE0AD1CA /* UIScrollView+EmptyDataSet.m */; };
 		3DE07E49121DF5444421352819703A53 /* Pods-FranvaroAppenUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 345F81821396B88124486BA77D5F7F7B /* Pods-FranvaroAppenUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A8F051276D6982F5C81F248B3A463CD /* Pods-FranvaroAppenTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABE20694F3A165B282CBDEE55D26670 /* Pods-FranvaroAppenTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60B3F4DC924CBE5578C7AD3BF878F952 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		72124690ED3EB61416A34FD5182C4587 /* StaticDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F222887631927273DAD5A014D0C90D /* StaticDataTableViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		72124690ED3EB61416A34FD5182C4587 /* StaticDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB0EB59EA55C1CAB70C566650D259 /* StaticDataTableViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7F981DEC4D160D6FA5616670316B238F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
-		A8D18BD7D042E9A1F17DC0B4304A5272 /* StaticDataTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBA952359A73C8435B4F0263D3983B0 /* StaticDataTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B116B651388E34E3CE3E9097BC83D47F /* DZNEmptyDataSet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13E62C78E36AD7503980CD2257A21367 /* DZNEmptyDataSet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8D18BD7D042E9A1F17DC0B4304A5272 /* StaticDataTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 222CC038778E0BC4CCF378066177B8B8 /* StaticDataTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B116B651388E34E3CE3E9097BC83D47F /* DZNEmptyDataSet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAB0B345A4F619745F9C93999E2CACB /* DZNEmptyDataSet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE9F89AF424C8FB7D1FB34D4D0DDECFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		CC1F18E4DFAC2E6159FAB41466D32874 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		DE0316796DDF438EE434A53315A819CF /* Pods-FranvaroAppen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC17FAA7E2626649921BA3921581CCB9 /* Pods-FranvaroAppen-dummy.m */; };
-		E14B01B2BDDA7C86AC2EBC45FCFEF52E /* UIScrollView+EmptyDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 91CBDF2CDA0D6522D7B9434BD1A5801F /* UIScrollView+EmptyDataSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E14B01B2BDDA7C86AC2EBC45FCFEF52E /* UIScrollView+EmptyDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F8C4DA19CF4C47237C9E79589C07090 /* UIScrollView+EmptyDataSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E368C6843AAF884C1873A5713E69B2D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		EA3E8F2E8C975CAEB64757AD756DDE18 /* Pods-FranvaroAppenUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 719A48E9EC71A120A1B4F92A28630BB9 /* Pods-FranvaroAppenUITests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -48,19 +48,27 @@
 
 /* Begin PBXFileReference section */
 		06CE67682631079BAE6CA803184AD9CC /* Pods-FranvaroAppenTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppenTests-frameworks.sh"; sourceTree = "<group>"; };
-		13E62C78E36AD7503980CD2257A21367 /* DZNEmptyDataSet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-umbrella.h"; sourceTree = "<group>"; };
+		0EC280F67E700CA3EAD1D860AA2EDA27 /* DZNEmptyDataSet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DZNEmptyDataSet-dummy.m"; sourceTree = "<group>"; };
 		14BD19252F2FA46C86272BE95D819E2B /* Pods-FranvaroAppenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		17ECAF6FBAC71136993A53EFBDA7E0A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D5BCBE9AEAC80AF0037B246C7E8B6C5 /* Pods-FranvaroAppen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FranvaroAppen.modulemap"; sourceTree = "<group>"; };
+		20E85FF5CEE62DAA78FE576CE49EDDED /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		21FD210F3AE5ACE70C21674285FDA939 /* Pods-FranvaroAppen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppen.debug.xcconfig"; sourceTree = "<group>"; };
-		29E45A306417F4297ED9CB302364FBB5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222CC038778E0BC4CCF378066177B8B8 /* StaticDataTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = StaticDataTableViewController.h; sourceTree = "<group>"; };
+		25908E2AAB3F681BA1C2D94491D9CDB0 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		2AFFCAA5E864628895DDDF162D157356 /* StaticDataTableViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StaticDataTableViewController-prefix.pch"; sourceTree = "<group>"; };
 		2F2046A536C44DF6B6A26F90D6881586 /* StaticDataTableViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StaticDataTableViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7A905AE4DD4348C19BDA5A93DB2E18 /* DZNEmptyDataSet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-prefix.pch"; sourceTree = "<group>"; };
 		345F81821396B88124486BA77D5F7F7B /* Pods-FranvaroAppenUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FranvaroAppenUITests-umbrella.h"; sourceTree = "<group>"; };
-		35D50DDCEBAA6109A0517198DEA4D0F8 /* DZNEmptyDataSet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-prefix.pch"; sourceTree = "<group>"; };
+		34BA0190711684DDC395324E7070E2A4 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		3AB9F1A4DFDF3D35D65426EE85B6BD6D /* DZNEmptyDataSet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DZNEmptyDataSet.xcconfig; sourceTree = "<group>"; };
 		3E00C2F52FDA338CA2248AA8B1C4642F /* Pods-FranvaroAppen-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FranvaroAppen-acknowledgements.markdown"; sourceTree = "<group>"; };
 		403FA9477B8785976025D9EB0BAF73D9 /* Pods-FranvaroAppenTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FranvaroAppenTests-dummy.m"; sourceTree = "<group>"; };
+		409606098C76F895BF4F1F81E789F086 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D387D6A525FB0A318A18B0D2FD2CF3 /* Pods-FranvaroAppenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppenTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4ABF9D24853C9749A5C773FECF14803B /* StaticDataTableViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StaticDataTableViewController-dummy.m"; sourceTree = "<group>"; };
+		4B00941E2F397F1B0811B90B70F0AD79 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		4C8E7E8232814D1D0F7E838E1BBBC840 /* Pods-FranvaroAppenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppenTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F8C4DA19CF4C47237C9E79589C07090 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		52937F370B471B6ECC9D4540D63FB49A /* Pods_FranvaroAppen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58419C3223E3478B6BBB3568AE275AEE /* Pods-FranvaroAppen-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FranvaroAppen-acknowledgements.plist"; sourceTree = "<group>"; };
 		5F72EDE2004A7C506D0D5E8EB28AD2DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,39 +76,42 @@
 		617F9949189382A1FC29D60036524FB7 /* Pods-FranvaroAppenUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppenUITests-frameworks.sh"; sourceTree = "<group>"; };
 		6320028492C84C0DFE0C379ABCF1FF9D /* Pods-FranvaroAppenTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppenTests-resources.sh"; sourceTree = "<group>"; };
 		68C8E421605D3FC62B1746610A1E43EE /* Pods-FranvaroAppenTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FranvaroAppenTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		69A2A978DE6F02C72DD8A746C4C061DE /* DZNEmptyDataSet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DZNEmptyDataSet.modulemap; sourceTree = "<group>"; };
+		6A363D6A83502C0B815F64D59887EC6F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		6ABE20694F3A165B282CBDEE55D26670 /* Pods-FranvaroAppenTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FranvaroAppenTests-umbrella.h"; sourceTree = "<group>"; };
 		6B44CC5582EE5604D21DB639A070F86C /* Pods-FranvaroAppenTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FranvaroAppenTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		707EB80AB624A8B29AC1476B32FED0B5 /* Pods-FranvaroAppen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppen.release.xcconfig"; sourceTree = "<group>"; };
 		719A48E9EC71A120A1B4F92A28630BB9 /* Pods-FranvaroAppenUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FranvaroAppenUITests-dummy.m"; sourceTree = "<group>"; };
-		7C0414C105532243E3C7EB01CA0CD9AB /* StaticDataTableViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StaticDataTableViewController.modulemap; sourceTree = "<group>"; };
+		73E26E9B5114CFDBD24A0398930EF2F7 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		7B5EB0EB59EA55C1CAB70C566650D259 /* StaticDataTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = StaticDataTableViewController.m; sourceTree = "<group>"; };
+		7C9C8C0ED61115FCD8FCEE2A5555061F /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		81219DCEF9809629202D47D89FF96B54 /* Pods-FranvaroAppenTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FranvaroAppenTests.modulemap"; sourceTree = "<group>"; };
-		82E99DB40F1C9DC640B5ED24857B1339 /* StaticDataTableViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StaticDataTableViewController-umbrella.h"; sourceTree = "<group>"; };
 		882F32892BFC8BFC57DB8832BDF37BBD /* Pods-FranvaroAppenUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FranvaroAppenUITests.modulemap"; sourceTree = "<group>"; };
+		8848A9C72789133E570F951AF1D07325 /* StaticDataTableViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StaticDataTableViewController-dummy.m"; sourceTree = "<group>"; };
 		8AD882E54374B56364F490DCE8A92896 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91CBDF2CDA0D6522D7B9434BD1A5801F /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94139C0349FC2AFF64D20757CE0AD1CA /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Source/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		975E25E5F340D9FE0B0D0C8F35482699 /* Pods-FranvaroAppen-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppen-frameworks.sh"; sourceTree = "<group>"; };
-		98B7FA0F7D2F123994EC0B5077FA8305 /* StaticDataTableViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StaticDataTableViewController.xcconfig; sourceTree = "<group>"; };
+		99E32A567D0D7B45CDB31FC02F04B395 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
+		9D0BA7C4E62D49D2C11581F1C8B6925E /* StaticDataTableViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StaticDataTableViewController.xcconfig; sourceTree = "<group>"; };
 		9D9CDCBEC993FA615045F76CBFD409A2 /* Pods-FranvaroAppen-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppen-resources.sh"; sourceTree = "<group>"; };
 		A0D490DF10896795121212B9D9FFBF4E /* Pods-FranvaroAppen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FranvaroAppen-umbrella.h"; sourceTree = "<group>"; };
 		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		AF4D6991BD01F675571337344F8A1F9E /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		B5EEEFE1B3B7AE70FFE656A227B24262 /* DZNEmptyDataSet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DZNEmptyDataSet.modulemap; sourceTree = "<group>"; };
 		BB1487A207AF6BC7EC89C48E249CCF6C /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC17FAA7E2626649921BA3921581CCB9 /* Pods-FranvaroAppen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FranvaroAppen-dummy.m"; sourceTree = "<group>"; };
-		C29D1E895FEA144E18D1FAB0EB995A53 /* Localytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localytics.framework; path = "Localytics-iOS-4.1.0/Localytics.framework"; sourceTree = "<group>"; };
-		D4B2DE85C466DD4DE4B7139C0DB9C62C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDBA952359A73C8435B4F0263D3983B0 /* StaticDataTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = StaticDataTableViewController.h; sourceTree = "<group>"; };
+		BED7007D6DE652268FD71FAB8AE491BA /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		C08BE72931FAAEAAF8F3BF107298DDC7 /* Localytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localytics.framework; path = "Localytics-iOS-4.1.0/Localytics.framework"; sourceTree = "<group>"; };
+		DB196EC4DDF5E6BD7A370A1095779AE4 /* StaticDataTableViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StaticDataTableViewController.modulemap; sourceTree = "<group>"; };
 		DE3D348B786230F0F365C7AA23204D71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFAA33948C5FF9B666F9D8487C2FF1E5 /* DZNEmptyDataSet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DZNEmptyDataSet-dummy.m"; sourceTree = "<group>"; };
 		E4FE8F0A6A97D7FE17B3BF89946C3F2E /* Pods-FranvaroAppenUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FranvaroAppenUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		E8F222887631927273DAD5A014D0C90D /* StaticDataTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = StaticDataTableViewController.m; sourceTree = "<group>"; };
 		EA39FC7DE60FA4CC9495DF919142A396 /* Pods-FranvaroAppenUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FranvaroAppenUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		EB63B4202EB89D33B1393910317F102E /* Pods-FranvaroAppenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FranvaroAppenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EC880E63896599E1E2E027088CC09246 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		EE5D8A1D436403C472B5C17EB825CECC /* Pods_FranvaroAppenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F072D8008F7E05EC6F2C542AA3BA1450 /* DZNEmptyDataSet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DZNEmptyDataSet.xcconfig; sourceTree = "<group>"; };
-		F21E2AE568A59559811C2F8C841329FC /* StaticDataTableViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StaticDataTableViewController-prefix.pch"; sourceTree = "<group>"; };
-		F30B82A6D815B404E87F5256BB1296E0 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Source/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		F21515447F823B785983AA3C28A05C7F /* StaticDataTableViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StaticDataTableViewController-umbrella.h"; sourceTree = "<group>"; };
+		FCAB0B345A4F619745F9C93999E2CACB /* DZNEmptyDataSet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-umbrella.h"; sourceTree = "<group>"; };
 		FF96E3554B6B3DC09068AF8DF24140FE /* Pods-FranvaroAppenUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FranvaroAppenUITests-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,16 +160,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1220646C8C0FCB8BA790C964F69725C6 /* StaticDataTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				DDBA952359A73C8435B4F0263D3983B0 /* StaticDataTableViewController.h */,
-				E8F222887631927273DAD5A014D0C90D /* StaticDataTableViewController.m */,
-				FAA6EC9F87F29D7CA19BC51C4382BBD2 /* Support Files */,
-			);
-			path = StaticDataTableViewController;
-			sourceTree = "<group>";
-		};
 		15218AB2C48097C8C6CDA9BD4EDCC4F9 /* Pods-FranvaroAppenTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,22 +196,19 @@
 			path = "Target Support Files/Pods-FranvaroAppen";
 			sourceTree = "<group>";
 		};
-		1EBED6AB731F1F10B2F73DB4D32D8665 /* Localytics */ = {
+		199A308ECFEE7043CBEC03902366B110 /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				FFFFEF30AB9BC7EADA749462CDF4BA25 /* Frameworks */,
+				20E85FF5CEE62DAA78FE576CE49EDDED /* ANSCompatibility.h */,
+				99E32A567D0D7B45CDB31FC02F04B395 /* Answers.h */,
+				AF4D6991BD01F675571337344F8A1F9E /* CLSAttributes.h */,
+				EC880E63896599E1E2E027088CC09246 /* CLSLogging.h */,
+				34BA0190711684DDC395324E7070E2A4 /* CLSReport.h */,
+				73E26E9B5114CFDBD24A0398930EF2F7 /* CLSStackFrame.h */,
+				BED7007D6DE652268FD71FAB8AE491BA /* Crashlytics.h */,
+				6E9B368849DD6E0131576D429D95D9AB /* Frameworks */,
 			);
-			path = Localytics;
-			sourceTree = "<group>";
-		};
-		2A493000AC3946D2098408423FF36F94 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7F9D96D8F199C6B57C89DF5E778EBC83 /* DZNEmptyDataSet */,
-				1EBED6AB731F1F10B2F73DB4D32D8665 /* Localytics */,
-				1220646C8C0FCB8BA790C964F69725C6 /* StaticDataTableViewController */,
-			);
-			name = Pods;
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 		36B8D770D3FF5DFBF89C1ADFE3AD1BE0 /* Products */ = {
@@ -223,6 +221,28 @@
 				2F2046A536C44DF6B6A26F90D6881586 /* StaticDataTableViewController.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3ABE1AB4106C64CE1B28266C043E9213 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				199A308ECFEE7043CBEC03902366B110 /* Crashlytics */,
+				7211F88E3FB998625930403B72A591F6 /* DZNEmptyDataSet */,
+				3CCC4F516D083750B0473DF3BD638C87 /* Fabric */,
+				B71A30CE56707DA094CE2590D39E0955 /* Localytics */,
+				7B68C4DA5EF2226C97553A68A4237EF3 /* StaticDataTableViewController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3CCC4F516D083750B0473DF3BD638C87 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				7C9C8C0ED61115FCD8FCEE2A5555061F /* FABAttributes.h */,
+				25908E2AAB3F681BA1C2D94491D9CDB0 /* Fabric.h */,
+				E1163A96D85D5C0A8A980520E33824C6 /* Frameworks */,
+			);
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -243,39 +263,87 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		6E9B368849DD6E0131576D429D95D9AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A363D6A83502C0B815F64D59887EC6F /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7211F88E3FB998625930403B72A591F6 /* DZNEmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				4F8C4DA19CF4C47237C9E79589C07090 /* UIScrollView+EmptyDataSet.h */,
+				94139C0349FC2AFF64D20757CE0AD1CA /* UIScrollView+EmptyDataSet.m */,
+				871CD34E31BD6EFA5334881E2ECF671E /* Support Files */,
+			);
+			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
+		7B68C4DA5EF2226C97553A68A4237EF3 /* StaticDataTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				222CC038778E0BC4CCF378066177B8B8 /* StaticDataTableViewController.h */,
+				7B5EB0EB59EA55C1CAB70C566650D259 /* StaticDataTableViewController.m */,
+				90C46E5E5F3506E3083802483AC86DCD /* Support Files */,
+			);
+			path = StaticDataTableViewController;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				2A493000AC3946D2098408423FF36F94 /* Pods */,
+				3ABE1AB4106C64CE1B28266C043E9213 /* Pods */,
 				36B8D770D3FF5DFBF89C1ADFE3AD1BE0 /* Products */,
 				6C65CB44099D25DC8BB3D204E1C05A11 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7F9D96D8F199C6B57C89DF5E778EBC83 /* DZNEmptyDataSet */ = {
+		871CD34E31BD6EFA5334881E2ECF671E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				91CBDF2CDA0D6522D7B9434BD1A5801F /* UIScrollView+EmptyDataSet.h */,
-				F30B82A6D815B404E87F5256BB1296E0 /* UIScrollView+EmptyDataSet.m */,
-				8FF2B4200819BC81B7060F92B3C8FA58 /* Support Files */,
-			);
-			path = DZNEmptyDataSet;
-			sourceTree = "<group>";
-		};
-		8FF2B4200819BC81B7060F92B3C8FA58 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				69A2A978DE6F02C72DD8A746C4C061DE /* DZNEmptyDataSet.modulemap */,
-				F072D8008F7E05EC6F2C542AA3BA1450 /* DZNEmptyDataSet.xcconfig */,
-				DFAA33948C5FF9B666F9D8487C2FF1E5 /* DZNEmptyDataSet-dummy.m */,
-				35D50DDCEBAA6109A0517198DEA4D0F8 /* DZNEmptyDataSet-prefix.pch */,
-				13E62C78E36AD7503980CD2257A21367 /* DZNEmptyDataSet-umbrella.h */,
-				29E45A306417F4297ED9CB302364FBB5 /* Info.plist */,
+				B5EEEFE1B3B7AE70FFE656A227B24262 /* DZNEmptyDataSet.modulemap */,
+				3AB9F1A4DFDF3D35D65426EE85B6BD6D /* DZNEmptyDataSet.xcconfig */,
+				0EC280F67E700CA3EAD1D860AA2EDA27 /* DZNEmptyDataSet-dummy.m */,
+				2F7A905AE4DD4348C19BDA5A93DB2E18 /* DZNEmptyDataSet-prefix.pch */,
+				FCAB0B345A4F619745F9C93999E2CACB /* DZNEmptyDataSet-umbrella.h */,
+				409606098C76F895BF4F1F81E789F086 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DZNEmptyDataSet";
+			sourceTree = "<group>";
+		};
+		90C46E5E5F3506E3083802483AC86DCD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				17ECAF6FBAC71136993A53EFBDA7E0A2 /* Info.plist */,
+				DB196EC4DDF5E6BD7A370A1095779AE4 /* StaticDataTableViewController.modulemap */,
+				9D0BA7C4E62D49D2C11581F1C8B6925E /* StaticDataTableViewController.xcconfig */,
+				8848A9C72789133E570F951AF1D07325 /* StaticDataTableViewController-dummy.m */,
+				2AFFCAA5E864628895DDDF162D157356 /* StaticDataTableViewController-prefix.pch */,
+				F21515447F823B785983AA3C28A05C7F /* StaticDataTableViewController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/StaticDataTableViewController";
+			sourceTree = "<group>";
+		};
+		92D5B150BF90F90819CB025A12974951 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C08BE72931FAAEAAF8F3BF107298DDC7 /* Localytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B71A30CE56707DA094CE2590D39E0955 /* Localytics */ = {
+			isa = PBXGroup;
+			children = (
+				92D5B150BF90F90819CB025A12974951 /* Frameworks */,
+			);
+			path = Localytics;
 			sourceTree = "<group>";
 		};
 		DCE5F000FA48B30E757E17DF564B137B /* Pods-FranvaroAppenUITests */ = {
@@ -296,6 +364,14 @@
 			path = "Target Support Files/Pods-FranvaroAppenUITests";
 			sourceTree = "<group>";
 		};
+		E1163A96D85D5C0A8A980520E33824C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B00941E2F397F1B0811B90B70F0AD79 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,28 +379,6 @@
 				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		FAA6EC9F87F29D7CA19BC51C4382BBD2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D4B2DE85C466DD4DE4B7139C0DB9C62C /* Info.plist */,
-				7C0414C105532243E3C7EB01CA0CD9AB /* StaticDataTableViewController.modulemap */,
-				98B7FA0F7D2F123994EC0B5077FA8305 /* StaticDataTableViewController.xcconfig */,
-				4ABF9D24853C9749A5C773FECF14803B /* StaticDataTableViewController-dummy.m */,
-				F21E2AE568A59559811C2F8C841329FC /* StaticDataTableViewController-prefix.pch */,
-				82E99DB40F1C9DC640B5ED24857B1339 /* StaticDataTableViewController-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/StaticDataTableViewController";
-			sourceTree = "<group>";
-		};
-		FFFFEF30AB9BC7EADA749462CDF4BA25 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C29D1E895FEA144E18D1FAB0EB995A53 /* Localytics.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,7 +675,7 @@
 		};
 		2D70797F4D691FBA8793F14AF4CDCC15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F072D8008F7E05EC6F2C542AA3BA1450 /* DZNEmptyDataSet.xcconfig */;
+			baseConfigurationReference = 3AB9F1A4DFDF3D35D65426EE85B6BD6D /* DZNEmptyDataSet.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -650,7 +704,7 @@
 		};
 		401181344D9E4A1081ADD0D967E37A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F072D8008F7E05EC6F2C542AA3BA1450 /* DZNEmptyDataSet.xcconfig */;
+			baseConfigurationReference = 3AB9F1A4DFDF3D35D65426EE85B6BD6D /* DZNEmptyDataSet.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -679,7 +733,7 @@
 		};
 		A6A6D90A249FDE02B8F6D3898ABCC8B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98B7FA0F7D2F123994EC0B5077FA8305 /* StaticDataTableViewController.xcconfig */;
+			baseConfigurationReference = 9D0BA7C4E62D49D2C11581F1C8B6925E /* StaticDataTableViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -746,7 +800,7 @@
 		};
 		DBE9A830B0B1316603BEF5F9F7676D86 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98B7FA0F7D2F123994EC0B5077FA8305 /* StaticDataTableViewController.xcconfig */;
+			baseConfigurationReference = 9D0BA7C4E62D49D2C11581F1C8B6925E /* StaticDataTableViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

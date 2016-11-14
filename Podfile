@@ -9,6 +9,8 @@ target 'FranvaroAppen' do
   pod 'DZNEmptyDataSet'
   pod 'StaticDataTableViewController', '~> 2.0'
   pod 'Localytics', '~> 4.0'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'FranvaroAppenTests' do
     inherit! :search_paths

@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Theme.applyTheme()
         
         Analytics.autoIntegrate(launchOptions)
+        Fabric.with([Crashlytics.self])
         
         // Override point for customization after application launch.
         return true
