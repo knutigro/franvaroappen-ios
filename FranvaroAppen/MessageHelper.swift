@@ -11,7 +11,7 @@ import Foundation
 
 class MessageHelper {
     
-    static let PhoneNumber = "0736598694"
+    static let PhoneNumber = "0769446000"
     
     static func messageForInformation(personalNumber: String, message: String) -> String {
         assert(!personalNumber.isEmpty)

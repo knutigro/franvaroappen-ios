@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49080EB41DD9DFD800673D11 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49080EB31DD9DFD800673D11 /* SnapshotHelper.swift */; };
 		4925AC211DD7C47200BE8881 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4925AC201DD7C47200BE8881 /* Analytics.swift */; };
 		492B00001DD3667D00867896 /* MessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BFFFF1DD3667D00867896 /* MessageHelper.swift */; };
 		492B00031DD369BB00867896 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B00021DD369BB00867896 /* Child.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		0403B388726FCC299A793C78 /* Pods-FranvaroAppen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppen.release.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.release.xcconfig"; sourceTree = "<group>"; };
 		0BE0AFD309BBAFC2D3FDAA52 /* Pods-FranvaroAppenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		49080EB31DD9DFD800673D11 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../SnapshotHelper.swift; sourceTree = "<group>"; };
 		4925AC201DD7C47200BE8881 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		492B00021DD369BB00867896 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		492BFFC61DD34C7E00867896 /* Frånvaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Frånvaro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,7 @@
 		492BFFEB1DD34C7E00867896 /* FranvaroAppenUITests */ = {
 			isa = PBXGroup;
 			children = (
+				49080EB31DD9DFD800673D11 /* SnapshotHelper.swift */,
 				492BFFEC1DD34C7E00867896 /* FranvaroAppenUITests.swift */,
 				492BFFEE1DD34C7E00867896 /* Info.plist */,
 			);
@@ -559,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				492BFFED1DD34C7E00867896 /* FranvaroAppenUITests.swift in Sources */,
+				49080EB41DD9DFD800673D11 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

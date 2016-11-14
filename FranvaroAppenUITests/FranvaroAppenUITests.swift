@@ -9,7 +9,10 @@
 import XCTest
 
 class FranvaroAppenUITests: XCTestCase {
-        
+    
+    let app = XCUIApplication()
+
+    
     override func setUp() {
         super.setUp()
         
@@ -18,9 +21,14 @@ class FranvaroAppenUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        
+        setupSnapshot(app)
+        app.launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
+        XCUIDevice.shared().orientation = .portrait
+        
     }
     
     override func tearDown() {
@@ -28,9 +36,28 @@ class FranvaroAppenUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testScreenshots() {
+        
+        // Create child
+        let tablesQuery = app.tables
+        tablesQuery.textFields["Namn"].tap()
+        let textField = tablesQuery.cells.containing(.staticText, identifier:"Namn").children(matching: .textField).element
+        textField.typeText("Lind")
+        tablesQuery.textFields["ÅÅMMDD-NNNN"].tap()
+        let textField2 = tablesQuery.cells.containing(.staticText, identifier:"Person nummer").children(matching: .textField).element
+        textField2.typeText("131223-3432")
+        
+        // Add avatar
+//        tablesQuery.children(matching: .button).element.tap()
+//        app.alerts["”Frånvaro” begär åtkomst till dina bilder"].buttons["OK"].tap()
+//        tablesQuery.buttons["Ögonblick"].tap()
+//        app.collectionViews["PhotosGridView"].children(matching: .cell).matching(identifier: "Bild, Liggande, 13 november 17:12").element(boundBy: 2).tap()
+        
+        // Save child
+        app.navigationBars["Lind"].buttons["Save"].tap()
+        tablesQuery.staticTexts["Lind"].tap()
+
+        snapshot("MainMenu")
     }
     
 }
