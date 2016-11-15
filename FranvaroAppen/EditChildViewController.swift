@@ -132,8 +132,9 @@ extension EditChildViewController {
     
     func save(child: Child) {
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.persistentContainer.viewContext
+        guard let managedContext = AppDelegate.originalAppDelegate?.persistentContainer.viewContext else {
+            return
+        }
         
         if childEntity == nil {
             let entity = NSEntityDescription.entity(forEntityName: "ChildEntity", in: managedContext)!

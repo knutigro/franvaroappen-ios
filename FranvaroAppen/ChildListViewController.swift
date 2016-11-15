@@ -73,8 +73,10 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
     }
     
     func updateData() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.persistentContainer.viewContext
+        guard let managedContext = AppDelegate.originalAppDelegate?.persistentContainer.viewContext else {
+            return
+        }
+        
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ChildEntity")
         do {
             if let results = try managedContext.fetch(fetchRequest) as? [NSManagedObject] {
@@ -111,8 +113,9 @@ extension ChildListViewController {
 extension ChildListViewController {
     
     func delete(child: NSManagedObject) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.persistentContainer.viewContext
+        guard let managedContext = AppDelegate.originalAppDelegate?.persistentContainer.viewContext else {
+            return
+        }
         do {
             managedContext.delete(child)
             try managedContext.save()
