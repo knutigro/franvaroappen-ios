@@ -39,6 +39,10 @@ struct Analytics {
     static func track(event: String, attributes: [String: String]?) {
         Localytics.tagEvent(event, attributes: attributes)
     }
+
+    static func trackValue(value: NSObject, forProfileAttribute: String) {
+        Localytics.setValue(value, forProfileAttribute: forProfileAttribute)
+    }
     
     static func track(screen: String) {
         Localytics.tagScreen(screen)
