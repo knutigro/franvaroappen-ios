@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "${PODS_ROOT}/Localytics/Localytics-iOS-4.1.0/Localytics.framework"
   install_framework "$BUILT_PRODUCTS_DIR/StaticDataTableViewController/StaticDataTableViewController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/XLForm/XLForm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "${PODS_ROOT}/Localytics/Localytics-iOS-4.1.0/Localytics.framework"
   install_framework "$BUILT_PRODUCTS_DIR/StaticDataTableViewController/StaticDataTableViewController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/XLForm/XLForm.framework"
 fi
