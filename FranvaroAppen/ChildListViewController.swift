@@ -81,6 +81,10 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         do {
             if let results = try managedContext.fetch(fetchRequest) as? [NSManagedObject] {
                 children = results
+                
+                let childrenNames = children.map{Child.newWith(managedObject: $0).name} as NSArray
+                Analytics.trackValue(value: childrenNames, forProfileAttribute: "Children")
+                
                 tableView.reloadData()
             }
         } catch let error as NSError {
