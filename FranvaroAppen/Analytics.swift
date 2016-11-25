@@ -37,7 +37,7 @@ struct Analytics {
     }
     
     static func track(event: String, attributes: [String: String]?) {
-        Analytics.track(event: event, attributes: attributes)
+        Localytics.tagEvent(event, attributes: attributes)
     }
     
     static func track(screen: String) {
