@@ -11,7 +11,8 @@ target 'FranvaroAppen' do
   pod 'Localytics', '~> 4.0'
   pod 'Fabric'
   pod 'Crashlytics'
-
+  pod 'XLForm', '~> 3.3'
+  
   target 'FranvaroAppenTests' do
     inherit! :search_paths
     # Pods for testing

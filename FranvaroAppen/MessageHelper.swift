@@ -54,7 +54,7 @@ class MessageHelper {
     
     private static func formatted(time: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hhmm"
+        dateFormatter.dateFormat = "HHmm"
         
         return dateFormatter.string(from: time)
     }

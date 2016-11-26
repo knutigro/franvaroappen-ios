@@ -6,60 +6,38 @@
 //  Copyright © 2016 Knut Inge Grosland. All rights reserved.
 //
 
-import StaticDataTableViewController
+import XLForm
 import UIKit
 import MessageUI
 
-class ReportViewController: StaticDataTableViewController, SegueHandlerType {
+class ReportViewController: XLFormViewController {
+    
+    enum FormTag: String {
+        case allDay = "all-day"
+        case starts = "starts"
+        case ends = "ends"
+    }
     
     enum ReportType {
         case sickLeave
         case absence
     }
     
-    enum DateSelect {
-        case none
-        case from
-        case to
-    }
-    
-    @IBOutlet weak var daySwitch: UISwitch?
-    @IBOutlet weak var fromCell: UITableViewCell?
-    @IBOutlet weak var toCell: UITableViewCell?
-    @IBOutlet weak var fromLabel: UILabel?
-    @IBOutlet weak var toLabel: UILabel?
-    
     var child: Child?
     var reportType = ReportType.sickLeave
-    var dateSelect = DateSelect.none
     
-    var completeDay = true {
-        didSet {
-            updateUI()
-        }
-    }
+    var completeDay = true
     var fromDate = Date()
     var toDate = Date()
     
-    struct DateFormatter {
-        static let short: Foundation.DateFormatter = {
-            let dateFormatter = Foundation.DateFormatter()
-            dateFormatter.dateStyle = .short
-            
-            return dateFormatter
-        }()
-        static let withTime: Foundation.DateFormatter = {
-            let dateFormatter = Foundation.DateFormatter()
-            dateFormatter.dateStyle = .short
-            dateFormatter.timeStyle = .short
-            
-            return dateFormatter
-        }()
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initializeForm()
     }
     
-    enum SegueIdentifier: String {
-        case OpenFromDatePicker = "OpenFromDatePicker"
-        case OpenToDatePicker = "OpenToDatePicker"
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        initializeForm()
     }
     
     override func viewDidLoad() {
@@ -67,48 +45,7 @@ class ReportViewController: StaticDataTableViewController, SegueHandlerType {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        fromDate = Date()
-        toDate = Date()
-        
-        updateUI()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        Analytics.track(screen: "Report")
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueIdentifierForSegue(segue) {
-        case .OpenFromDatePicker:
-            if let controller = segue.destination as? DatePickerViewController {
-                dateSelect = .from
-                controller.delegate = self
-                controller.date = fromDate
-                controller.title = "Från"
-                controller.datePickerMode = completeDay ? .date : .dateAndTime
-            }
-        case .OpenToDatePicker:
-            if let controller = segue.destination as? DatePickerViewController {
-                dateSelect = .to
-                controller.delegate = self
-                controller.date = toDate
-                controller.title = "Till"
-                controller.datePickerMode = completeDay ? .date : .dateAndTime
-            }
-        }
-    }
-    
-    func updateUI() {
-        daySwitch?.isOn = completeDay
-
-        if completeDay {
-            fromLabel?.text = DateFormatter.short.string(from: fromDate)
-            toLabel?.text = DateFormatter.short.string(from: toDate)
-        } else {
-            fromLabel?.text = DateFormatter.withTime.string(from: fromDate)
-            toLabel?.text = DateFormatter.withTime.string(from: toDate)
-        }
+        tableView.backgroundColor = UIColor.clear
         
         switch reportType {
         case .absence:
@@ -118,6 +55,68 @@ class ReportViewController: StaticDataTableViewController, SegueHandlerType {
             title = "Sjukfrånvaro"
             break
         }
+        
+        let startDateDescriptor = form.formRow(withTag: FormTag.starts.rawValue)!
+        let endDateDescriptor = form.formRow(withTag: FormTag.ends.rawValue)!
+        startDateDescriptor.valueTransformer = DateValueTransformer.self
+        endDateDescriptor.valueTransformer = DateValueTransformer.self
+        updateFormRow(startDateDescriptor)
+        updateFormRow(endDateDescriptor)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.track(screen: "Report")
+    }
+
+    func initializeForm() {
+        
+        fromDate = Date()
+        toDate = Date(timeInterval: 0, since: fromDate)
+
+        let form : XLFormDescriptor
+        var section : XLFormSectionDescriptor
+        var row : XLFormRowDescriptor
+        
+        form = XLFormDescriptor()
+        
+        section = XLFormSectionDescriptor.formSection()
+        form.addFormSection(section)
+        
+        // All-day
+        row = XLFormRowDescriptor(tag: FormTag.allDay.rawValue, rowType: XLFormRowDescriptorTypeBooleanSwitch, title: "Heldag")
+        row.value = true;
+        row.height = 56.0
+        section.addFormRow(row)
+        
+        // Starts
+        row = XLFormRowDescriptor(tag: FormTag.starts.rawValue, rowType: XLFormRowDescriptorTypeDateInline, title: "Från")
+        row.height = 56.0
+        row.value = fromDate
+        section.addFormRow(row)
+        
+        // Ends
+        row = XLFormRowDescriptor(tag: FormTag.ends.rawValue, rowType: XLFormRowDescriptorTypeDateInline, title: "Till")
+        row.height = 56.0
+        row.value = toDate
+        section.addFormRow(row)
+        
+        section = XLFormSectionDescriptor.formSection()
+        form.addFormSection(section)
+        
+        self.form = form
+    }
+    
+    func updateValuesFromForm() {
+        if let completeDay = form.formRow(withTag: FormTag.allDay.rawValue)?.value as? Bool {
+            self.completeDay = completeDay
+        }
+        if let date = form.formRow(withTag: FormTag.starts.rawValue)?.value as? Date {
+            fromDate = date
+        }
+        if let date = form.formRow(withTag: FormTag.ends.rawValue)?.value as? Date {
+            toDate = date
+        }
     }
 }
 
@@ -125,38 +124,67 @@ class ReportViewController: StaticDataTableViewController, SegueHandlerType {
 
 extension ReportViewController {
     
-    @IBAction func switchDidChange(_ mySwitch: UISwitch) {
-        completeDay = mySwitch.isOn
-    }
-    
     @IBAction func didTapSendButton(_ objects: AnyObject?) {
         
-        guard let  personalNumber = child?.personalNumber else {
+        let validationErrors : Array<NSError> = formValidationErrors() as! Array<NSError>
+        if (validationErrors.count > 0){
+            showFormValidationError(validationErrors.first)
+            return
+        }
+        
+        guard let personalNumber = child?.personalNumber else {
             assertionFailure()
             return;
         }
         
-        var message: String
+        var message: String?
         
         switch reportType {
         case .absence:
-            message = MessageHelper.messageForAbsence(personalNumber: personalNumber, from: fromDate, to: toDate)
+            if (fromDate.compare(toDate) == .orderedDescending) {
+                showAlert(message: "Till måste vara efter från")
+            } else {
+                message = MessageHelper.messageForAbsence(personalNumber: personalNumber, from: fromDate, to: toDate)
+            }
+
             break
         case .sickLeave:
-            message = MessageHelper.messageForSickLeave(personalNumber: personalNumber, from: fromDate, to: toDate)
+            if (!NSCalendar.current.isDateInToday(fromDate)) {
+                showAlert(message: "Sjukfrånvaro måste anmälas samma dag")
+            } else if (fromDate.compare(toDate) == .orderedDescending) {
+                showAlert(message: "Till måste vara efter från")
+            } else if (fromDate.compare(toDate) == .orderedSame) {
+                message = MessageHelper.messageForSickLeave(personalNumber: personalNumber, from: fromDate, to: nil)
+            } else {
+                message = MessageHelper.messageForSickLeave(personalNumber: personalNumber, from: fromDate, to: toDate)
+            }
+            
             break
+        }
+        
+        guard let body = message else {
+            return
         }
         
         if (MFMessageComposeViewController.canSendText()) {
             Analytics.track(screen: "Sms")
 
             let controller = MFMessageComposeViewController()
-            controller.body = message
+            controller.body = body
             controller.recipients = [MessageHelper.PhoneNumber]
             controller.messageComposeDelegate = self
             present(controller, animated: true, completion: nil)
         }
     }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: nil,
+                                      message: message,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 }
 
 extension ReportViewController: MFMessageComposeViewControllerDelegate {
@@ -181,27 +209,59 @@ extension ReportViewController: MFMessageComposeViewControllerDelegate {
     }
 }
 
-// MARK: DatePickerDelegate
+// MARK: XLFormDescriptorDelegate
 
-extension ReportViewController: DatePickerDelegate {
+extension ReportViewController {
     
-    func datePicker(_ controller: DatePickerViewController, didFinishWithDate date: Date?) {
-        guard let date = date else {
-            return
+    override func formRowDescriptorValueHasChanged(_ formRow: XLFormRowDescriptor!, oldValue: Any!, newValue: Any!) {
+        super.formRowDescriptorValueHasChanged(formRow, oldValue: oldValue, newValue: newValue)
+        
+        if formRow.tag == FormTag.allDay.rawValue {
+            let startDateDescriptor = form.formRow(withTag: FormTag.starts.rawValue)!
+            let endDateDescriptor = form.formRow(withTag: FormTag.ends.rawValue)!
+            let dateStartCell: XLFormDateCell = startDateDescriptor.cell(forForm: self) as! XLFormDateCell
+            let dateEndCell: XLFormDateCell = endDateDescriptor.cell(forForm: self) as! XLFormDateCell
+            if (formRow.value! as AnyObject).valueData() as? Bool == true {
+                startDateDescriptor.valueTransformer = DateValueTransformer.self
+                endDateDescriptor.valueTransformer = DateValueTransformer.self
+                dateStartCell.formDatePickerMode = .date
+                dateEndCell.formDatePickerMode = .date
+            } else {
+                startDateDescriptor.valueTransformer = DateTimeValueTransformer.self
+                endDateDescriptor.valueTransformer = DateTimeValueTransformer.self
+                dateStartCell.formDatePickerMode = .dateTime
+                dateEndCell.formDatePickerMode = .dateTime
+            }
+            updateFormRow(startDateDescriptor)
+            updateFormRow(endDateDescriptor)
+        } else if formRow.tag == FormTag.starts.rawValue {
+            let startDateDescriptor = form.formRow(withTag: FormTag.starts.rawValue)!
+            let endDateDescriptor = form.formRow(withTag: FormTag.ends.rawValue)!
+            if (startDateDescriptor.value! as AnyObject).compare(endDateDescriptor.value as! Date) == .orderedDescending {
+                // startDateDescriptor is later than endDateDescriptor
+                endDateDescriptor.value = Date(timeInterval: 0, since: startDateDescriptor.value as! Date)
+                endDateDescriptor.cellConfig.removeObject(forKey: "detailTextLabel.attributedText")
+                updateFormRow(endDateDescriptor)
+            }
+        } else if formRow.tag == FormTag.ends.rawValue {
+            let startDateDescriptor = form.formRow(withTag: FormTag.starts.rawValue)!
+            let endDateDescriptor = form.formRow(withTag: FormTag.ends.rawValue)!
+            let dateEndCell = endDateDescriptor.cell(forForm: self) as! XLFormDateCell
+            if (startDateDescriptor.value! as AnyObject).compare(endDateDescriptor.value as! Date) == .orderedDescending {
+                // startDateDescriptor is later than endDateDescriptor
+                dateEndCell.update()
+                let newDetailText =  dateEndCell.detailTextLabel!.text!
+                let strikeThroughAttribute = [NSStrikethroughStyleAttributeName : NSUnderlineStyle.styleSingle.rawValue]
+                let strikeThroughText = NSAttributedString(string: newDetailText, attributes: strikeThroughAttribute)
+                endDateDescriptor.cellConfig["detailTextLabel.attributedText"] = strikeThroughText
+                updateFormRow(endDateDescriptor)
+            } else {
+                let endDateDescriptor = self.form.formRow(withTag: FormTag.ends.rawValue)!
+                endDateDescriptor.cellConfig.removeObject(forKey: "detailTextLabel.attributedText")
+                updateFormRow(endDateDescriptor)
+            }
         }
         
-        switch dateSelect {
-        case .to:
-            toDate = date
-            break
-        case .from:
-            fromDate = date
-            toDate = date
-            break
-        default:
-            break
-        }
-        updateUI()
+        updateValuesFromForm()
     }
 }
-
