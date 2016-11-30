@@ -40,7 +40,9 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name.NSManagedObjectContextObjectsDidChange, object: nil, queue: nil) { [weak self] note in
-            self?.updateData()
+            DispatchQueue.main.async(execute: { [weak self] () in
+                self?.updateData()
+            });
         }
     }
     
@@ -83,7 +85,10 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
                 children = results
                 
                 let childrenNames = children.map{Child.newWith(managedObject: $0).name} as NSArray
-                Analytics.trackValue(value: childrenNames, forProfileAttribute: "Children")
+                if (childrenNames.count > 0) {
+                    Analytics.trackValue(value: childrenNames, forProfileAttribute: "Children")
+                }
+                Analytics.trackValue(value: NSNumber(integerLiteral: childrenNames.count), forProfileAttribute: "Number of children")
                 
                 tableView.reloadData()
             }
@@ -126,7 +131,6 @@ extension ChildListViewController {
         } catch let error as NSError  {
             print("Kunde inte radera \(error), \(error.userInfo)")
         }
-        updateData()
     }
 }
 

@@ -89,7 +89,7 @@ extension SendInfoViewController: MFMessageComposeViewControllerDelegate {
             break
         }
         
-        Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res])
+        Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res, Analytics.kSMSCategoryKey: "Message"])
         
         self.dismiss(animated: true, completion:nil)
     }

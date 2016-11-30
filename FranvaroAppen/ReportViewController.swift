@@ -203,7 +203,9 @@ extension ReportViewController: MFMessageComposeViewControllerDelegate {
             break
         }
         
-        Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res])
+        let category = reportType == ReportType.sickLeave ? "Sick Leave" : "Absence"
+        
+        Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res, Analytics.kSMSCategoryKey: category])
 
         self.dismiss(animated: true, completion:nil)
     }

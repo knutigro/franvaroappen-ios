@@ -11,6 +11,7 @@ import Localytics
 
 struct Analytics {
     
+    static let kSMSCategoryKey = "Category"
     static let kResultKey = "Result"
     static let kErrorKey = "Error"
     
