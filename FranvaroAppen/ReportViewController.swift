@@ -60,8 +60,12 @@ class ReportViewController: XLFormViewController {
         let endDateDescriptor = form.formRow(withTag: FormTag.ends.rawValue)!
         startDateDescriptor.valueTransformer = DateValueTransformer.self
         endDateDescriptor.valueTransformer = DateValueTransformer.self
+        startDateDescriptor.hidden = reportType == .sickLeave
+        endDateDescriptor.hidden = reportType == .sickLeave
         updateFormRow(startDateDescriptor)
         updateFormRow(endDateDescriptor)
+        
+        tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -143,8 +147,10 @@ extension ReportViewController {
         case .absence:
             if (fromDate.compare(toDate) == .orderedDescending) {
                 showAlert(message: "Till måste vara efter från")
+            } else if (!completeDay && !NSCalendar.current.isDate(fromDate, inSameDayAs: toDate)) {
+                showAlert(message: "Till och från måste vara samma dag om du inte anmäler heldagar")
             } else {
-                message = MessageHelper.messageForAbsence(personalNumber: personalNumber, from: fromDate, to: toDate)
+                message = MessageHelper.messageForAbsence(personalNumber: personalNumber, from: fromDate, to: toDate, completeDay: completeDay)
             }
 
             break
@@ -228,11 +234,15 @@ extension ReportViewController {
                 endDateDescriptor.valueTransformer = DateValueTransformer.self
                 dateStartCell.formDatePickerMode = .date
                 dateEndCell.formDatePickerMode = .date
+                endDateDescriptor.hidden = reportType == .sickLeave
+                startDateDescriptor.hidden = reportType == .sickLeave
             } else {
                 startDateDescriptor.valueTransformer = DateTimeValueTransformer.self
                 endDateDescriptor.valueTransformer = DateTimeValueTransformer.self
-                dateStartCell.formDatePickerMode = .dateTime
-                dateEndCell.formDatePickerMode = .dateTime
+                dateStartCell.formDatePickerMode = reportType == .sickLeave ? .time : .dateTime
+                dateEndCell.formDatePickerMode = reportType == .sickLeave ? .time : .dateTime
+                endDateDescriptor.hidden = false
+                startDateDescriptor.hidden = false
             }
             updateFormRow(startDateDescriptor)
             updateFormRow(endDateDescriptor)

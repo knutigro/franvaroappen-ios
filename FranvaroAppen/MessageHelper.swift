@@ -30,7 +30,7 @@ class MessageHelper {
         }
     }
     
-    static func messageForAbsence(personalNumber: String, from: Date, to: Date?) -> String {
+    static func messageForAbsence(personalNumber: String, from: Date, to: Date?, completeDay: Bool) -> String {
         assert(!personalNumber.isEmpty)
         
         guard let to = to else {
@@ -45,7 +45,7 @@ class MessageHelper {
             assertionFailure()
         }
         
-        if (days(from: from, to: to) > 0) {
+        if (completeDay) {
             return "Ledig " + personalNumber + " " + formatted(date: from) + "-" + formatted(date: to)
         } else {
             return "Ledig " + personalNumber + " " + formatted(date: from) + " " + formatted(time: from) + "-" + formatted(time: to)
