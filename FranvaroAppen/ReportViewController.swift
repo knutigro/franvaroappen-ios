@@ -49,10 +49,10 @@ class ReportViewController: XLFormViewController {
         
         switch reportType {
         case .absence:
-            title = "Ledighet"
+            title = NSLocalizedString("Ledighet", comment: "")
             break
         case .sickLeave:
-            title = "Sjukfrånvaro"
+            title = NSLocalizedString("Sjukfrånvaro", comment: "")
             break
         }
         
@@ -88,19 +88,19 @@ class ReportViewController: XLFormViewController {
         form.addFormSection(section)
         
         // All-day
-        row = XLFormRowDescriptor(tag: FormTag.allDay.rawValue, rowType: XLFormRowDescriptorTypeBooleanSwitch, title: "Heldag")
+        row = XLFormRowDescriptor(tag: FormTag.allDay.rawValue, rowType: XLFormRowDescriptorTypeBooleanSwitch, title: NSLocalizedString("Heldag", comment: ""))
         row.value = true;
         row.height = 56.0
         section.addFormRow(row)
         
         // Starts
-        row = XLFormRowDescriptor(tag: FormTag.starts.rawValue, rowType: XLFormRowDescriptorTypeDateInline, title: "Från")
+        row = XLFormRowDescriptor(tag: FormTag.starts.rawValue, rowType: XLFormRowDescriptorTypeDateInline, title: NSLocalizedString("Från", comment: ""))
         row.height = 56.0
         row.value = fromDate
         section.addFormRow(row)
         
         // Ends
-        row = XLFormRowDescriptor(tag: FormTag.ends.rawValue, rowType: XLFormRowDescriptorTypeDateInline, title: "Till")
+        row = XLFormRowDescriptor(tag: FormTag.ends.rawValue, rowType: XLFormRowDescriptorTypeDateInline, title: NSLocalizedString("Till", comment: ""))
         row.height = 56.0
         row.value = toDate
         section.addFormRow(row)
@@ -146,9 +146,9 @@ extension ReportViewController {
         switch reportType {
         case .absence:
             if (fromDate.compare(toDate) == .orderedDescending) {
-                showAlert(message: "Till måste vara efter från")
+                showAlert(message: NSLocalizedString("Till måste vara efter från", comment: ""))
             } else if (!completeDay && !NSCalendar.current.isDate(fromDate, inSameDayAs: toDate)) {
-                showAlert(message: "Till och från måste vara samma dag om du inte anmäler heldagar")
+                showAlert(message: NSLocalizedString("Till och från måste vara samma dag om du inte anmäler heldagar", comment: ""))
             } else {
                 message = MessageHelper.messageForAbsence(personalNumber: personalNumber, from: fromDate, to: toDate, completeDay: completeDay)
             }
@@ -156,9 +156,9 @@ extension ReportViewController {
             break
         case .sickLeave:
             if (!NSCalendar.current.isDateInToday(fromDate)) {
-                showAlert(message: "Sjukfrånvaro måste anmälas samma dag")
+                showAlert(message: NSLocalizedString("Sjukfrånvaro måste anmälas samma dag", comment: ""))
             } else if (fromDate.compare(toDate) == .orderedDescending) {
-                showAlert(message: "Till måste vara efter från")
+                showAlert(message: NSLocalizedString("Till måste vara efter från", comment: ""))
             } else if (fromDate.compare(toDate) == .orderedSame) {
                 message = MessageHelper.messageForSickLeave(personalNumber: personalNumber, from: fromDate, to: nil)
             } else {
@@ -187,7 +187,7 @@ extension ReportViewController {
         let alert = UIAlertController(title: nil,
                                       message: message,
                                       preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 

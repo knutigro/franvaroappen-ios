@@ -20,6 +20,8 @@ class SendInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = NSLocalizedString("Skicka information", comment: "")
+        
         textView?.becomeFirstResponder()
         textView?.text = ""
         
@@ -52,10 +54,10 @@ class SendInfoViewController: UIViewController {
         }
         
         guard !message.isEmpty else {
-            let alert = UIAlertController(title: "Fel",
-                                          message: "Medelandet kan inte vara tomt",
+            let alert = UIAlertController(title: NSLocalizedString("Fel", comment: ""),
+                                          message: NSLocalizedString("Medelandet kan inte vara tomt", comment: ""),
                                           preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
 
             return

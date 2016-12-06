@@ -72,7 +72,7 @@
         <!--Om appen-->
         <scene sceneID="IKO-gb-cMy">
             <objects>
-                <viewController id="jJD-n5-Pdv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutAppViewController" id="jJD-n5-Pdv" customClass="AboutAppViewController" customModule="Frånvaro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="C4n-5M-kbg"/>
                         <viewControllerLayoutGuide type="bottom" id="ieR-hy-cmn"/>
@@ -125,6 +125,9 @@ knutigro.github.io</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Om appen" id="tOX-wt-5jz"/>
+                    <connections>
+                        <outlet property="infoTextView" destination="JkO-Zj-V5a" id="LUk-tM-VDx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRI-ZF-1vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +167,7 @@ knutigro.github.io</string>
                                         <rect key="frame" x="0.0" y="140" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YS0-G0-R4g" id="NEY-ag-Ydw">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anmäl sjukfrånvaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t5-Nm-fa8">
@@ -188,7 +191,7 @@ knutigro.github.io</string>
                                         <rect key="frame" x="0.0" y="196" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ymo-5q-qZ4" id="ddM-zC-wqY">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anmäl ledighet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79T-ot-vZO">
@@ -211,7 +214,7 @@ knutigro.github.io</string>
                                         <rect key="frame" x="0.0" y="252" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0T-fx-pMv" id="Vnn-q4-T9C">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skicka information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpe-uM-fwg">
@@ -238,7 +241,7 @@ knutigro.github.io</string>
                                         <rect key="frame" x="0.0" y="329" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eaR-Ao-Wi8" id="eWL-RI-sXC">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Om sms tjänsten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mki-Dd-KGJ">
@@ -264,7 +267,7 @@ knutigro.github.io</string>
                                         <rect key="frame" x="0.0" y="385" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IYC-tk-frV" id="sFV-Hr-uSh">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Om appen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVE-Z4-Xf7">
@@ -303,10 +306,15 @@ knutigro.github.io</string>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="aboutAppLabel" destination="yVE-Z4-Xf7" id="Sju-XM-zhC"/>
+                        <outlet property="aboutSMSLabel" destination="Mki-Dd-KGJ" id="9Hg-b2-qll"/>
+                        <outlet property="absenceLabel" destination="79T-ot-vZO" id="0s8-5j-dSh"/>
                         <outlet property="childImageView" destination="JOp-b8-9MM" id="sq1-V0-PSq"/>
+                        <outlet property="infoLabel" destination="jpe-uM-fwg" id="58H-kN-JDQ"/>
                         <outlet property="reportOtherAbsenceCell" destination="ymo-5q-qZ4" id="Ka3-R0-qfW"/>
                         <outlet property="reportSickLeaveCell" destination="YS0-G0-R4g" id="8xa-Pp-8tb"/>
                         <outlet property="sendInfoCell" destination="O0T-fx-pMv" id="2hD-3j-LQQ"/>
+                        <outlet property="sickLeaveLabel" destination="2t5-Nm-fa8" id="cFo-BX-D68"/>
                         <segue destination="yr6-qT-Bxc" kind="show" identifier="OpenSendInfo" id="uGc-iN-wSR"/>
                         <segue destination="BZz-hF-N3D" kind="show" identifier="OpenReportSickLeave" id="2Qw-cb-1qL"/>
                         <segue destination="BZz-hF-N3D" kind="show" identifier="OpenReportOtherAbsence" id="NrA-dr-WpR"/>
@@ -327,10 +335,10 @@ knutigro.github.io</string>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChildCell" id="ash-vD-nhs" customClass="ChildCell" customModule="Frånvaro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="56" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ash-vD-nhs" id="39m-ct-hKy">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-76" translatesAutoresizingMaskIntoConstraints="NO" id="f3S-v2-16Q">
@@ -542,7 +550,7 @@ knutigro.github.io</string>
                                         <rect key="frame" x="0.0" y="150" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gCN-XD-y4a" id="Edt-6V-SIN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Namn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKH-E9-p1Y">
@@ -579,7 +587,7 @@ knutigro.github.io</string>
                                         <rect key="frame" x="0.0" y="206" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AzP-Il-GzB" id="I8z-TQ-XpM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ÅÅMMDD-NNNN" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L68-Zy-N5V">
@@ -637,7 +645,9 @@ knutigro.github.io</string>
                     <connections>
                         <outlet property="cancelButton" destination="uxx-n6-0by" id="bm7-PK-jlV"/>
                         <outlet property="imageView" destination="ODN-dr-VmD" id="hkw-kD-KD6"/>
+                        <outlet property="nameLabel" destination="tKH-E9-p1Y" id="HOG-bZ-EjV"/>
                         <outlet property="nameTextField" destination="JfD-ua-mRU" id="FDP-DF-zYB"/>
+                        <outlet property="personNumberLabel" destination="cPa-a0-zcj" id="ru6-IX-FMz"/>
                         <outlet property="personalNumberTextField" destination="L68-Zy-N5V" id="lzF-Hi-AQH"/>
                     </connections>
                 </tableViewController>
@@ -651,7 +661,7 @@ knutigro.github.io</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PZO-46-r9v"/>
-        <segue reference="NPi-qq-HdX"/>
+        <segue reference="dec-iw-trP"/>
         <segue reference="2Qw-cb-1qL"/>
     </inferredMetricsTieBreakers>
 </document>
