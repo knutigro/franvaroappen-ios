@@ -119,12 +119,18 @@ knutigro.github.io</string>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="leading" secondItem="WAq-hd-axT" secondAttribute="leading" constant="8" id="1Gb-FF-lk9"/>
                             <constraint firstItem="xtk-Mt-egy" firstAttribute="top" secondItem="C4n-5M-kbg" secondAttribute="bottom" constant="30" id="3Vn-JK-n7l"/>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="top" secondItem="xtk-Mt-egy" secondAttribute="bottom" constant="20" id="HS0-T9-0Gr"/>
+                            <constraint firstItem="xtk-Mt-egy" firstAttribute="centerX" secondItem="WAq-hd-axT" secondAttribute="centerX" id="OSd-jL-fmo"/>
                             <constraint firstItem="ieR-hy-cmn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JkO-Zj-V5a" secondAttribute="bottom" constant="10" id="TSF-FH-TVy"/>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="centerY" secondItem="WAq-hd-axT" secondAttribute="centerY" priority="750" id="fUX-Oc-cvq"/>
-                            <constraint firstItem="xtk-Mt-egy" firstAttribute="centerX" secondItem="WAq-hd-axT" secondAttribute="centerX" id="ruF-Z0-ScC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Om appen" id="tOX-wt-5jz"/>
+                    <navigationItem key="navigationItem" title="Om appen" id="tOX-wt-5jz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Vjy-IH-wch">
+                            <connections>
+                                <action selector="didTapShareButton:" destination="jJD-n5-Pdv" id="PUf-a0-SLW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="infoTextView" destination="JkO-Zj-V5a" id="LUk-tM-VDx"/>
                     </connections>
