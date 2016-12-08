@@ -29,10 +29,10 @@ class AboutAppViewController: UIViewController {
     
     @IBAction func didTapShareButton(_ objects: AnyObject?) {
         let alert = UIAlertController(title: NSLocalizedString("Facebook", comment: ""), message:nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Skicka medelande", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Skicka till vänner", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
             self?.sendMessageOnFacebook()
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Dela", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Dela på Facebook", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
             self?.shareOnFacebook()
         }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.default, handler: nil))
