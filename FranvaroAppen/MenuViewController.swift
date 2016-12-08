@@ -21,6 +21,8 @@ class MenuViewController: UITableViewController, SegueHandlerType {
     @IBOutlet weak var aboutSMSLabel: UILabel?
     @IBOutlet weak var aboutAppLabel: UILabel?
 
+    let shareManager = ShareManager()
+
     var child: Child?
     
     var childEntity: NSManagedObject? {
@@ -128,6 +130,9 @@ extension MenuViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
+    @IBAction func didTapShareButton(_ objects: AnyObject?) {
+        shareManager.openShareSelector(style: .actionSheet, viewController: self)
+    }
 }
 
 // MARK: TableViewDelegate
