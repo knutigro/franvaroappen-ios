@@ -15,6 +15,13 @@ class MenuViewController: UITableViewController, SegueHandlerType {
     @IBOutlet weak var reportOtherAbsenceCell: UITableViewCell?
     @IBOutlet weak var sendInfoCell: UITableViewCell?
     @IBOutlet weak var childImageView: UIImageView?
+    @IBOutlet weak var sickLeaveLabel: UILabel?
+    @IBOutlet weak var absenceLabel: UILabel?
+    @IBOutlet weak var infoLabel: UILabel?
+    @IBOutlet weak var aboutSMSLabel: UILabel?
+    @IBOutlet weak var aboutAppLabel: UILabel?
+
+    let shareManager = ShareManager()
 
     var child: Child?
     
@@ -42,6 +49,12 @@ class MenuViewController: UITableViewController, SegueHandlerType {
         self.navigationItem.hidesBackButton = true
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        sickLeaveLabel?.text = NSLocalizedString("Anmäl sjukfrånvaro", comment: "")
+        absenceLabel?.text = NSLocalizedString("Anmäl ledighet", comment: "")
+        infoLabel?.text = NSLocalizedString("Skicka information", comment: "")
+        aboutSMSLabel?.text = NSLocalizedString("Om sms tjänsten", comment: "")
+        aboutAppLabel?.text = NSLocalizedString("Om appen", comment: "")
 
         if let imageView = childImageView {
             imageView.layer.cornerRadius = imageView.bounds.size.width / 2
@@ -88,8 +101,6 @@ class MenuViewController: UITableViewController, SegueHandlerType {
             if let controller = segue.destination as? SendInfoViewController {
                 controller.child = child
             }
-        case .OpenAbout:
-            Analytics.track(screen: "About app")
         default:
             break;
         }
@@ -103,13 +114,13 @@ extension MenuViewController {
     @IBAction func didTapEditButton(_ button: UIButton) {
         
         let alert = UIAlertController(title: child?.name, message:nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        alert.addAction(UIAlertAction(title: "Ändra info", style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ändra info", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
             self?.performSegueWithIdentifier(.OpenEditChild, sender: self)
         }))
-        alert.addAction(UIAlertAction(title: "Byt barn", style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Byt barn", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
             let _ = self?.navigationController?.popViewController(animated: true)
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.default, handler: nil))
         
         if let popoverPresentationController = alert.popoverPresentationController {
             popoverPresentationController.sourceView = self.view
@@ -119,6 +130,9 @@ extension MenuViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
+    @IBAction func didTapShareButton(_ objects: AnyObject?) {
+        shareManager.openShareSelector(style: .actionSheet, viewController: self)
+    }
 }
 
 // MARK: TableViewDelegate
@@ -139,9 +153,9 @@ extension MenuViewController {
             let cell = tableView.cellForRow(at: indexPath)
             if (child == nil) {
                 let alert = UIAlertController(title: nil,
-                                              message: "Inget barn vald.",
+                                              message: NSLocalizedString("Inget barn vald.", comment: ""),
                                               preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 
                 return

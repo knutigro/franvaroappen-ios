@@ -1,6 +1,0 @@
-framework module Pods_FranvaroAppen {
-  umbrella header "Pods-FranvaroAppen-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -14,6 +14,8 @@ class InfoViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = NSLocalizedString("Om sms tjänsten", comment: "")
         
         if let pdf = Bundle.main.url(forResource: "info", withExtension: "pdf", subdirectory: nil, localization: nil)  {
             let req = NSURLRequest(url: pdf)

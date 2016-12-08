@@ -22,7 +22,10 @@ protocol EditChildViewControllerDelegate {
 }
 
 class EditChildViewController: UITableViewController {
-    
+
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var personNumberLabel: UILabel!
+
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var personalNumberTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView?
@@ -37,6 +40,9 @@ class EditChildViewController: UITableViewController {
         super.viewDidLoad()
         
         self.navigationItem.backBarButtonItem = self.cancelButton
+        
+        nameLabel.text = NSLocalizedString("Namn", comment: "")
+        personNumberLabel.text = NSLocalizedString("Person nummer", comment: "")
 
         view.layoutIfNeeded()
         
@@ -58,7 +64,7 @@ class EditChildViewController: UITableViewController {
             personalNumberTextField.text = child.personalNumber
             imageView?.image = child.image
         } else {
-            self.title = "Lägg till barn"
+            self.title = NSLocalizedString("Lägg till barn", comment: "")
             nameTextField.text = ""
             personalNumberTextField.text = ""
         }
@@ -71,10 +77,10 @@ class EditChildViewController: UITableViewController {
     }
 
     func showAlert(message: String) {
-        let alert = UIAlertController(title: "Fel",
+        let alert = UIAlertController(title: NSLocalizedString("Fel", comment: ""),
                                       message: message,
                                       preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
@@ -93,17 +99,17 @@ extension EditChildViewController {
         let personalNumber = personalNumberTextField?.text ?? ""
         
         guard !name.isEmpty else {
-            showAlert(message: "Namn kan inte vara tomt")
+            showAlert(message: NSLocalizedString("Namn kan inte vara tomt", comment: ""))
             return
         }
         
         guard !personalNumber.isEmpty else {
-            showAlert(message: "Person nummer kan inte vara tomt")
+            showAlert(message: NSLocalizedString("Person nummer kan inte vara tomt", comment: ""))
             return
         }
         
         guard personalNumber.isPersonalNumber() else {
-            showAlert(message: "Person nummer måste ha formen ÅÅMMDD-NNNN.")
+            showAlert(message: NSLocalizedString("Person nummer måste ha formen ÅÅMMDD-NNNN.", comment: ""))
             return
         }
 

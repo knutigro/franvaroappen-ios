@@ -72,7 +72,7 @@
         <!--Om appen-->
         <scene sceneID="IKO-gb-cMy">
             <objects>
-                <viewController id="jJD-n5-Pdv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutAppViewController" id="jJD-n5-Pdv" customClass="AboutAppViewController" customModule="Frånvaro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="C4n-5M-kbg"/>
                         <viewControllerLayoutGuide type="bottom" id="ieR-hy-cmn"/>
@@ -119,12 +119,21 @@ knutigro.github.io</string>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="leading" secondItem="WAq-hd-axT" secondAttribute="leading" constant="8" id="1Gb-FF-lk9"/>
                             <constraint firstItem="xtk-Mt-egy" firstAttribute="top" secondItem="C4n-5M-kbg" secondAttribute="bottom" constant="30" id="3Vn-JK-n7l"/>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="top" secondItem="xtk-Mt-egy" secondAttribute="bottom" constant="20" id="HS0-T9-0Gr"/>
+                            <constraint firstItem="xtk-Mt-egy" firstAttribute="centerX" secondItem="WAq-hd-axT" secondAttribute="centerX" id="OSd-jL-fmo"/>
                             <constraint firstItem="ieR-hy-cmn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JkO-Zj-V5a" secondAttribute="bottom" constant="10" id="TSF-FH-TVy"/>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="centerY" secondItem="WAq-hd-axT" secondAttribute="centerY" priority="750" id="fUX-Oc-cvq"/>
-                            <constraint firstItem="xtk-Mt-egy" firstAttribute="centerX" secondItem="WAq-hd-axT" secondAttribute="centerX" id="ruF-Z0-ScC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Om appen" id="tOX-wt-5jz"/>
+                    <navigationItem key="navigationItem" title="Om appen" id="tOX-wt-5jz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Vjy-IH-wch">
+                            <connections>
+                                <action selector="didTapShareButton:" destination="jJD-n5-Pdv" id="PUf-a0-SLW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infoTextView" destination="JkO-Zj-V5a" id="LUk-tM-VDx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRI-ZF-1vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,6 +304,11 @@ knutigro.github.io</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lind Grösland" id="lPC-5w-8sr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="1dF-Qc-tgd">
+                            <connections>
+                                <action selector="didTapShareButton:" destination="CFE-nm-E4L" id="iVM-wG-VMq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="9VR-K4-G1Y">
                             <connections>
                                 <action selector="didTapEditButton:" destination="CFE-nm-E4L" id="dn5-FB-jLq"/>
@@ -303,10 +317,15 @@ knutigro.github.io</string>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="aboutAppLabel" destination="yVE-Z4-Xf7" id="Sju-XM-zhC"/>
+                        <outlet property="aboutSMSLabel" destination="Mki-Dd-KGJ" id="9Hg-b2-qll"/>
+                        <outlet property="absenceLabel" destination="79T-ot-vZO" id="0s8-5j-dSh"/>
                         <outlet property="childImageView" destination="JOp-b8-9MM" id="sq1-V0-PSq"/>
+                        <outlet property="infoLabel" destination="jpe-uM-fwg" id="58H-kN-JDQ"/>
                         <outlet property="reportOtherAbsenceCell" destination="ymo-5q-qZ4" id="Ka3-R0-qfW"/>
                         <outlet property="reportSickLeaveCell" destination="YS0-G0-R4g" id="8xa-Pp-8tb"/>
                         <outlet property="sendInfoCell" destination="O0T-fx-pMv" id="2hD-3j-LQQ"/>
+                        <outlet property="sickLeaveLabel" destination="2t5-Nm-fa8" id="cFo-BX-D68"/>
                         <segue destination="yr6-qT-Bxc" kind="show" identifier="OpenSendInfo" id="uGc-iN-wSR"/>
                         <segue destination="BZz-hF-N3D" kind="show" identifier="OpenReportSickLeave" id="2Qw-cb-1qL"/>
                         <segue destination="BZz-hF-N3D" kind="show" identifier="OpenReportOtherAbsence" id="NrA-dr-WpR"/>
@@ -637,7 +656,9 @@ knutigro.github.io</string>
                     <connections>
                         <outlet property="cancelButton" destination="uxx-n6-0by" id="bm7-PK-jlV"/>
                         <outlet property="imageView" destination="ODN-dr-VmD" id="hkw-kD-KD6"/>
+                        <outlet property="nameLabel" destination="tKH-E9-p1Y" id="HOG-bZ-EjV"/>
                         <outlet property="nameTextField" destination="JfD-ua-mRU" id="FDP-DF-zYB"/>
+                        <outlet property="personNumberLabel" destination="cPa-a0-zcj" id="ru6-IX-FMz"/>
                         <outlet property="personalNumberTextField" destination="L68-Zy-N5V" id="lzF-Hi-AQH"/>
                     </connections>
                 </tableViewController>
@@ -651,7 +672,7 @@ knutigro.github.io</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PZO-46-r9v"/>
-        <segue reference="NPi-qq-HdX"/>
+        <segue reference="dec-iw-trP"/>
         <segue reference="2Qw-cb-1qL"/>
     </inferredMetricsTieBreakers>
 </document>

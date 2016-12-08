@@ -28,6 +28,8 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
+        self.title = NSLocalizedString("Barn", comment: "")
+        
         self.tableView.emptyDataSetSource = self
         self.tableView.emptyDataSetDelegate = self
         
@@ -65,7 +67,7 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         switch segueIdentifierForSegue(segue) {
         case .OpenAddChild, .OpenAddChildNoAnimation:
             if let controller = segue.destination as? EditChildViewController {
-                controller.title = "Lägg till barn"
+                controller.title = NSLocalizedString("Lägg till barn", comment: "")
             }
         case .OpenChildMenu, .OpenChildMenuNoAnimation:
             if let controller = segue.destination as? MenuViewController {
@@ -160,7 +162,7 @@ extension ChildListViewController {
 extension ChildListViewController: DZNEmptyDataSetSource {
     
     func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControlState) -> NSAttributedString {
-        return NSAttributedString(string: "Lägg till barn", attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 24)])
+        return NSAttributedString(string: NSLocalizedString("Lägg till barn", comment: ""), attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 24)])
     }
 }
 
