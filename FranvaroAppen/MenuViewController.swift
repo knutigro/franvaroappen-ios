@@ -111,7 +111,7 @@ class MenuViewController: UITableViewController, SegueHandlerType {
 
 extension MenuViewController {
     
-    @IBAction func didTapEditButton(_ button: UIButton) {
+    @IBAction func didTapEditButton(_ button: UIBarButtonItem) {
         
         let alert = UIAlertController(title: child?.name, message:nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("Ändra info", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
@@ -123,15 +123,14 @@ extension MenuViewController {
         alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.default, handler: nil))
         
         if let popoverPresentationController = alert.popoverPresentationController {
-            popoverPresentationController.sourceView = self.view
-            popoverPresentationController.sourceRect = CGRect(x: button.frame.midX, y: self.view.frame.height, width: 1.0, height: 1.0)
+            popoverPresentationController.barButtonItem = button
         }
         
         self.present(alert, animated: true, completion: nil)
     }
 
-    @IBAction func didTapShareButton(_ objects: AnyObject?) {
-        shareManager.openShareSelector(style: .actionSheet, viewController: self)
+    @IBAction func didTapShareButton(_ barButton: UIBarButtonItem) {
+        shareManager.openShareSelector(style: .actionSheet, viewController: self, barButton: barButton)
     }
 }
 

@@ -12,7 +12,7 @@ import FBSDKShareKit
 
 class ShareManager: NSObject {
     
-    func openShareSelector(style: UIAlertControllerStyle, viewController: UIViewController) {
+    func openShareSelector(style: UIAlertControllerStyle, viewController: UIViewController, barButton: UIBarButtonItem) {
         
         let alert = UIAlertController(title: NSLocalizedString("Facebook", comment: ""), message:nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("Skicka till vänner", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
@@ -24,8 +24,7 @@ class ShareManager: NSObject {
         alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.default, handler: nil))
         
         if let popoverPresentationController = alert.popoverPresentationController {
-            popoverPresentationController.sourceView = viewController.view
-            popoverPresentationController.sourceRect = CGRect(x: viewController.view.frame.width, y: 0, width: 1.0, height: 1.0)
+            popoverPresentationController.barButtonItem = barButton
         }
         
         viewController.present(alert, animated: true, completion: nil)

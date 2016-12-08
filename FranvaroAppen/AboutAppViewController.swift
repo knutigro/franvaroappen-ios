@@ -27,7 +27,7 @@ class AboutAppViewController: UIViewController {
         Analytics.track(screen: "About app")
     }
     
-    @IBAction func didTapShareButton(_ objects: AnyObject?) {
-        shareManager.openShareSelector(style: .actionSheet, viewController: self)
+    @IBAction func didTapShareButton(_ barButton: UIBarButtonItem) {
+        shareManager.openShareSelector(style: .actionSheet, viewController: self, barButton: barButton)
     }
 }
