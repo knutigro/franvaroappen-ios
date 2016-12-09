@@ -22,7 +22,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb744903028996436</string>
-				<string>franvaro://</string>
+				<string>franvaro</string>
 			</array>
 		</dict>
 	</array>
