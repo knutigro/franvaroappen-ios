@@ -32,7 +32,10 @@ class ChildCell: UITableViewCell {
         
         nameLabel?.text = child.name
         personalNumberLabel?.text = child.personalNumber
-        avatarImageView?.image = child.image
+        
+        if let image = child.image {
+            avatarImageView?.image = image
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

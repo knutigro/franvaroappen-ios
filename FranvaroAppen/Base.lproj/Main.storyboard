@@ -105,22 +105,23 @@ knutigro.github.io</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-76" translatesAutoresizingMaskIntoConstraints="NO" id="xtk-Mt-egy">
-                                <rect key="frame" x="137.5" y="30" width="100" height="99"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-sP-dLP" customClass="IconView" customModule="Frånvaro" customModuleProvider="target">
+                                <rect key="frame" x="137" y="30" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="99" id="EZL-iT-x60"/>
-                                    <constraint firstAttribute="width" constant="100" id="k9I-Pk-nqo"/>
+                                    <constraint firstAttribute="height" constant="100" id="S6P-Va-zYa"/>
+                                    <constraint firstAttribute="width" constant="100" id="tF2-Gu-J2E"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JkO-Zj-V5a" secondAttribute="trailing" constant="8" id="0u9-5j-cH4"/>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="leading" secondItem="WAq-hd-axT" secondAttribute="leading" constant="8" id="1Gb-FF-lk9"/>
-                            <constraint firstItem="xtk-Mt-egy" firstAttribute="top" secondItem="C4n-5M-kbg" secondAttribute="bottom" constant="30" id="3Vn-JK-n7l"/>
-                            <constraint firstItem="JkO-Zj-V5a" firstAttribute="top" secondItem="xtk-Mt-egy" secondAttribute="bottom" constant="20" id="HS0-T9-0Gr"/>
-                            <constraint firstItem="xtk-Mt-egy" firstAttribute="centerX" secondItem="WAq-hd-axT" secondAttribute="centerX" id="OSd-jL-fmo"/>
+                            <constraint firstItem="JkO-Zj-V5a" firstAttribute="top" secondItem="MVC-sP-dLP" secondAttribute="bottom" constant="19" id="4qO-10-Y62"/>
+                            <constraint firstItem="MVC-sP-dLP" firstAttribute="centerX" secondItem="WAq-hd-axT" secondAttribute="centerX" id="IZ0-b5-pim"/>
                             <constraint firstItem="ieR-hy-cmn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JkO-Zj-V5a" secondAttribute="bottom" constant="10" id="TSF-FH-TVy"/>
+                            <constraint firstItem="MVC-sP-dLP" firstAttribute="top" secondItem="C4n-5M-kbg" secondAttribute="bottom" constant="30" id="efj-aU-rs0"/>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="centerY" secondItem="WAq-hd-axT" secondAttribute="centerY" priority="750" id="fUX-Oc-cvq"/>
                         </constraints>
                     </view>
@@ -132,6 +133,7 @@ knutigro.github.io</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="iconView" destination="MVC-sP-dLP" id="mXV-6q-hrN"/>
                         <outlet property="infoTextView" destination="JkO-Zj-V5a" id="LUk-tM-VDx"/>
                     </connections>
                 </viewController>
@@ -152,7 +154,15 @@ knutigro.github.io</string>
                             <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-76" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-b8-9MM">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-kL-okl" customClass="IconView" customModule="Frånvaro" customModuleProvider="target">
+                                    <rect key="frame" x="138" y="20" width="100" height="100"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="BcE-Lu-hgh"/>
+                                        <constraint firstAttribute="width" constant="100" id="Y5o-vJ-Say"/>
+                                    </constraints>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-b8-9MM">
                                     <rect key="frame" x="127.5" y="10" width="120" height="120"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="120" id="Gc0-eb-pfm"/>
@@ -162,6 +172,8 @@ knutigro.github.io</string>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="C8q-kL-okl" firstAttribute="centerY" secondItem="JOp-b8-9MM" secondAttribute="centerY" id="XEZ-E8-QmK"/>
+                                <constraint firstItem="C8q-kL-okl" firstAttribute="centerX" secondItem="JOp-b8-9MM" secondAttribute="centerX" id="bJw-Dc-M4K"/>
                                 <constraint firstItem="JOp-b8-9MM" firstAttribute="centerX" secondItem="T2c-rk-aI6" secondAttribute="centerX" id="bqo-uX-P1j"/>
                                 <constraint firstItem="JOp-b8-9MM" firstAttribute="centerY" secondItem="T2c-rk-aI6" secondAttribute="centerY" id="iVo-iz-R3o"/>
                             </constraints>
@@ -354,6 +366,7 @@ knutigro.github.io</string>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-76" translatesAutoresizingMaskIntoConstraints="NO" id="f3S-v2-16Q">
                                             <rect key="frame" x="8" y="10" width="99.5" height="100"/>
+                                            <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="f3S-v2-16Q" secondAttribute="height" multiplier="1:1" id="f2k-iJ-juX"/>
                                                 <constraint firstAttribute="height" constant="100" id="kY7-dc-Ks0"/>
@@ -511,13 +524,21 @@ knutigro.github.io</string>
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="StE-Hg-45r" customClass="UserProfileView" customModule="Frånvaro" customModuleProvider="target">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="StE-Hg-45r">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-76" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-dr-VmD">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXw-YH-IKD" customClass="IconView" customModule="Frånvaro" customModuleProvider="target">
+                                    <rect key="frame" x="138" y="25" width="100" height="100"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="hMC-tS-aan"/>
+                                        <constraint firstAttribute="width" constant="100" id="lbg-JX-toY"/>
+                                    </constraints>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-dr-VmD">
                                     <rect key="frame" x="123" y="10" width="130" height="130"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="K4i-zD-qtG"/>
                                         <constraint firstAttribute="height" constant="130" id="b4W-k9-ahd"/>
@@ -540,9 +561,11 @@ knutigro.github.io</string>
                                 <constraint firstItem="ODN-dr-VmD" firstAttribute="top" secondItem="StE-Hg-45r" secondAttribute="top" constant="8" id="NJw-Xn-TTd"/>
                                 <constraint firstItem="ODN-dr-VmD" firstAttribute="top" secondItem="StE-Hg-45r" secondAttribute="top" constant="8" id="OJT-az-JrF"/>
                                 <constraint firstItem="ODN-dr-VmD" firstAttribute="centerY" secondItem="StE-Hg-45r" secondAttribute="centerY" id="oXJ-v8-dMg"/>
+                                <constraint firstItem="kXw-YH-IKD" firstAttribute="centerY" secondItem="ODN-dr-VmD" secondAttribute="centerY" id="r16-Ik-cOA"/>
                                 <constraint firstItem="ODN-dr-VmD" firstAttribute="leading" secondItem="StE-Hg-45r" secondAttribute="leading" constant="8" id="tqE-a0-l11"/>
                                 <constraint firstItem="2eg-iS-cTB" firstAttribute="top" secondItem="ODN-dr-VmD" secondAttribute="top" id="vwi-W8-RU5"/>
                                 <constraint firstItem="2eg-iS-cTB" firstAttribute="leading" secondItem="ODN-dr-VmD" secondAttribute="leading" id="xzC-U6-ebP"/>
+                                <constraint firstItem="kXw-YH-IKD" firstAttribute="centerX" secondItem="ODN-dr-VmD" secondAttribute="centerX" id="z0u-IU-NkI"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
@@ -672,7 +695,7 @@ knutigro.github.io</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PZO-46-r9v"/>
-        <segue reference="dec-iw-trP"/>
+        <segue reference="NPi-qq-HdX"/>
         <segue reference="2Qw-cb-1qL"/>
     </inferredMetricsTieBreakers>
 </document>

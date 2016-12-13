@@ -31,6 +31,7 @@
 		4987BAE01DD5FE780053BC98 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADF1DD5FE780053BC98 /* UIColor+App.swift */; };
 		4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE11DD600920053BC98 /* NavigationController.swift */; };
 		4987BAE41DD612F10053BC98 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE31DD612F10053BC98 /* ReportViewController.swift */; };
+		49888D3E1DFFFB6300F0EBA0 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49888D3D1DFFFB6300F0EBA0 /* IconView.swift */; };
 		49C63E571DD5E6F60087A148 /* info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C63E561DD5E6F60087A148 /* info.pdf */; };
 		49C63E591DD5E7530087A148 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C63E581DD5E7530087A148 /* InfoViewController.swift */; };
 		49D48FD185D1FB8BE8077422 /* Pods_FranvaroAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A845E52E9986868944A57 /* Pods_FranvaroAppen.framework */; };
@@ -89,6 +90,7 @@
 		4987BADF1DD5FE780053BC98 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		4987BAE11DD600920053BC98 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		4987BAE31DD612F10053BC98 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		49888D3D1DFFFB6300F0EBA0 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		49C63E561DD5E6F60087A148 /* info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = info.pdf; sourceTree = "<group>"; };
 		49C63E581DD5E7530087A148 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueTransformer.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				4925AC201DD7C47200BE8881 /* Analytics.swift */,
 				49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */,
 				495886D71DFA0EBB007AB93E /* ShareManager.swift */,
+				49888D3D1DFFFB6300F0EBA0 /* IconView.swift */,
 				493B14AE1DD36F9A007882C5 /* ViewControllers */,
 				492B00011DD369A900867896 /* Models */,
 				492BFFFA1DD35E1400867896 /* Categories */,
@@ -558,6 +561,7 @@
 				4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */,
 				49ED43BE1DE8D89B004FB1BC /* DateValueTransformer.swift in Sources */,
 				493B14B91DD4A6B9007882C5 /* ChildGridCell.swift in Sources */,
+				49888D3E1DFFFB6300F0EBA0 /* IconView.swift in Sources */,
 				493B14B31DD3E22B007882C5 /* ChildCell.swift in Sources */,
 				4925AC211DD7C47200BE8881 /* Analytics.swift in Sources */,
 				4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */,

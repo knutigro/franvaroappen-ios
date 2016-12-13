@@ -11,6 +11,7 @@ import UIKit
 class AboutAppViewController: UIViewController {
     
     @IBOutlet weak var infoTextView: UITextView?
+    @IBOutlet weak var iconView: IconView?
     
     let shareManager = ShareManager()
     
@@ -20,6 +21,8 @@ class AboutAppViewController: UIViewController {
         title = NSLocalizedString("Om appen", comment: "")
         
         infoTextView?.text = NSLocalizedString("\nDenne app är inte gjord på uppdrag av Lidköping kommun, men av en förälder som gillar att göra appar.\n\nKom gärna med tips angående förbättringar eller förslag på andra appar som behövs.\n\nKnut Inge Grösland\nhei@knutinge.com\nknutigro.github.io", comment: "")
+        
+        iconView?.animateDrawingPath()
     }
     
     override func viewDidAppear(_ animated: Bool) {
