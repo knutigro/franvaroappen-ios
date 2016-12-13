@@ -11,10 +11,18 @@ import Localytics
 
 struct Analytics {
     
+    // Keys
     static let kSMSCategoryKey = "Category"
     static let kResultKey = "Result"
     static let kErrorKey = "Error"
-    
+    static let kNumberOfSmsSentKey = "Number of SMS"
+    static let kLocationKey = "Location"
+
+    // Events
+    static let kRatingDialogEvent = "Rate app dialog"
+    static let kShareButtonTappedEvent = "Tapped share button"
+
+    // Enums
     enum MessageComposeResult : String {
         case cancelled = "cancelled"
         case sent = "sent"
@@ -43,6 +51,10 @@ struct Analytics {
 
     static func trackValue(value: NSObject, forProfileAttribute: String) {
         Localytics.setValue(value, forProfileAttribute: forProfileAttribute)
+    }
+
+    static func incrementValue(by value: Int, forProfileAttribute attribute: String) {
+        Localytics.incrementValue(by: value, forProfileAttribute: attribute)
     }
     
     static func track(screen: String) {

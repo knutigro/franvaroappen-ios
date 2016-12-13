@@ -15,18 +15,22 @@ class ShareManager: NSObject {
     func openShareSelector(style: UIAlertControllerStyle, viewController: UIViewController, barButton: UIBarButtonItem) {
         
         let alert = UIAlertController(title: NSLocalizedString("Facebook", comment: ""), message:nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Skicka till vänner", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Skicka appen till vänner", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+            Analytics.track(event: Analytics.kShareButtonTappedEvent, attributes: [Analytics.kResultKey: "Message on Facebook", Analytics.kLocationKey: String(describing: type(of: viewController))])
             self?.sendMessageOnFacebook()
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Dela på Facebook", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Dela appen på Facebook", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+            Analytics.track(event: Analytics.kShareButtonTappedEvent, attributes: [Analytics.kResultKey: "Share on Facebook", Analytics.kLocationKey: String(describing: type(of: viewController))])
             self?.shareOnFacebook(viewController: viewController)
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.default, handler: {(action) in
+            Analytics.track(event: Analytics.kShareButtonTappedEvent, attributes: [Analytics.kResultKey: "Cancelled", Analytics.kLocationKey: String(describing: type(of: viewController))])
+        }))
         
         if let popoverPresentationController = alert.popoverPresentationController {
             popoverPresentationController.barButtonItem = barButton
         }
-        
+
         viewController.present(alert, animated: true, completion: nil)
     }
     

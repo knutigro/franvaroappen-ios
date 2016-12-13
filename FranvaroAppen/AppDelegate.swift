@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Appirater.setSignificantEventsUntilPrompt(-1)
         Appirater.setTimeBeforeReminding(2)
         Appirater.setDebug(false)
+        Appirater.setDelegate(self)
         Appirater.appLaunched(true)
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -116,6 +117,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 
+// MARK: - AppiraterDelegate
+
+extension AppDelegate: AppiraterDelegate {
+    
+    public func appiraterDidDecline(toRate appirater: Appirater!) {
+        Analytics.track(event: Analytics.kRatingDialogEvent, attributes: [Analytics.kResultKey: "Declined"])
+    }
+    
+    public func appiraterDidOpt(toRate appirater: Appirater!) {
+        Analytics.track(event: Analytics.kRatingDialogEvent, attributes: [Analytics.kResultKey: "Rated"])
+    }
+    
+    public func appiraterDidOpt(toRemindLater appirater: Appirater!) {
+        Analytics.track(event: Analytics.kRatingDialogEvent, attributes: [Analytics.kResultKey: "Remind later"])
+    }
+}
