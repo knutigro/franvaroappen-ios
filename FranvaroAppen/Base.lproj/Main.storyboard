@@ -81,6 +81,10 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcJ-xB-0QE" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JkO-Zj-V5a">
                                 <rect key="frame" x="8" y="149" width="359" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,8 +123,12 @@ knutigro.github.io</string>
                             <constraint firstAttribute="trailing" secondItem="JkO-Zj-V5a" secondAttribute="trailing" constant="8" id="0u9-5j-cH4"/>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="leading" secondItem="WAq-hd-axT" secondAttribute="leading" constant="8" id="1Gb-FF-lk9"/>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="top" secondItem="MVC-sP-dLP" secondAttribute="bottom" constant="19" id="4qO-10-Y62"/>
+                            <constraint firstItem="JkO-Zj-V5a" firstAttribute="top" secondItem="NcJ-xB-0QE" secondAttribute="bottom" constant="8" id="8B4-Ua-mg2"/>
+                            <constraint firstItem="NcJ-xB-0QE" firstAttribute="leading" secondItem="WAq-hd-axT" secondAttribute="leading" id="EwN-1t-ez0"/>
+                            <constraint firstItem="NcJ-xB-0QE" firstAttribute="top" secondItem="C4n-5M-kbg" secondAttribute="bottom" id="Fx8-1x-Po5"/>
                             <constraint firstItem="MVC-sP-dLP" firstAttribute="centerX" secondItem="WAq-hd-axT" secondAttribute="centerX" id="IZ0-b5-pim"/>
                             <constraint firstItem="ieR-hy-cmn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JkO-Zj-V5a" secondAttribute="bottom" constant="10" id="TSF-FH-TVy"/>
+                            <constraint firstAttribute="trailing" secondItem="NcJ-xB-0QE" secondAttribute="trailing" id="cNh-VG-7j8"/>
                             <constraint firstItem="MVC-sP-dLP" firstAttribute="top" secondItem="C4n-5M-kbg" secondAttribute="bottom" constant="30" id="efj-aU-rs0"/>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="centerY" secondItem="WAq-hd-axT" secondAttribute="centerY" priority="750" id="fUX-Oc-cvq"/>
                         </constraints>
@@ -135,6 +143,7 @@ knutigro.github.io</string>
                     <connections>
                         <outlet property="iconView" destination="MVC-sP-dLP" id="mXV-6q-hrN"/>
                         <outlet property="infoTextView" destination="JkO-Zj-V5a" id="LUk-tM-VDx"/>
+                        <outlet property="spriteKitView" destination="NcJ-xB-0QE" id="k2Z-YV-04r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRI-ZF-1vm" userLabel="First Responder" sceneMemberID="firstResponder"/>

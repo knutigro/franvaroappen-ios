@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import SpriteKit
 
 class AboutAppViewController: UIViewController {
     
     @IBOutlet weak var infoTextView: UITextView?
     @IBOutlet weak var iconView: IconView?
+    @IBOutlet weak var spriteKitView: SKView?
+    
+    let toyScene = ToyScene()
     
     let shareManager = ShareManager()
     
@@ -23,11 +27,13 @@ class AboutAppViewController: UIViewController {
         infoTextView?.text = NSLocalizedString("\nDenne app är inte gjord på uppdrag av Lidköping kommun, men av en förälder som gillar att göra appar.\n\nKom gärna med tips angående förbättringar eller förslag på andra appar som behövs.\n\nKnut Inge Grösland\nhei@knutinge.com\nknutigro.github.io", comment: "")
         
         iconView?.animateDrawingPath()
+        spriteKitView?.presentScene(toyScene)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Analytics.track(screen: "About app")
+        toyScene.beginBubbling()
     }
     
     @IBAction func didTapShareButton(_ barButton: UIBarButtonItem) {

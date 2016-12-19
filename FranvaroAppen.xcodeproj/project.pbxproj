@@ -36,6 +36,11 @@
 		49C63E591DD5E7530087A148 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C63E581DD5E7530087A148 /* InfoViewController.swift */; };
 		49D48FD185D1FB8BE8077422 /* Pods_FranvaroAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A845E52E9986868944A57 /* Pods_FranvaroAppen.framework */; };
 		49ED43BE1DE8D89B004FB1BC /* DateValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */; };
+		49F1078E1E0147EC009808F4 /* heart-bubbles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49F1078D1E0147EC009808F4 /* heart-bubbles.sks */; };
+		49F107921E014CB1009808F4 /* heart-particle.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F1078F1E014CB1009808F4 /* heart-particle.png */; };
+		49F107931E014CB1009808F4 /* heart-particle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F107901E014CB1009808F4 /* heart-particle@2x.png */; };
+		49F107941E014CB1009808F4 /* heart-particle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F107911E014CB1009808F4 /* heart-particle@3x.png */; };
+		49F107961E014E00009808F4 /* ToyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F107951E014E00009808F4 /* ToyScene.swift */; };
 		753FCDF5FD1664F2A50A12C4 /* Pods_FranvaroAppenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A035787C726D3FC6A3FCC46 /* Pods_FranvaroAppenTests.framework */; };
 		7DF8D251DA97E98208E382D0 /* Pods_FranvaroAppenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD11E43C30475B03AD84F37 /* Pods_FranvaroAppenUITests.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +99,11 @@
 		49C63E561DD5E6F60087A148 /* info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = info.pdf; sourceTree = "<group>"; };
 		49C63E581DD5E7530087A148 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueTransformer.swift; sourceTree = "<group>"; };
+		49F1078D1E0147EC009808F4 /* heart-bubbles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "heart-bubbles.sks"; sourceTree = "<group>"; };
+		49F1078F1E014CB1009808F4 /* heart-particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-particle.png"; sourceTree = "<group>"; };
+		49F107901E014CB1009808F4 /* heart-particle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-particle@2x.png"; sourceTree = "<group>"; };
+		49F107911E014CB1009808F4 /* heart-particle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-particle@3x.png"; sourceTree = "<group>"; };
+		49F107951E014E00009808F4 /* ToyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyScene.swift; sourceTree = "<group>"; };
 		4BD11E43C30475B03AD84F37 /* Pods_FranvaroAppenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B646E7CE0CABD0C8B32E549 /* Pods-FranvaroAppenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B77778A8AC0B4F9245EEC36 /* Pods-FranvaroAppen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +182,7 @@
 				49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */,
 				495886D71DFA0EBB007AB93E /* ShareManager.swift */,
 				49888D3D1DFFFB6300F0EBA0 /* IconView.swift */,
+				49F107951E014E00009808F4 /* ToyScene.swift */,
 				493B14AE1DD36F9A007882C5 /* ViewControllers */,
 				492B00011DD369A900867896 /* Models */,
 				492BFFFA1DD35E1400867896 /* Categories */,
@@ -241,6 +252,10 @@
 				492BFFD51DD34C7E00867896 /* LaunchScreen.storyboard */,
 				492BFFD81DD34C7E00867896 /* Info.plist */,
 				492BFFD01DD34C7E00867896 /* FranvaroAppen.xcdatamodeld */,
+				49F1078F1E014CB1009808F4 /* heart-particle.png */,
+				49F107901E014CB1009808F4 /* heart-particle@2x.png */,
+				49F107911E014CB1009808F4 /* heart-particle@3x.png */,
+				49F1078D1E0147EC009808F4 /* heart-bubbles.sks */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -387,9 +402,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F107941E014CB1009808F4 /* heart-particle@3x.png in Resources */,
 				49C63E571DD5E6F60087A148 /* info.pdf in Resources */,
 				492BFFD71DD34C7E00867896 /* LaunchScreen.storyboard in Resources */,
+				49F107931E014CB1009808F4 /* heart-particle@2x.png in Resources */,
+				49F107921E014CB1009808F4 /* heart-particle.png in Resources */,
 				492BFFD41DD34C7E00867896 /* Assets.xcassets in Resources */,
+				49F1078E1E0147EC009808F4 /* heart-bubbles.sks in Resources */,
 				492BFFCF1DD34C7E00867896 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,6 +574,7 @@
 				4987BAE41DD612F10053BC98 /* ReportViewController.swift in Sources */,
 				492BFFFC1DD35E3100867896 /* UIViewController+Utils.swift in Sources */,
 				493B14B51DD3E530007882C5 /* ChildListViewController.swift in Sources */,
+				49F107961E014E00009808F4 /* ToyScene.swift in Sources */,
 				493B14B01DD3831F007882C5 /* EditChildViewController.swift in Sources */,
 				492B00001DD3667D00867896 /* MessageHelper.swift in Sources */,
 				495886D61DF75CB0007AB93E /* AboutAppViewController.swift in Sources */,
