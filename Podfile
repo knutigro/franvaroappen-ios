@@ -12,7 +12,6 @@ target 'FranvaroAppen' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'XLForm', '~> 3.3'
-  pod 'Appirater', '~> 2.1'
   pod 'FBSDKShareKit', '~> 4.18'
   pod 'FBSDKCoreKit', '~> 4.18'
  

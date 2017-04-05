@@ -67,7 +67,7 @@ class ShareManager: NSObject {
             dialog.show()
         } else {
             // Messenger isn't installed. Redirect the person to the App Store.
-            UIApplication.shared.open(NSURL(string: "https://itunes.apple.com/se/app/messenger/id454638411?mt=8") as! URL, options: [:], completionHandler: nil)
+            UIApplication.shared.open(NSURL(string: "https://itunes.apple.com/se/app/messenger/id454638411?mt=8")! as URL, options: [:], completionHandler: nil)
         }
     }
 }

@@ -32,6 +32,8 @@
 		4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE11DD600920053BC98 /* NavigationController.swift */; };
 		4987BAE41DD612F10053BC98 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE31DD612F10053BC98 /* ReportViewController.swift */; };
 		49888D3E1DFFFB6300F0EBA0 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49888D3D1DFFFB6300F0EBA0 /* IconView.swift */; };
+		49BBACA81E945978000FFAE2 /* RatingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBACA71E945978000FFAE2 /* RatingManagerTests.swift */; };
+		49C5139F1E905A4D00CD0487 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5139E1E905A4D00CD0487 /* RatingManager.swift */; };
 		49C63E571DD5E6F60087A148 /* info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C63E561DD5E6F60087A148 /* info.pdf */; };
 		49C63E591DD5E7530087A148 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C63E581DD5E7530087A148 /* InfoViewController.swift */; };
 		49D48FD185D1FB8BE8077422 /* Pods_FranvaroAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A845E52E9986868944A57 /* Pods_FranvaroAppen.framework */; };
@@ -63,7 +65,7 @@
 		49080EB31DD9DFD800673D11 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../SnapshotHelper.swift; sourceTree = "<group>"; };
 		4925AC201DD7C47200BE8881 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		492B00021DD369BB00867896 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
-		492BFFC61DD34C7E00867896 /* Frånvaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Frånvaro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		492BFFC61DD34C7E00867896 /* FranvaroAppen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FranvaroAppen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		492BFFC91DD34C7E00867896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		492BFFCB1DD34C7E00867896 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		492BFFCE1DD34C7E00867896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,8 @@
 		4987BAE11DD600920053BC98 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		4987BAE31DD612F10053BC98 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		49888D3D1DFFFB6300F0EBA0 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		49BBACA71E945978000FFAE2 /* RatingManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingManagerTests.swift; sourceTree = "<group>"; };
+		49C5139E1E905A4D00CD0487 /* RatingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
 		49C63E561DD5E6F60087A148 /* info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = info.pdf; sourceTree = "<group>"; };
 		49C63E581DD5E7530087A148 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueTransformer.swift; sourceTree = "<group>"; };
@@ -154,7 +158,7 @@
 		492BFFC71DD34C7E00867896 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				492BFFC61DD34C7E00867896 /* Frånvaro.app */,
+				492BFFC61DD34C7E00867896 /* FranvaroAppen.app */,
 				492BFFDD1DD34C7E00867896 /* FranvaroAppenTests.xctest */,
 				492BFFE81DD34C7E00867896 /* FranvaroAppenUITests.xctest */,
 			);
@@ -171,6 +175,7 @@
 				4925AC201DD7C47200BE8881 /* Analytics.swift */,
 				49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */,
 				495886D71DFA0EBB007AB93E /* ShareManager.swift */,
+				49C5139E1E905A4D00CD0487 /* RatingManager.swift */,
 				49888D3D1DFFFB6300F0EBA0 /* IconView.swift */,
 				493B14AE1DD36F9A007882C5 /* ViewControllers */,
 				492B00011DD369A900867896 /* Models */,
@@ -184,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				492BFFE11DD34C7E00867896 /* FranvaroAppenTests.swift */,
+				49BBACA71E945978000FFAE2 /* RatingManagerTests.swift */,
 				492BFFE31DD34C7E00867896 /* Info.plist */,
 			);
 			path = FranvaroAppenTests;
@@ -289,7 +295,7 @@
 			);
 			name = FranvaroAppen;
 			productName = FranvaroAppen;
-			productReference = 492BFFC61DD34C7E00867896 /* Frånvaro.app */;
+			productReference = 492BFFC61DD34C7E00867896 /* FranvaroAppen.app */;
 			productType = "com.apple.product-type.application";
 		};
 		492BFFDC1DD34C7E00867896 /* FranvaroAppenTests */ = {
@@ -322,6 +328,7 @@
 				492BFFE51DD34C7E00867896 /* Frameworks */,
 				492BFFE61DD34C7E00867896 /* Resources */,
 				D0F1A0F9FBB0C7B9737EAC4A /* [CP] Copy Pods Resources */,
+				8900E34DFABB9963E8807800 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -423,7 +430,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		0B77D2A25480CAD4998AD3FA /* [CP] Embed Pods Frameworks */ = {
@@ -453,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		356443C4E6591C8B4CB6AE5F /* [CP] Copy Pods Resources */ = {
@@ -483,7 +490,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		49080EB51DD9F36200673D11 /* Fabric */ = {
@@ -513,6 +520,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8900E34DFABB9963E8807800 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D0F1A0F9FBB0C7B9737EAC4A /* [CP] Copy Pods Resources */ = {
@@ -554,6 +576,7 @@
 			files = (
 				4987BAE41DD612F10053BC98 /* ReportViewController.swift in Sources */,
 				492BFFFC1DD35E3100867896 /* UIViewController+Utils.swift in Sources */,
+				49C5139F1E905A4D00CD0487 /* RatingManager.swift in Sources */,
 				493B14B51DD3E530007882C5 /* ChildListViewController.swift in Sources */,
 				493B14B01DD3831F007882C5 /* EditChildViewController.swift in Sources */,
 				492B00001DD3667D00867896 /* MessageHelper.swift in Sources */,
@@ -580,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BBACA81E945978000FFAE2 /* RatingManagerTests.swift in Sources */,
 				492BFFE21DD34C7E00867896 /* FranvaroAppenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +677,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -704,6 +729,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -729,11 +755,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2PRW676NCQ;
 				INFOPLIST_FILE = FranvaroAppen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocmoc.franvaro;
-				PRODUCT_NAME = "Frånvaro";
+				PRODUCT_NAME = FranvaroAppen;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -744,11 +771,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2PRW676NCQ;
 				INFOPLIST_FILE = FranvaroAppen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocmoc.franvaro;
-				PRODUCT_NAME = "Frånvaro";
+				PRODUCT_NAME = FranvaroAppen;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

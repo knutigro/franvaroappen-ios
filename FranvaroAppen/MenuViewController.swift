@@ -13,6 +13,8 @@ class MenuViewController: UITableViewController, SegueHandlerType {
 
     @IBOutlet weak var reportSickLeaveCell: UITableViewCell?
     @IBOutlet weak var reportOtherAbsenceCell: UITableViewCell?
+    @IBOutlet weak var reviewOnAppstoreCell: UITableViewCell?
+    @IBOutlet weak var reviewOnAppstoreReminderBadge: UIView?
     @IBOutlet weak var sendInfoCell: UITableViewCell?
     @IBOutlet weak var childImageView: UIImageView?
     @IBOutlet weak var sickLeaveLabel: UILabel?
@@ -73,11 +75,17 @@ class MenuViewController: UITableViewController, SegueHandlerType {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Analytics.track(screen: "Menu")
+        
+        if RatingManager.shouldRequestReview {
+            RatingManager.requestReview()
+            Analytics.track(event: Analytics.kRatingDialogEvent)
+        }
     }
     
     func updateUI() {
         self.title = child?.name
         childImageView?.image = child?.image
+        reviewOnAppstoreReminderBadge?.isHidden = RatingManager.didTapReviewLink
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -147,28 +155,40 @@ extension MenuViewController: EditChildViewControllerDelegate {
 extension MenuViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
         
-        if (indexPath.section == 0) {
-            let cell = tableView.cellForRow(at: indexPath)
+        if cell == reportSickLeaveCell {
             if (child == nil) {
-                let alert = UIAlertController(title: nil,
-                                              message: NSLocalizedString("Inget barn vald.", comment: ""),
-                                              preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-                
-                return
+                showNoChildAlert()
             } else {
-                if cell == reportSickLeaveCell {
-                    performSegueWithIdentifier(.OpenReportSickLeave, sender: cell)
-                } else if cell == reportOtherAbsenceCell {
-                    performSegueWithIdentifier(.OpenReportOtherAbsence, sender: cell)
-                } else if cell == sendInfoCell {
-                    performSegueWithIdentifier(.OpenSendInfo, sender: cell)
-                }
+                performSegueWithIdentifier(.OpenReportSickLeave, sender: cell)
             }
+        } else if cell == reportOtherAbsenceCell {
+            if (child == nil) {
+                showNoChildAlert()
+            } else {
+                performSegueWithIdentifier(.OpenReportOtherAbsence, sender: cell)
+            }
+        } else if cell == sendInfoCell {
+            if (child == nil) {
+                showNoChildAlert()
+            } else {
+                performSegueWithIdentifier(.OpenSendInfo, sender: cell)
+            }
+        } else if cell == reviewOnAppstoreCell {
+            RatingManager.didTapReviewLink = true
+            updateUI()
+            UIApplication.shared.open(URL(string:"https://itunes.apple.com/se/app/anm%C3%A4l-fr%C3%A5nvaro-lidk%C3%B6ping/id1175852934?action=write-review")!, options: [String: Any](), completionHandler: nil)
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    public func showNoChildAlert() {
+        let alert = UIAlertController(title: nil,
+                                      message: NSLocalizedString("Inget barn vald.", comment: ""),
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
