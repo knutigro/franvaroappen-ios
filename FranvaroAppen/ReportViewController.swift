@@ -214,6 +214,7 @@ extension ReportViewController: MFMessageComposeViewControllerDelegate {
         Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res, Analytics.kSMSCategoryKey: category])
 
         if (result == .sent) {
+            RatingManager.userDidSignificantEvent()
             Analytics.incrementValue(by: 1, forProfileAttribute: Analytics.kNumberOfSmsSentKey)
         }
 

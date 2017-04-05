@@ -11,7 +11,6 @@ import CoreData
 import Fabric
 import Crashlytics
 import FBSDKCoreKit
-import Appirater
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,14 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Analytics.autoIntegrate(launchOptions)
         Fabric.with([Crashlytics.self])
         
-        Appirater.setAppId("1175852934")
-        Appirater.setDaysUntilPrompt(7)
-        Appirater.setUsesUntilPrompt(5)
-        Appirater.setSignificantEventsUntilPrompt(-1)
-        Appirater.setTimeBeforeReminding(2)
-        Appirater.setDebug(false)
-        Appirater.setDelegate(self)
-        Appirater.appLaunched(true)
+        RatingManager.daysUntilPromt = 5
+        RatingManager.significantEventsUntilPrompt = 3
+        RatingManager.usesUntilPromt = 4
+        RatingManager.appLaunched()
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
@@ -116,22 +111,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }
-}
-
-// MARK: - AppiraterDelegate
-
-extension AppDelegate: AppiraterDelegate {
-    
-    public func appiraterDidDecline(toRate appirater: Appirater!) {
-        Analytics.track(event: Analytics.kRatingDialogEvent, attributes: [Analytics.kResultKey: "Declined"])
-    }
-    
-    public func appiraterDidOpt(toRate appirater: Appirater!) {
-        Analytics.track(event: Analytics.kRatingDialogEvent, attributes: [Analytics.kResultKey: "Rated"])
-    }
-    
-    public func appiraterDidOpt(toRemindLater appirater: Appirater!) {
-        Analytics.track(event: Analytics.kRatingDialogEvent, attributes: [Analytics.kResultKey: "Remind later"])
     }
 }
