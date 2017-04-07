@@ -20,6 +20,7 @@ struct Analytics {
 
     // Events
     static let kRatingDialogEvent = "Rate app dialog"
+    static let kDidTapReviewCellEvent = "Tapped review app cell"
     static let kShareButtonTappedEvent = "Tapped share button"
 
     // Enums

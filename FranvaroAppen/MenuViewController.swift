@@ -179,6 +179,7 @@ extension MenuViewController {
             RatingManager.didTapReviewLink = true
             updateUI()
             UIApplication.shared.open(URL(string:"https://itunes.apple.com/se/app/anm%C3%A4l-fr%C3%A5nvaro-lidk%C3%B6ping/id1175852934?action=write-review")!, options: [String: Any](), completionHandler: nil)
+            Analytics.track(event: Analytics.kDidTapReviewCellEvent)
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
