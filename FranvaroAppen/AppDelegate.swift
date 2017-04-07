@@ -11,6 +11,7 @@ import CoreData
 import Fabric
 import Crashlytics
 import FBSDKCoreKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RatingManager.appLaunched()
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            if error != nil {
+            }
+        }
 
         // Override point for customization after application launch.
         return true

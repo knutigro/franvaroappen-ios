@@ -85,7 +85,13 @@ class MenuViewController: UITableViewController, SegueHandlerType {
     func updateUI() {
         self.title = child?.name
         childImageView?.image = child?.image
-        reviewOnAppstoreReminderBadge?.isHidden = RatingManager.didTapReviewLink
+        
+        let hasImage = child?.image != nil ? NSNumber(value: 1) : NSNumber(value: 0)
+        Analytics.trackValue(value: hasImage, forProfileAttribute: "Image")
+
+        let didTapReviewLink = RatingManager.didTapReviewLink
+        reviewOnAppstoreReminderBadge?.isHidden = didTapReviewLink
+        UIApplication.shared.applicationIconBadgeNumber = didTapReviewLink ? 0 : 1
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
