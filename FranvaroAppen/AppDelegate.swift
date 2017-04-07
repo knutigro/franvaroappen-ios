@@ -31,16 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RatingManager.significantEventsUntilPrompt = 3
         RatingManager.usesUntilPromt = 4
         RatingManager.appLaunched()
-        
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
+
         application.registerForRemoteNotifications()
         
         let options: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: options) { (granted, error) in
             Analytics.didRequestUserNotificationAuthorization(withOptions: options.rawValue, granted: granted)
         }
-
+        
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         // Override point for customization after application launch.
         return true
     }
