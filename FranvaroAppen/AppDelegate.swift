@@ -34,9 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-            if error != nil {
-            }
+        application.registerForRemoteNotifications()
+        
+        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: options) { (granted, error) in
+            Analytics.didRequestUserNotificationAuthorization(withOptions: options.rawValue, granted: granted)
         }
 
         // Override point for customization after application launch.

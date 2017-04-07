@@ -61,4 +61,8 @@ struct Analytics {
     static func track(screen: String) {
         Localytics.tagScreen(screen)
     }
+
+    static func didRequestUserNotificationAuthorization(withOptions options: UInt, granted: Bool) {
+        Localytics.didRequestUserNotificationAuthorization(withOptions: options, granted: granted)
+    }
 }
