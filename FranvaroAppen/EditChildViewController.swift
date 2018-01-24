@@ -13,7 +13,7 @@ extension String {
     func isPersonalNumber() -> Bool {
         let pat = "\\d\\d\\d\\d\\d\\d-\\d\\d\\d\\d"
         let regex = try! NSRegularExpression(pattern: pat, options: [])
-        return regex.numberOfMatches(in: self, options: [], range: NSRange(location: 0, length: self.characters.count)) == 1
+        return regex.numberOfMatches(in: self, options: [], range: NSRange(location: 0, length: self.count)) == 1
     }
 }
 
@@ -185,7 +185,7 @@ extension EditChildViewController: UIImagePickerControllerDelegate, UINavigation
 extension EditChildViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if range.length + range.location > (textField.text?.characters.count ?? 0) { return false  }
+        if range.length + range.location > (textField.text?.count ?? 0) { return false  }
         
         if textField == nameTextField {
             if let text = nameTextField?.text {

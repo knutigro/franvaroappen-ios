@@ -268,7 +268,7 @@ extension ReportViewController {
                 // startDateDescriptor is later than endDateDescriptor
                 dateEndCell.update()
                 let newDetailText =  dateEndCell.detailTextLabel!.text!
-                let strikeThroughAttribute = [NSStrikethroughStyleAttributeName : NSUnderlineStyle.styleSingle.rawValue]
+                let strikeThroughAttribute = [NSAttributedStringKey.strikethroughStyle : NSUnderlineStyle.styleSingle.rawValue]
                 let strikeThroughText = NSAttributedString(string: newDetailText, attributes: strikeThroughAttribute)
                 endDateDescriptor.cellConfig["detailTextLabel.attributedText"] = strikeThroughText
                 updateFormRow(endDateDescriptor)

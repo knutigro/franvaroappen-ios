@@ -29,7 +29,7 @@ class SendInfoViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         
-        textLimitLabel?.text = String(format: "%i / %i", textView?.text.characters.count ?? 0, limit)
+        textLimitLabel?.text = String(format: "%i / %i", textView?.text.count ?? 0, limit)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,16 +37,20 @@ class SendInfoViewController: UIViewController {
         Analytics.track(screen: "Send Info")
     }
     
-    func keyboardWillChangeFrame(aNotification:NSNotification) {
+    @objc func keyboardWillChangeFrame(aNotification:NSNotification) {
         let info = aNotification.userInfo
-        let infoNSValue = info![UIKeyboardFrameBeginUserInfoKey] as! NSValue
+        let infoNSValue = info![UIKeyboardFrameEndUserInfoKey] as! NSValue
+        let duration = aNotification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as? Double ?? 0
         let kbSize = infoNSValue.cgRectValue.size
         let newHeight = kbSize.height
         textViewBottomContraint?.constant = newHeight + 8
+        view.setNeedsLayout()
+        UIView.animate(withDuration: duration) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
     }
     
     @IBAction func didTapSendButton(_ objects: AnyObject?) {
-        
         let message = textView?.text ?? ""
         guard let  personalNumber = child?.personalNumber else {
             assertionFailure()
@@ -107,9 +111,9 @@ extension SendInfoViewController: MFMessageComposeViewControllerDelegate {
 extension SendInfoViewController: UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if range.length + range.location > (textView.text?.characters.count ?? 0) { return false  }
+        if range.length + range.location > (textView.text?.count ?? 0) { return false  }
         
-        let newLength = textView.text.characters.count + text.characters.count - range.length
+        let newLength = textView.text.count + text.count - range.length
         
         textLimitLabel?.text = String(format: "%i / %i", min(newLength, limit), limit)
 
