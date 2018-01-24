@@ -29,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         RatingManager.daysUntilPromt = 5
         RatingManager.significantEventsUntilPrompt = 3
-        RatingManager.usesUntilPromt = 4
+        RatingManager.daysUntilPromt = 5
+        RatingManager.shouldPromtOnlyOncePerVersion = true
         RatingManager.appLaunched()
 
         application.registerForRemoteNotifications()
