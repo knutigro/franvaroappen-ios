@@ -39,14 +39,18 @@ class SendInfoViewController: UIViewController {
     
     @objc func keyboardWillChangeFrame(aNotification:NSNotification) {
         let info = aNotification.userInfo
-        let infoNSValue = info![UIKeyboardFrameBeginUserInfoKey] as! NSValue
+        let infoNSValue = info![UIKeyboardFrameEndUserInfoKey] as! NSValue
+        let duration = aNotification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as? Double ?? 0
         let kbSize = infoNSValue.cgRectValue.size
         let newHeight = kbSize.height
         textViewBottomContraint?.constant = newHeight + 8
+        view.setNeedsLayout()
+        UIView.animate(withDuration: duration) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
     }
     
     @IBAction func didTapSendButton(_ objects: AnyObject?) {
-        
         let message = textView?.text ?? ""
         guard let  personalNumber = child?.personalNumber else {
             assertionFailure()
