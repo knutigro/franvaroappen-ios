@@ -200,7 +200,7 @@ extension EditChildViewController: UITextFieldDelegate {
             } else if (range.location == 6) {
                 return string == "-"
             } else if (range.location <= 10) {
-                return Int(string) != nil
+                return true
             } else {
                 return false
             }
