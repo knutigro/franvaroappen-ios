@@ -10,8 +10,8 @@ import UIKit
 import CoreData
 
 extension String {
-    func isPersonalNumber() -> Bool {
-        let pat = "\\d\\d\\d\\d\\d\\d-\\d\\d\\d\\d"
+    var isValidPersonalNumber: Bool {
+        let pat = "\\d\\d\\d\\d\\d\\d-\\w\\w\\w\\w"
         let regex = try! NSRegularExpression(pattern: pat, options: [])
         return regex.numberOfMatches(in: self, options: [], range: NSRange(location: 0, length: self.count)) == 1
     }
@@ -108,7 +108,7 @@ extension EditChildViewController {
             return
         }
         
-        guard personalNumber.isPersonalNumber() else {
+        guard personalNumber.isValidPersonalNumber else {
             showAlert(message: NSLocalizedString("Person nummer måste ha formen ÅÅMMDD-NNNN.", comment: ""))
             return
         }
