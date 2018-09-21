@@ -111,7 +111,7 @@ extension DBManager {
         childEnity.setValue(child.name, forKey: "name")
         childEnity.setValue(child.personalNumber, forKey: "personal_number")
         if let image = image {
-            childEnity.setValue(UIImageJPEGRepresentation(image, 1), forKey: "photo")
+            childEnity.setValue(image.jpegData(compressionQuality: 1), forKey: "photo")
         }
         
         do {

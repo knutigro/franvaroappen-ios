@@ -27,7 +27,7 @@ class SendInfoViewController: UIViewController, ChildController {
         
         assert(child != nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
         textLimitLabel?.text = String(format: "%i / %i", textView?.text.count ?? 0, limit)
         
@@ -43,8 +43,8 @@ class SendInfoViewController: UIViewController, ChildController {
     
     @objc func keyboardWillChangeFrame(aNotification:NSNotification) {
         let info = aNotification.userInfo
-        let infoNSValue = info![UIKeyboardFrameEndUserInfoKey] as! NSValue
-        let duration = aNotification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as? Double ?? 0
+        let infoNSValue = info![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
+        let duration = aNotification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
         let kbSize = infoNSValue.cgRectValue.size
         let newHeight = kbSize.height
         textViewBottomContraint?.constant = newHeight + 8
@@ -64,7 +64,7 @@ class SendInfoViewController: UIViewController, ChildController {
         guard !message.isEmpty else {
             let alert = UIAlertController(title: NSLocalizedString("Fel", comment: ""),
                                           message: NSLocalizedString("Medelandet kan inte vara tomt", comment: ""),
-                                          preferredStyle: UIAlertControllerStyle.alert)
+                                          preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
 

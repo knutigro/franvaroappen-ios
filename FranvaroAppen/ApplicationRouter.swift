@@ -30,7 +30,7 @@ class ApplicationRouter {
     
     fileprivate func present(viewController: UIViewController, animated: Bool) {
         if let navigationController = presentingViewController as? UINavigationController {
-            if navigationController.childViewControllers.isEmpty {
+            if navigationController.children.isEmpty {
                 navigationController.setViewControllers([viewController], animated: true)
             } else {
                 navigationController.pushViewController(viewController, animated: animated)

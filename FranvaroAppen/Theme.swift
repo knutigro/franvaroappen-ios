@@ -22,8 +22,8 @@ class Theme {
         UINavigationBar.appearance().barTintColor = UIColor.white
         
         // Changing the navigation controller's title colour
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.App.blue, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.App.blue, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
-        UIBarButtonItem.appearance().setTitleTextAttributes( [NSAttributedStringKey.foregroundColor: UIColor.App.blue, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 18)], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes( [NSAttributedString.Key.foregroundColor: UIColor.App.blue, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)], for: .normal)
     }
 }

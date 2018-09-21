@@ -192,7 +192,7 @@ extension ReportViewController {
     func showAlert(message: String) {
         let alert = UIAlertController(title: nil,
                                       message: message,
-                                      preferredStyle: UIAlertControllerStyle.alert)
+                                      preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -274,7 +274,7 @@ extension ReportViewController {
                 // startDateDescriptor is later than endDateDescriptor
                 dateEndCell.update()
                 let newDetailText =  dateEndCell.detailTextLabel!.text!
-                let strikeThroughAttribute = [NSAttributedStringKey.strikethroughStyle : NSUnderlineStyle.styleSingle.rawValue]
+                let strikeThroughAttribute = [NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.single.rawValue]
                 let strikeThroughText = NSAttributedString(string: newDetailText, attributes: strikeThroughAttribute)
                 endDateDescriptor.cellConfig["detailTextLabel.attributedText"] = strikeThroughText
                 updateFormRow(endDateDescriptor)

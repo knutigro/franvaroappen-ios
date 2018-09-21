@@ -148,8 +148,8 @@ extension ChildListViewController {
 
 extension ChildListViewController: DZNEmptyDataSetSource {
     
-    func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControlState) -> NSAttributedString {
-        return NSAttributedString(string: NSLocalizedString("Lägg till barn", comment: ""), attributes: [NSAttributedStringKey.foregroundColor:UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 24)])
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControl.State) -> NSAttributedString {
+        return NSAttributedString(string: NSLocalizedString("Lägg till barn", comment: ""), attributes: [NSAttributedString.Key.foregroundColor:UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24)])
     }
 }
 

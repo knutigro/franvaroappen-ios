@@ -12,18 +12,18 @@ import FBSDKShareKit
 
 class ShareManager: NSObject {
     
-    func openShareSelector(style: UIAlertControllerStyle, viewController: UIViewController, barButton: UIBarButtonItem) {
+    func openShareSelector(style: UIAlertController.Style, viewController: UIViewController, barButton: UIBarButtonItem) {
         
-        let alert = UIAlertController(title: NSLocalizedString("Facebook", comment: ""), message:nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Skicka appen till vänner", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        let alert = UIAlertController(title: NSLocalizedString("Facebook", comment: ""), message:nil, preferredStyle: UIAlertController.Style.actionSheet)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Skicka appen till vänner", comment: ""), style: UIAlertAction.Style.default, handler:  { [weak self](action) in
             Analytics.track(event: Analytics.kShareButtonTappedEvent, attributes: [Analytics.kResultKey: "Message on Facebook", Analytics.kLocationKey: String(describing: type(of: viewController))])
             self?.sendMessageOnFacebook()
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Dela appen på Facebook", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Dela appen på Facebook", comment: ""), style: UIAlertAction.Style.default, handler:  { [weak self](action) in
             Analytics.track(event: Analytics.kShareButtonTappedEvent, attributes: [Analytics.kResultKey: "Share on Facebook", Analytics.kLocationKey: String(describing: type(of: viewController))])
             self?.shareOnFacebook(viewController: viewController)
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.default, handler: {(action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertAction.Style.default, handler: {(action) in
             Analytics.track(event: Analytics.kShareButtonTappedEvent, attributes: [Analytics.kResultKey: "Cancelled", Analytics.kLocationKey: String(describing: type(of: viewController))])
         }))
         
@@ -67,7 +67,7 @@ class ShareManager: NSObject {
             dialog.show()
         } else {
             // Messenger isn't installed. Redirect the person to the App Store.
-            UIApplication.shared.open(NSURL(string: "https://itunes.apple.com/se/app/messenger/id454638411?mt=8")! as URL, options: [:], completionHandler: nil)
+            UIApplication.shared.open(NSURL(string: "https://itunes.apple.com/se/app/messenger/id454638411?mt=8")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         }
     }
 }
@@ -94,4 +94,9 @@ extension ShareManager: FBSDKSharingDelegate {
             return "Facebook share"
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

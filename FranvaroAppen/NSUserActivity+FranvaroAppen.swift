@@ -41,7 +41,7 @@ extension NSUserActivity {
         requiredUserInfoKeys = [NSUserActivity.childrenNameKey]
         let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
         let image = UIImage(named: "Icon-76")!
-        attributes.thumbnailData = UIImagePNGRepresentation(image)
+        attributes.thumbnailData = image.pngData()
         attributes.contentDescription = description
         contentAttributeSet = attributes
         if #available(iOS 12, *) {

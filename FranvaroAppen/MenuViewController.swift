@@ -127,14 +127,14 @@ extension MenuViewController {
     
     @IBAction func didTapEditButton(_ button: UIBarButtonItem) {
         
-        let alert = UIAlertController(title: child?.name, message:nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Ändra info", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        let alert = UIAlertController(title: child?.name, message:nil, preferredStyle: UIAlertController.Style.actionSheet)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Ändra info", comment: ""), style: UIAlertAction.Style.default, handler:  { [weak self](action) in
             self?.performSegueWithIdentifier(.OpenEditChild, sender: self)
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Byt barn", comment: ""), style: UIAlertActionStyle.default, handler:  { [weak self](action) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Byt barn", comment: ""), style: UIAlertAction.Style.default, handler:  { [weak self](action) in
             let _ = self?.navigationController?.popViewController(animated: true)
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertAction.Style.default, handler: nil))
         
         if let popoverPresentationController = alert.popoverPresentationController {
             popoverPresentationController.barButtonItem = button
@@ -184,7 +184,7 @@ extension MenuViewController {
         } else if cell == reviewOnAppstoreCell {
             RatingManager.didTapReviewLink = true
             updateUI()
-            UIApplication.shared.open(URL(string:"https://itunes.apple.com/se/app/anm%C3%A4l-fr%C3%A5nvaro-lidk%C3%B6ping/id1175852934?action=write-review")!, options: [String: Any](), completionHandler: nil)
+            UIApplication.shared.open(URL(string:"https://itunes.apple.com/se/app/anm%C3%A4l-fr%C3%A5nvaro-lidk%C3%B6ping/id1175852934?action=write-review")!, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([String: Any]()), completionHandler: nil)
             Analytics.track(event: Analytics.kDidTapReviewCellEvent)
         }
         
@@ -194,8 +194,13 @@ extension MenuViewController {
     public func showNoChildAlert() {
         let alert = UIAlertController(title: nil,
                                       message: NSLocalizedString("Inget barn vald.", comment: ""),
-                                      preferredStyle: UIAlertControllerStyle.alert)
+                                      preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }
