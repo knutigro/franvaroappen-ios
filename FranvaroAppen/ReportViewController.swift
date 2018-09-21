@@ -52,11 +52,13 @@ class ReportViewController: XLFormViewController, ChildController {
             title = NSLocalizedString("Ledighet", comment: "")
             userActivity = NSUserActivity(type: .reportAbsence, description: "Anmäl ledighet")
             userActivity?.delegate = self
+            userActivity?.becomeCurrent()
             break
         case .sickLeave:
             title = NSLocalizedString("Sjukfrånvaro", comment: "")
             userActivity = NSUserActivity(type: .reportSickleave, description: "Anmäl sjukfrånvaro")
             userActivity?.delegate = self
+            userActivity?.becomeCurrent()
             break
         }
         

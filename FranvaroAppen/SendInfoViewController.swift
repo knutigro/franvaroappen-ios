@@ -33,6 +33,7 @@ class SendInfoViewController: UIViewController, ChildController {
         
         userActivity = NSUserActivity(type: .composeMessage, description: "Skicka information")
         userActivity?.delegate = self
+        userActivity?.becomeCurrent()
     }
     
     override func viewDidAppear(_ animated: Bool) {

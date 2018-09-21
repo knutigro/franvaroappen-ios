@@ -39,13 +39,14 @@ extension NSUserActivity {
         self.init(type: type)
         isEligibleForSearch = true
         requiredUserInfoKeys = [NSUserActivity.childrenNameKey]
-        //        activity.suggestedInvocationPhrase = "Let's do it"
-        //        activity.isEligibleForPrediction = true
         let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
         let image = UIImage(named: "Icon-76")!
         attributes.thumbnailData = UIImagePNGRepresentation(image)
         attributes.contentDescription = description
         contentAttributeSet = attributes
+        if #available(iOS 12, *) {
+            isEligibleForPrediction = true
+        }
     }
 
 }
@@ -61,6 +62,9 @@ extension ChildController where Self: UIViewController, Self: NSUserActivityDele
         userActivity.keywords = [child.name, "Frånvaro", "Anmäl"]
         userActivity.title = child.name
         userActivity.childrenName = child.name
+        if #available(iOS 12, *) {
+            userActivity.persistentIdentifier = NSUserActivityPersistentIdentifier(format: "%@-%@", userActivity.activityType, child.name)
+        }
     }
 }
 
