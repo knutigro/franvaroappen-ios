@@ -25,6 +25,8 @@
 		493B14B31DD3E22B007882C5 /* ChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B21DD3E22B007882C5 /* ChildCell.swift */; };
 		493B14B51DD3E530007882C5 /* ChildListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B41DD3E530007882C5 /* ChildListViewController.swift */; };
 		493B14B91DD4A6B9007882C5 /* ChildGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B81DD4A6B9007882C5 /* ChildGridCell.swift */; };
+		49434CE62135429E00CD3D0D /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49434CE52135429E00CD3D0D /* ApplicationRouter.swift */; };
+		49434CEA2135575300CD3D0D /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49434CE92135575300CD3D0D /* DBManager.swift */; };
 		495886D61DF75CB0007AB93E /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495886D51DF75CB0007AB93E /* AboutAppViewController.swift */; };
 		495886D81DFA0EBB007AB93E /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495886D71DFA0EBB007AB93E /* ShareManager.swift */; };
 		4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADD1DD5FDD90053BC98 /* Theme.swift */; };
@@ -32,6 +34,7 @@
 		4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE11DD600920053BC98 /* NavigationController.swift */; };
 		4987BAE41DD612F10053BC98 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE31DD612F10053BC98 /* ReportViewController.swift */; };
 		49888D3E1DFFFB6300F0EBA0 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49888D3D1DFFFB6300F0EBA0 /* IconView.swift */; };
+		499E6FF821348E740054328D /* NSUserActivity+FranvaroAppen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E6FF721348E740054328D /* NSUserActivity+FranvaroAppen.swift */; };
 		49BBACA81E945978000FFAE2 /* RatingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBACA71E945978000FFAE2 /* RatingManagerTests.swift */; };
 		49C5139F1E905A4D00CD0487 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5139E1E905A4D00CD0487 /* RatingManager.swift */; };
 		49C63E571DD5E6F60087A148 /* info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C63E561DD5E6F60087A148 /* info.pdf */; };
@@ -86,6 +89,8 @@
 		493B14B21DD3E22B007882C5 /* ChildCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCell.swift; sourceTree = "<group>"; };
 		493B14B41DD3E530007882C5 /* ChildListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildListViewController.swift; sourceTree = "<group>"; };
 		493B14B81DD4A6B9007882C5 /* ChildGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildGridCell.swift; sourceTree = "<group>"; };
+		49434CE52135429E00CD3D0D /* ApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
+		49434CE92135575300CD3D0D /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		495886D51DF75CB0007AB93E /* AboutAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		495886D71DFA0EBB007AB93E /* ShareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		4987BADD1DD5FDD90053BC98 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 		4987BAE11DD600920053BC98 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		4987BAE31DD612F10053BC98 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		49888D3D1DFFFB6300F0EBA0 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		499E6FF721348E740054328D /* NSUserActivity+FranvaroAppen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+FranvaroAppen.swift"; sourceTree = "<group>"; };
 		49BBACA71E945978000FFAE2 /* RatingManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingManagerTests.swift; sourceTree = "<group>"; };
 		49C5139E1E905A4D00CD0487 /* RatingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
 		49C63E561DD5E6F60087A148 /* info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = info.pdf; sourceTree = "<group>"; };
@@ -171,14 +177,17 @@
 			children = (
 				49F35EA71E983B46003C0521 /* FranvaroAppen.entitlements */,
 				492BFFC91DD34C7E00867896 /* AppDelegate.swift */,
+				49434CE92135575300CD3D0D /* DBManager.swift */,
 				492BFFFF1DD3667D00867896 /* MessageHelper.swift */,
 				4987BADD1DD5FDD90053BC98 /* Theme.swift */,
 				4987BADF1DD5FE780053BC98 /* UIColor+App.swift */,
 				4925AC201DD7C47200BE8881 /* Analytics.swift */,
 				49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */,
+				49434CE52135429E00CD3D0D /* ApplicationRouter.swift */,
 				495886D71DFA0EBB007AB93E /* ShareManager.swift */,
 				49C5139E1E905A4D00CD0487 /* RatingManager.swift */,
 				49888D3D1DFFFB6300F0EBA0 /* IconView.swift */,
+				499E6FF721348E740054328D /* NSUserActivity+FranvaroAppen.swift */,
 				493B14AE1DD36F9A007882C5 /* ViewControllers */,
 				492B00011DD369A900867896 /* Models */,
 				492BFFFA1DD35E1400867896 /* Categories */,
@@ -288,7 +297,6 @@
 				492BFFC31DD34C7E00867896 /* Frameworks */,
 				492BFFC41DD34C7E00867896 /* Resources */,
 				E74D2694136BFF8A573853F2 /* [CP] Embed Pods Frameworks */,
-				356443C4E6591C8B4CB6AE5F /* [CP] Copy Pods Resources */,
 				49080EB51DD9F36200673D11 /* Fabric */,
 			);
 			buildRules = (
@@ -308,8 +316,6 @@
 				492BFFD91DD34C7E00867896 /* Sources */,
 				492BFFDA1DD34C7E00867896 /* Frameworks */,
 				492BFFDB1DD34C7E00867896 /* Resources */,
-				0B77D2A25480CAD4998AD3FA /* [CP] Embed Pods Frameworks */,
-				652BB945814946C39CED54A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,8 +335,6 @@
 				492BFFE41DD34C7E00867896 /* Sources */,
 				492BFFE51DD34C7E00867896 /* Frameworks */,
 				492BFFE61DD34C7E00867896 /* Resources */,
-				D0F1A0F9FBB0C7B9737EAC4A /* [CP] Copy Pods Resources */,
-				8900E34DFABB9963E8807800 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -437,28 +441,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FranvaroAppen-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		0B77D2A25480CAD4998AD3FA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2671EAFB9C0B3CEC58A3E650 /* [CP] Check Pods Manifest.lock */ = {
@@ -467,28 +459,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FranvaroAppenTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		356443C4E6591C8B4CB6AE5F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3CAF09B56A5A4C784481FD17 /* [CP] Check Pods Manifest.lock */ = {
@@ -497,13 +477,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FranvaroAppenUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		49080EB51DD9F36200673D11 /* Fabric */ = {
@@ -520,60 +503,30 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 975b8be9fe2f4dfd2f635a7b54ac52b4c49e023b cdb27eb87742e8cc0001dee929df20f6c8c18c09130ea5df80c17cfd68ae8a80";
 		};
-		652BB945814946C39CED54A7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8900E34DFABB9963E8807800 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D0F1A0F9FBB0C7B9737EAC4A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E74D2694136BFF8A573853F2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${PODS_ROOT}/Localytics/Localytics-iOS-4.4.1/Localytics.framework",
+				"${BUILT_PRODUCTS_DIR}/StaticDataTableViewController/StaticDataTableViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/XLForm/XLForm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localytics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StaticDataTableViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLForm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -592,8 +545,10 @@
 				49C5139F1E905A4D00CD0487 /* RatingManager.swift in Sources */,
 				493B14B51DD3E530007882C5 /* ChildListViewController.swift in Sources */,
 				493B14B01DD3831F007882C5 /* EditChildViewController.swift in Sources */,
+				49434CEA2135575300CD3D0D /* DBManager.swift in Sources */,
 				492B00001DD3667D00867896 /* MessageHelper.swift in Sources */,
 				495886D61DF75CB0007AB93E /* AboutAppViewController.swift in Sources */,
+				49434CE62135429E00CD3D0D /* ApplicationRouter.swift in Sources */,
 				4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */,
 				49ED43BE1DE8D89B004FB1BC /* DateValueTransformer.swift in Sources */,
 				493B14B91DD4A6B9007882C5 /* ChildGridCell.swift in Sources */,
@@ -601,6 +556,7 @@
 				493B14B31DD3E22B007882C5 /* ChildCell.swift in Sources */,
 				4925AC211DD7C47200BE8881 /* Analytics.swift in Sources */,
 				4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */,
+				499E6FF821348E740054328D /* NSUserActivity+FranvaroAppen.swift in Sources */,
 				492BFFCC1DD34C7E00867896 /* MenuViewController.swift in Sources */,
 				492BFFCA1DD34C7E00867896 /* AppDelegate.swift in Sources */,
 				492BFFD21DD34C7E00867896 /* FranvaroAppen.xcdatamodeld in Sources */,
@@ -717,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
@@ -774,7 +730,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

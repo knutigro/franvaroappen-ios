@@ -10,7 +10,7 @@ import XLForm
 import UIKit
 import MessageUI
 
-class ReportViewController: XLFormViewController {
+class ReportViewController: XLFormViewController, ChildController {
     
     enum FormTag: String {
         case allDay = "all-day"
@@ -50,9 +50,13 @@ class ReportViewController: XLFormViewController {
         switch reportType {
         case .absence:
             title = NSLocalizedString("Ledighet", comment: "")
+            userActivity = NSUserActivity(type: .reportAbsence, description: "Anmäl ledighet")
+            userActivity?.delegate = self
             break
         case .sickLeave:
             title = NSLocalizedString("Sjukfrånvaro", comment: "")
+            userActivity = NSUserActivity(type: .reportSickleave, description: "Anmäl sjukfrånvaro")
+            userActivity?.delegate = self
             break
         }
         
@@ -282,3 +286,15 @@ extension ReportViewController {
         updateValuesFromForm()
     }
 }
+
+// MARK: NSUserActivityDelegate
+
+extension ReportViewController: NSUserActivityDelegate {
+    
+    @objc func userActivityWillSave(_ userActivity: NSUserActivity) {
+        if let child = child {
+            updateUserActivity(userActivity: userActivity, with: child)
+        }
+    }
+}
+

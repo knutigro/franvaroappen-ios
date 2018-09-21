@@ -71,6 +71,12 @@
 	<array>
 		<string>armv7</string>
 	</array>
+    <key>NSUserActivityTypes</key>
+    <array>
+        <string>com.cocmoc.franvaro.compose-message</string>
+        <string>com.cocmoc.franvaro.report-sickleave</string>
+        <string>com.cocmoc.franvaro.report-absence</string>
+    </array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>

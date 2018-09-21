@@ -37,9 +37,9 @@ class ShareManager: NSObject {
     func shareLinkContent() -> FBSDKShareLinkContent {
         let content : FBSDKShareLinkContent = FBSDKShareLinkContent()
         content.contentURL = NSURL(string: "https://itunes.apple.com/us/app/anmal-franvaro-lidkoping/id1175852934") as URL?
-        content.contentTitle = NSLocalizedString("Anmäl frånvaro Lidköping", comment: "")
-        content.contentDescription = NSLocalizedString("Nu kan du enkelt anmäla frånvaro för barn i Lidköpings kommunala förskolor och fritids. Med några klick registrerar du som vårdnadshavare heldag eller del av dag då ditt barn är frånvarande. Appen genererar sedan din anmälan i form av ett sms som skickas till Lidköping kommuns e-tjänster.", comment: "")
-        content.imageURL = NSURL(string: "http://knutigro.github.io/documents/franvaro/facebook_add.jpg") as URL?
+//        content.contentTitle = NSLocalizedString("Anmäl frånvaro Lidköping", comment: "")
+//        content.contentDescription = NSLocalizedString("Nu kan du enkelt anmäla frånvaro för barn i Lidköpings kommunala förskolor och fritids. Med några klick registrerar du som vårdnadshavare heldag eller del av dag då ditt barn är frånvarande. Appen genererar sedan din anmälan i form av ett sms som skickas till Lidköping kommuns e-tjänster.", comment: "")
+ //       content.imageURL = NSURL(string: "http://knutigro.github.io/documents/franvaro/facebook_add.jpg") as URL?
         
         return content
     }

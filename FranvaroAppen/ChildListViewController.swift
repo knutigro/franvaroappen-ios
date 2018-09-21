@@ -12,7 +12,7 @@ import DZNEmptyDataSet
 
 class ChildListViewController: UITableViewController, SegueHandlerType {
     
-    var children = [NSManagedObject]()
+    var childItems = [NSManagedObject]()
     var viewControllerIsFirstTimeLoading = true
     
     enum SegueIdentifier: String {
@@ -35,10 +35,10 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         
         updateData()
         
-        if children.count == 0 {
+        if childItems.count == 0 {
             performSegueWithIdentifier(.OpenAddChildNoAnimation, sender: nil)
-        } else if children.count == 1 {
-            performSegueWithIdentifier(.OpenChildMenuNoAnimation, sender: children.first)
+        } else if childItems.count == 1 {
+            performSegueWithIdentifier(.OpenChildMenuNoAnimation, sender: childItems.first)
         }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name.NSManagedObjectContextObjectsDidChange, object: nil, queue: nil) { [weak self] note in
@@ -77,26 +77,21 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
     }
     
     func updateData() {
-        guard let managedContext = AppDelegate.originalAppDelegate?.persistentContainer.viewContext else {
-            return
-        }
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ChildEntity")
-        do {
-            if let results = try managedContext.fetch(fetchRequest) as? [NSManagedObject] {
-                children = results
-                
-                let childrenNames = children.map{Child.newWith(managedObject: $0).name} as NSArray
-                if (childrenNames.count > 0) {
-                    Analytics.trackValue(value: childrenNames, forProfileAttribute: "Children")
-                }
-                Analytics.trackValue(value: NSNumber(integerLiteral: childrenNames.count), forProfileAttribute: "Number of children")
-                
-                tableView.reloadData()
+        AppDelegate.originalAppDelegate?.dbManager.fetchAllChildren(completion: { [weak self] (objects, error) in
+            if let error = error {
+                print("Could not fetch \(error), \(error.userInfo)")
+                return
             }
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
+            
+            let childrenNames = objects.map{Child.newWith(managedObject: $0).name} as NSArray
+            if (childrenNames.count > 0) {
+                Analytics.trackValue(value: childrenNames, forProfileAttribute: "Children")
+            }
+            Analytics.trackValue(value: NSNumber(integerLiteral: childrenNames.count), forProfileAttribute: "Number of children")
+            self?.childItems = objects
+            self?.tableView.reloadData()
+        })
     }
 }
 
@@ -105,13 +100,13 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
 extension ChildListViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return children.count
+        return childItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChildCell") as! ChildCell
-        let child = children[indexPath.row]
+        let child = childItems[indexPath.row]
         
         cell.update(child: Child.newWith(managedObject: child))
         
@@ -124,15 +119,7 @@ extension ChildListViewController {
 extension ChildListViewController {
     
     func delete(child: NSManagedObject) {
-        guard let managedContext = AppDelegate.originalAppDelegate?.persistentContainer.viewContext else {
-            return
-        }
-        do {
-            managedContext.delete(child)
-            try managedContext.save()
-        } catch let error as NSError  {
-            print("Kunde inte radera \(error), \(error.userInfo)")
-        }
+        AppDelegate.originalAppDelegate?.dbManager.delete(child: child)
     }
 }
 
@@ -142,12 +129,12 @@ extension ChildListViewController {
 extension ChildListViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegueWithIdentifier(.OpenChildMenu, sender: children[indexPath.row])
+        performSegueWithIdentifier(.OpenChildMenu, sender: childItems[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let child = children[indexPath.row]
+        let child = childItems[indexPath.row]
         let delete = UITableViewRowAction(style: .normal, title: "Radera") { [weak self] action, index in
             self?.delete(child: child)
         }

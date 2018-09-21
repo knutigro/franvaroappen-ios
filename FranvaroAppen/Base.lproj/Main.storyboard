@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R9p-PV-lUS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R9p-PV-lUS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -482,7 +481,7 @@ knutigro.github.io</string>
         <!--Anmäl-->
         <scene sceneID="TLE-Df-sBJ">
             <objects>
-                <tableViewController id="BZz-hF-N3D" customClass="ReportViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ReportViewController" id="BZz-hF-N3D" customClass="ReportViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="56" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ppy-DT-z0C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -509,7 +508,7 @@ knutigro.github.io</string>
         <!--Skicka information-->
         <scene sceneID="czE-1C-AXj">
             <objects>
-                <viewController id="yr6-qT-Bxc" customClass="SendInfoViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SendInfoViewController" id="yr6-qT-Bxc" customClass="SendInfoViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vfH-sC-dDo"/>
                         <viewControllerLayoutGuide type="bottom" id="38V-mF-Qwr"/>

@@ -93,27 +93,43 @@ extension EditChildViewController {
         let _ = self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func didTapSave(_ objects: AnyObject?) {
-        
+    func childFromData() -> Child? {
         let name = nameTextField?.text ?? ""
         let personalNumber = personalNumberTextField?.text ?? ""
         
         guard !name.isEmpty else {
             showAlert(message: NSLocalizedString("Namn kan inte vara tomt", comment: ""))
-            return
+            return nil
         }
         
         guard !personalNumber.isEmpty else {
             showAlert(message: NSLocalizedString("Person nummer kan inte vara tomt", comment: ""))
-            return
+            return nil
         }
         
         guard personalNumber.isValidPersonalNumber else {
             showAlert(message: NSLocalizedString("Person nummer måste ha formen ÅÅMMDD-NNNN.", comment: ""))
-            return
+            return nil
         }
-
-        save(child: Child(name: name, personalNumber: personalNumber, image: nil))
+        
+        return  Child(name: name, personalNumber: personalNumber, image: nil)
+    }
+    
+    @IBAction func didTapSave(_ objects: AnyObject?) {
+        
+        guard let child = childFromData() else { return }
+        let previousObject = childEntity
+        let image = imageView?.image
+        
+        AppDelegate.originalAppDelegate?.dbManager.save(child: child, image: image, previousObject: previousObject, completion: { [weak self] (object, error) in
+            
+            if let object = object {
+                self?.delegate?.editChildViewController(self!, didFinishWithChild: object)
+                let _ = self?.navigationController?.popViewController(animated: true)
+            } else {
+                print("Could not save \(String(describing: error)), \(String(describing: error?.userInfo))")
+            }
+        })
     }
     
     @IBAction func didTapAvatar(_ sender: AnyObject?) {
@@ -128,39 +144,6 @@ extension EditChildViewController {
         if (UIDevice.current.userInterfaceIdiom == .pad) {
             let popper = imagePicker.popoverPresentationController
             popper?.sourceView = self.view
-        }
-    }
-}
-
-// MARK: CoreData
-
-extension EditChildViewController {
-    
-    func save(child: Child) {
-        
-        guard let managedContext = AppDelegate.originalAppDelegate?.persistentContainer.viewContext else {
-            return
-        }
-        
-        if childEntity == nil {
-            let entity = NSEntityDescription.entity(forEntityName: "ChildEntity", in: managedContext)!
-            childEntity = NSManagedObject(entity: entity, insertInto: managedContext)
-        }
-        
-        guard let childEnity = childEntity else { return }
-
-        childEnity.setValue(child.name, forKey: "name")
-        childEnity.setValue(child.personalNumber, forKey: "personal_number")
-        if let image = imageView?.image {
-            childEnity.setValue(UIImageJPEGRepresentation(image, 1), forKey: "photo")
-        }
-        
-        do {
-            try managedContext.save()
-            delegate?.editChildViewController(self, didFinishWithChild: childEnity)
-            let _ = navigationController?.popViewController(animated: true)
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
         }
     }
 }

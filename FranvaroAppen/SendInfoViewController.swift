@@ -9,7 +9,7 @@
 import Foundation
 import MessageUI
 
-class SendInfoViewController: UIViewController {
+class SendInfoViewController: UIViewController, ChildController {
     
     let limit = 160
     @IBOutlet var textViewBottomContraint: NSLayoutConstraint?
@@ -30,6 +30,9 @@ class SendInfoViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         
         textLimitLabel?.text = String(format: "%i / %i", textView?.text.count ?? 0, limit)
+        
+        userActivity = NSUserActivity(type: .composeMessage, description: "Skicka information")
+        userActivity?.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -120,3 +123,16 @@ extension SendInfoViewController: UITextViewDelegate {
         return newLength <= limit
     }
 }
+
+// MARK: NSUserActivityDelegate
+
+extension SendInfoViewController: NSUserActivityDelegate {
+    
+    @objc func userActivityWillSave(_ userActivity: NSUserActivity) {
+        if let child = child {
+            updateUserActivity(userActivity: userActivity, with: child)
+        }
+    }
+}
+
+
