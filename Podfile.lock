@@ -9,23 +9,23 @@ PODS:
     - Fabric (~> 1.7.11)
   - DZNEmptyDataSet (1.8.1)
   - Fabric (1.7.11)
-  - FBSDKCoreKit (4.35.0):
-    - Bolts (~> 1.7)
-  - FBSDKShareKit (4.35.0):
-    - FBSDKCoreKit (~> 4.35.0)
-  - Localytics (4.4.1)
+  - FBSDKCoreKit (4.38.0):
+    - Bolts (~> 1.9)
+  - FBSDKShareKit (4.38.0):
+    - FBSDKCoreKit
+  - Localytics (5.3.0)
   - StaticDataTableViewController (2.5.0)
-  - XLForm (3.3.0)
+  - XLForm (4.0.0)
 
 DEPENDENCIES:
   - Crashlytics
   - DZNEmptyDataSet
   - Fabric
-  - FBSDKCoreKit (~> 4.18)
-  - FBSDKShareKit (~> 4.18)
-  - Localytics (~> 4.0)
-  - StaticDataTableViewController (~> 2.0)
-  - XLForm (~> 3.3)
+  - FBSDKCoreKit (~> 4.38)
+  - FBSDKShareKit (~> 4.38)
+  - Localytics (~> 5.3)
+  - StaticDataTableViewController (~> 2.5)
+  - XLForm (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -44,12 +44,12 @@ SPEC CHECKSUMS:
   Crashlytics: ccaac42660eb9351b9960c0d66106b0bcf99f4fa
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Fabric: f233c9492b3bbc1f04e3882986740f7988a58edb
-  FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
-  FBSDKShareKit: 2ddbd7e6432023fff957af62e23a3671b84319f7
-  Localytics: f9673b7170c4744173b7154ee9a96a942a3da890
+  FBSDKCoreKit: 2ab7fdbf600dc6b628ba7a49aa29d357a7b4c74e
+  FBSDKShareKit: 00290e3db446eed603ff80ac629dcc5e80cf8b74
+  Localytics: aa49adf35bd480a598c98f525a86d4c5b91debe8
   StaticDataTableViewController: 0c5c4a47861446dd3cfd52530ae801ec7662ce26
-  XLForm: d5c391dfc62865927b5bcab0a5a0dbfb3e02b0ec
+  XLForm: 04110197c12187dd28a6c7295d3d8b95f4fdb4de
 
-PODFILE CHECKSUM: aaabcdc4ed1c4d307fe818e81c8b89a3d39ad38d
+PODFILE CHECKSUM: 7aa44d780b10b5d538293a3956c2adba07a186ad
 
 COCOAPODS: 1.5.3
