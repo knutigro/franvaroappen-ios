@@ -31,6 +31,7 @@
 		495886D81DFA0EBB007AB93E /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495886D71DFA0EBB007AB93E /* ShareManager.swift */; };
 		495AEBEA2187A7EE00CB914F /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 495AEBE92187A7EE00CB914F /* Secrets.plist */; };
 		495AEBEC2187A86800CB914F /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AEBEB2187A86700CB914F /* Secrets.swift */; };
+		495AEBEE2187B3C000CB914F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 495AEBED2187B3C000CB914F /* README.md */; };
 		4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADD1DD5FDD90053BC98 /* Theme.swift */; };
 		4987BAE01DD5FE780053BC98 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADF1DD5FE780053BC98 /* UIColor+App.swift */; };
 		4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE11DD600920053BC98 /* NavigationController.swift */; };
@@ -97,6 +98,7 @@
 		495886D71DFA0EBB007AB93E /* ShareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		495AEBE92187A7EE00CB914F /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		495AEBEB2187A86700CB914F /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		495AEBED2187B3C000CB914F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4987BADD1DD5FDD90053BC98 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4987BADF1DD5FE780053BC98 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		4987BAE11DD600920053BC98 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		492BFFBD1DD34C7E00867896 = {
 			isa = PBXGroup;
 			children = (
+				495AEBED2187B3C000CB914F /* README.md */,
 				492BFFC81DD34C7E00867896 /* FranvaroAppen */,
 				492BFFE01DD34C7E00867896 /* FranvaroAppenTests */,
 				492BFFEB1DD34C7E00867896 /* FranvaroAppenUITests */,
@@ -420,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495AEBEE2187B3C000CB914F /* README.md in Resources */,
 				495AEBEA2187A7EE00CB914F /* Secrets.plist in Resources */,
 				49C63E571DD5E6F60087A148 /* info.pdf in Resources */,
 				492BFFD71DD34C7E00867896 /* LaunchScreen.storyboard in Resources */,
