@@ -30,7 +30,7 @@ class MenuViewController: UITableViewController, SegueHandlerType {
     var childEntity: NSManagedObject? {
         didSet {
             if let childEntity = childEntity {
-                child = Child.newWith(managedObject: childEntity)
+                child = Child(managedObject: childEntity)
             }
         }
     }

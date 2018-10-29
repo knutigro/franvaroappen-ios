@@ -75,7 +75,7 @@ extension DBManager {
         fetchAllChildren { (object, error) in
             
             let childObject = object.filter({ (object) -> Bool in
-                Child.newWith(managedObject: object).name == name
+                Child(managedObject: object).name == name
             }).first
             
             completion(childObject, error)

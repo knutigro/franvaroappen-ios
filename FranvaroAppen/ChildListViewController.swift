@@ -84,7 +84,7 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
                 return
             }
             
-            let childrenNames = objects.map{Child.newWith(managedObject: $0).name} as NSArray
+            let childrenNames = objects.map{ Child(managedObject: $0).name } as NSArray
             if (childrenNames.count > 0) {
                 Analytics.trackValue(value: childrenNames, forProfileAttribute: "Children")
             }
@@ -108,7 +108,7 @@ extension ChildListViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChildCell") as! ChildCell
         let child = childItems[indexPath.row]
         
-        cell.update(child: Child.newWith(managedObject: child))
+        cell.update(child: Child(managedObject: child))
         
         return cell
     }

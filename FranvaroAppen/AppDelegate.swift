@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var fetchedChild: Child?
         dbManager.fetchChild(withName: name) { (object, error) in
             guard let object = object else { return }
-            fetchedChild = Child.newWith(managedObject: object)
+            fetchedChild = Child(managedObject: object)
         }
 
         guard let child = fetchedChild else { return false }

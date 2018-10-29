@@ -55,7 +55,7 @@ class EditChildViewController: UITableViewController {
         
         var child: Child?
         if let childEntity = childEntity {
-            child = Child.newWith(managedObject: childEntity)
+            child = Child(managedObject: childEntity)
         }
         
         if let child = child {

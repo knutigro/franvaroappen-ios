@@ -38,7 +38,9 @@ struct Analytics {
     static func autoIntegrate(_ launchOptions: [AnyHashable: Any]?) {
         #if DEBUG
         #else
-            Localytics.autoIntegrate("c37149f6da0bce9e37c3180-b7ca7ba8-a91e-11e6-67f0-007933b47d84", launchOptions: launchOptions)
+            if let key = Secrets.localyticsAPIKey {
+                Localytics.autoIntegrate(key, launchOptions: launchOptions)
+            }
         #endif
     }
     
