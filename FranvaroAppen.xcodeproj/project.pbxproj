@@ -515,7 +515,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 975b8be9fe2f4dfd2f635a7b54ac52b4c49e023b cdb27eb87742e8cc0001dee929df20f6c8c18c09130ea5df80c17cfd68ae8a80";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 975b8be9fe2f4dfd2f635a7b54ac52b4c49e023b cdb27eb87742e8cc0001dee929df20f6c8c18c09130ea5df80c17cfd68ae8a80\n";
 		};
 		E74D2694136BFF8A573853F2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -763,6 +763,7 @@
 				CODE_SIGN_ENTITLEMENTS = FranvaroAppen/FranvaroAppen.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2PRW676NCQ;
 				INFOPLIST_FILE = FranvaroAppen/Info.plist;

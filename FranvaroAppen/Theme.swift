@@ -12,9 +12,6 @@ class Theme {
     
     class func applyTheme() {
         
-        // Changing the status bar's colour to white
-        UIApplication.shared.statusBarStyle = .default
-        
         // Changing the colour of the bar button items
         UINavigationBar.appearance().tintColor = UIColor.App.blue
         
