@@ -14,6 +14,7 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
     
     var childItems = [NSManagedObject]()
     var viewControllerIsFirstTimeLoading = true
+    var childPersistenceController: ChildPersistenceProtocol?
     
     enum SegueIdentifier: String {
         case OpenAddChild = "OpenAddChild"
@@ -46,6 +47,8 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
                 self?.updateData()
             });
         }
+        
+        assert(childPersistenceController != nil, "childPersistenceController must have a value")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,17 +71,18 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         case .OpenAddChild, .OpenAddChildNoAnimation:
             if let controller = segue.destination as? EditChildViewController {
                 controller.title = NSLocalizedString("Lägg till barn", comment: "")
+                controller.childPersistenceController = childPersistenceController
             }
         case .OpenChildMenu, .OpenChildMenuNoAnimation:
             if let controller = segue.destination as? MenuViewController {
                 controller.childEntity = sender as? NSManagedObject
+                controller.childPersistenceController = childPersistenceController
             }
         }
     }
     
     func updateData() {
-        
-        AppDelegate.originalAppDelegate?.dbManager.fetchAllChildren(completion: { [weak self] (objects, error) in
+        childPersistenceController?.fetchAllChildren(completion: { [weak self] (objects, error) in
             if let error = error {
                 print("Could not fetch \(error), \(error.userInfo)")
                 return
@@ -119,7 +123,7 @@ extension ChildListViewController {
 extension ChildListViewController {
     
     func delete(child: NSManagedObject) {
-        AppDelegate.originalAppDelegate?.dbManager.delete(child: child)
+        childPersistenceController?.delete(child: child)
     }
 }
 

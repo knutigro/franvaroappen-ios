@@ -16,13 +16,14 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    static var originalAppDelegate:AppDelegate!
     
     var dbManager = DBManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        AppDelegate.originalAppDelegate = self
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = ApplicationRouter.initialViewController(childPersistenceController: dbManager)
+        window?.makeKeyAndVisible()
         
         Theme.applyTheme()
         
@@ -64,8 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let type = UserActivityType(rawValue: userActivity.activityType) else { return false }
         guard let name = userActivity.childrenName else { return false }
         guard let viewController = window?.rootViewController else { return false }
-        
-        let approuter = ApplicationRouter(viewController: viewController)
+        let approuter = ApplicationRouter(viewController: viewController, childPersistenceController: dbManager)
         
         var fetchedChild: Child?
         dbManager.fetchChild(withName: name) { (object, error) in

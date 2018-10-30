@@ -25,7 +25,6 @@ class EditChildViewController: UITableViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personNumberLabel: UILabel!
-
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var personalNumberTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView?
@@ -33,6 +32,7 @@ class EditChildViewController: UITableViewController {
 
     var childEntity: NSManagedObject?
     var delegate: EditChildViewControllerDelegate?
+    var childPersistenceController: ChildPersistenceProtocol?
 
     // MARK: View
     
@@ -68,7 +68,8 @@ class EditChildViewController: UITableViewController {
             nameTextField.text = ""
             personalNumberTextField.text = ""
         }
-
+        
+        assert(childPersistenceController != nil, "childPersistenceController must have a value")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,12 +117,11 @@ extension EditChildViewController {
     }
     
     @IBAction func didTapSave(_ objects: AnyObject?) {
-        
         guard let child = childFromData() else { return }
         let previousObject = childEntity
         let image = imageView?.image
         
-        AppDelegate.originalAppDelegate?.dbManager.save(child: child, image: image, previousObject: previousObject, completion: { [weak self] (object, error) in
+        childPersistenceController?.save(child: child, image: image, previousObject: previousObject, completion: { [weak self] (object, error) in
             
             if let object = object {
                 self?.delegate?.editChildViewController(self!, didFinishWithChild: object)
@@ -153,8 +153,8 @@ extension EditChildViewController {
 extension EditChildViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-// Local variable inserted by Swift 4.2 migrator.
-let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+        // Local variable inserted by Swift 4.2 migrator.
+        let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
 
         guard let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage else {
             dismiss(animated: true, completion: nil)

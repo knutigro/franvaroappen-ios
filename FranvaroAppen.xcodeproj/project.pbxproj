@@ -32,6 +32,7 @@
 		495AEBEA2187A7EE00CB914F /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 495AEBE92187A7EE00CB914F /* Secrets.plist */; };
 		495AEBEC2187A86800CB914F /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AEBEB2187A86700CB914F /* Secrets.swift */; };
 		495AEBEE2187B3C000CB914F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 495AEBED2187B3C000CB914F /* README.md */; };
+		496CE7C2218879C9002FF42A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CE7C1218879C9002FF42A /* Storyboard.swift */; };
 		4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADD1DD5FDD90053BC98 /* Theme.swift */; };
 		4987BAE01DD5FE780053BC98 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADF1DD5FE780053BC98 /* UIColor+App.swift */; };
 		4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE11DD600920053BC98 /* NavigationController.swift */; };
@@ -99,6 +100,7 @@
 		495AEBE92187A7EE00CB914F /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		495AEBEB2187A86700CB914F /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		495AEBED2187B3C000CB914F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		496CE7C1218879C9002FF42A /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		4987BADD1DD5FDD90053BC98 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4987BADF1DD5FE780053BC98 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		4987BAE11DD600920053BC98 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				49888D3D1DFFFB6300F0EBA0 /* IconView.swift */,
 				499E6FF721348E740054328D /* NSUserActivity+FranvaroAppen.swift */,
 				495AEBEB2187A86700CB914F /* Secrets.swift */,
+				496CE7C1218879C9002FF42A /* Storyboard.swift */,
 				493B14AE1DD36F9A007882C5 /* ViewControllers */,
 				492B00011DD369A900867896 /* Models */,
 				492BFFFA1DD35E1400867896 /* Categories */,
@@ -561,6 +564,7 @@
 				493B14B01DD3831F007882C5 /* EditChildViewController.swift in Sources */,
 				49434CEA2135575300CD3D0D /* DBManager.swift in Sources */,
 				492B00001DD3667D00867896 /* MessageHelper.swift in Sources */,
+				496CE7C2218879C9002FF42A /* Storyboard.swift in Sources */,
 				495886D61DF75CB0007AB93E /* AboutAppViewController.swift in Sources */,
 				49434CE62135429E00CD3D0D /* ApplicationRouter.swift in Sources */,
 				4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */,

@@ -25,7 +25,8 @@ class ReportViewController: XLFormViewController, ChildController {
     
     var child: Child?
     var reportType = ReportType.sickLeave
-    
+    var childPersistenceController: ChildPersistenceProtocol?
+
     var completeDay = true
     var fromDate = Date()
     var toDate = Date()
@@ -43,6 +44,8 @@ class ReportViewController: XLFormViewController, ChildController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        assert(childPersistenceController != nil, "childPersistenceController must have a value")
+
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         tableView.backgroundColor = UIColor.clear

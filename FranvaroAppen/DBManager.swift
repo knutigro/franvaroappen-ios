@@ -10,9 +10,17 @@ import Foundation
 import CoreData
 import UIKit
 
-class DBManager {
+protocol ChildPersistenceProtocol {
     
-    lazy var persistentContainer: NSPersistentContainer = {
+    func fetchAllChildren(completion: @escaping ([NSManagedObject], NSError?) -> Void)
+    func fetchChild(withName name: String, completion: @escaping (NSManagedObject?, NSError?) -> Void)
+    func delete(child: NSManagedObject)
+    func save(child: Child, image: UIImage?, previousObject: NSManagedObject?, completion: @escaping (NSManagedObject?, NSError?) -> Void)
+}
+
+class DBManager: ChildPersistenceProtocol {
+    
+    fileprivate lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
@@ -58,7 +66,7 @@ class DBManager {
 
 extension DBManager {
     
-    func fetchAllChildren(completion: @escaping ([NSManagedObject], NSError?) -> Void) {
+    internal func fetchAllChildren(completion: @escaping ([NSManagedObject], NSError?) -> Void) {
         
         let managedContext = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ChildEntity")
@@ -71,7 +79,7 @@ extension DBManager {
         }
     }
     
-    func fetchChild(withName name: String, completion: @escaping (NSManagedObject?, NSError?) -> Void) {
+    internal func fetchChild(withName name: String, completion: @escaping (NSManagedObject?, NSError?) -> Void) {
         fetchAllChildren { (object, error) in
             
             let childObject = object.filter({ (object) -> Bool in
@@ -82,7 +90,7 @@ extension DBManager {
         }
     }
     
-    func delete(child: NSManagedObject) {
+    internal func delete(child: NSManagedObject) {
         let managedContext = persistentContainer.viewContext
         
         do {
@@ -93,7 +101,7 @@ extension DBManager {
         }
     }
     
-    func save(child: Child, image: UIImage?, previousObject: NSManagedObject? = nil, completion: @escaping (NSManagedObject?, NSError?) -> Void) {
+    internal func save(child: Child, image: UIImage?, previousObject: NSManagedObject? = nil, completion: @escaping (NSManagedObject?, NSError?) -> Void) {
         
         let managedContext = persistentContainer.viewContext
  

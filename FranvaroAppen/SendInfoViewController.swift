@@ -16,6 +16,7 @@ class SendInfoViewController: UIViewController, ChildController {
     @IBOutlet weak var textView: UITextView?
     @IBOutlet weak var textLimitLabel: UILabel?
     var child: Child?
+    var childPersistenceController: ChildPersistenceProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,9 @@ class SendInfoViewController: UIViewController, ChildController {
         textView?.becomeFirstResponder()
         textView?.text = ""
         
-        assert(child != nil)
-        
+        assert(child != nil, "child must have a value")
+        assert(childPersistenceController != nil, "childPersistenceController must have a value")
+
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
         textLimitLabel?.text = String(format: "%i / %i", textView?.text.count ?? 0, limit)

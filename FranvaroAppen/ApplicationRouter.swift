@@ -11,21 +11,29 @@ import UIKit
 class ApplicationRouter {
     
     var presentingViewController: UIViewController
+    var childPersistenceController: ChildPersistenceProtocol
     
-    required init(viewController: UIViewController) {
+    required init(viewController: UIViewController, childPersistenceController: ChildPersistenceProtocol) {
         self.presentingViewController = viewController
+        self.childPersistenceController = childPersistenceController
     }
     
-    fileprivate var storyBoard: UIStoryboard {
-        return UIStoryboard(name: "Main", bundle: nil)
+    class func initialViewController(childPersistenceController: ChildPersistenceProtocol) -> UIViewController {
+        let navigationController = Storyboard.main.instantiateInitialViewController(NavigationController.self)
+        (navigationController.children.first as? ChildListViewController)?.childPersistenceController = childPersistenceController
+        return navigationController
     }
 
     fileprivate var sendInfoViewController: SendInfoViewController {
-        return storyBoard.instantiateViewController(withIdentifier: String(describing: SendInfoViewController.self)) as! SendInfoViewController
+        let controller = Storyboard.main.instantiate(SendInfoViewController.self)
+        controller.childPersistenceController = childPersistenceController
+        return controller
     }
 
     fileprivate var reportViewController: ReportViewController {
-        return storyBoard.instantiateViewController(withIdentifier: String(describing: ReportViewController.self)) as! ReportViewController
+        let controller = Storyboard.main.instantiate(ReportViewController.self)
+        controller.childPersistenceController = childPersistenceController
+        return controller
     }
     
     fileprivate func present(viewController: UIViewController, animated: Bool) {
@@ -43,6 +51,7 @@ class ApplicationRouter {
     func presentSendInfoViewController(with child: Child, animated: Bool) {
         let controller = sendInfoViewController
         controller.child =  child
+        controller.childPersistenceController = childPersistenceController
         present(viewController: controller, animated: animated)
     }
     
@@ -50,6 +59,7 @@ class ApplicationRouter {
         let controller = reportViewController
         controller.reportType = .sickLeave
         controller.child =  child
+        controller.childPersistenceController = childPersistenceController
         present(viewController: controller, animated: animated)
     }
     
@@ -57,6 +67,7 @@ class ApplicationRouter {
         let controller = reportViewController
         controller.reportType = .absence
         controller.child =  child
+        controller.childPersistenceController = childPersistenceController
         present(viewController: controller, animated: animated)
     }
 }

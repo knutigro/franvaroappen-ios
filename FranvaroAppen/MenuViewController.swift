@@ -26,7 +26,8 @@ class MenuViewController: UITableViewController, SegueHandlerType {
     let shareManager = ShareManager()
 
     var child: Child?
-    
+    var childPersistenceController: ChildPersistenceProtocol?
+
     var childEntity: NSManagedObject? {
         didSet {
             if let childEntity = childEntity {
@@ -64,7 +65,8 @@ class MenuViewController: UITableViewController, SegueHandlerType {
         childImageView?.layer.borderWidth = 1
         childImageView?.layer.borderColor = UIColor.white.cgColor
         
-        assert(child != nil)
+        assert(child != nil, "child must have a value")
+        assert(childPersistenceController != nil, "childPersistenceController must have a value")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,20 +102,24 @@ class MenuViewController: UITableViewController, SegueHandlerType {
             if let controller = segue.destination as? EditChildViewController {
                 controller.childEntity = childEntity
                 controller.delegate = self
+                controller.childPersistenceController = childPersistenceController
             }
         case .OpenReportSickLeave:
             if let controller = segue.destination as? ReportViewController {
                 controller.child = child
                 controller.reportType = .sickLeave
+                controller.childPersistenceController = childPersistenceController
             }
         case .OpenReportOtherAbsence:
             if let controller = segue.destination as? ReportViewController {
                 controller.child = child
                 controller.reportType = .absence
+                controller.childPersistenceController = childPersistenceController
             }
         case .OpenSendInfo:
             if let controller = segue.destination as? SendInfoViewController {
                 controller.child = child
+                controller.childPersistenceController = childPersistenceController
             }
         default:
             break;
