@@ -12,13 +12,15 @@ import UIKit
 
 protocol ChildPersistenceProtocol {
     
-    func fetchAllChildren(completion: @escaping ([NSManagedObject], NSError?) -> Void)
-    func fetchChild(withName name: String, completion: @escaping (NSManagedObject?, NSError?) -> Void)
-    func delete(child: NSManagedObject)
-    func save(child: Child, image: UIImage?, previousObject: NSManagedObject?, completion: @escaping (NSManagedObject?, NSError?) -> Void)
+    func fetchAllChildren(completion: @escaping ([Child], NSError?) -> Void)
+    func fetchChild(withName name: String, completion: @escaping (Child?, NSError?) -> Void)
+    func delete(child: Child)
+    func save(child: Child, withChild oldChild: Child?, image: UIImage?, completion: @escaping (Child?, NSError?) -> Void)
 }
 
 class DBManager: ChildPersistenceProtocol {
+    
+    let kChildEntity = "ChildEntity"
     
     fileprivate lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -66,10 +68,9 @@ class DBManager: ChildPersistenceProtocol {
 
 extension DBManager {
     
-    internal func fetchAllChildren(completion: @escaping ([NSManagedObject], NSError?) -> Void) {
-        
+    internal func fetchAllChildEntities(completion: @escaping ([NSManagedObject], NSError?) -> Void) {
         let managedContext = persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ChildEntity")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: kChildEntity)
         do {
             if let results = try managedContext.fetch(fetchRequest) as? [NSManagedObject] {
                 completion(results, nil)
@@ -79,54 +80,88 @@ extension DBManager {
         }
     }
     
-    internal func fetchChild(withName name: String, completion: @escaping (NSManagedObject?, NSError?) -> Void) {
-        fetchAllChildren { (object, error) in
-            
+    internal func fetchAllChildren(completion: @escaping ([Child], NSError?) -> Void) {
+        fetchAllChildEntities { (results, error) in
+            let children = results.map { Child(managedObject: $0) }
+            completion(children, error)
+        }
+    }
+    
+    internal func fetchChildEntity(withName name: String, completion: @escaping (NSManagedObject?, NSError?) -> Void) {
+        fetchAllChildEntities { (object, error) in
             let childObject = object.filter({ (object) -> Bool in
                 Child(managedObject: object).name == name
             }).first
-            
             completion(childObject, error)
         }
     }
     
-    internal func delete(child: NSManagedObject) {
-        let managedContext = persistentContainer.viewContext
-        
-        do {
-            managedContext.delete(child)
-            try managedContext.save()
-        } catch let error as NSError  {
-            print("Kunde inte radera \(error), \(error.userInfo)")
+    internal func fetchChild(withName name: String, completion: @escaping (Child?, NSError?) -> Void) {
+        fetchChildEntity(withName: name) { (object, error) in
+            guard let child = object else {
+                completion(nil, error)
+                return
+            }
+            completion(Child(managedObject: child), error)
         }
     }
     
-    internal func save(child: Child, image: UIImage?, previousObject: NSManagedObject? = nil, completion: @escaping (NSManagedObject?, NSError?) -> Void) {
-        
-        let managedContext = persistentContainer.viewContext
- 
-        var childEntity = previousObject
-        if childEntity == nil {
-            let entity = NSEntityDescription.entity(forEntityName: "ChildEntity", in: managedContext)!
-            childEntity = NSManagedObject(entity: entity, insertInto: managedContext)
+    internal func delete(child: Child) {
+        fetchChildEntity(withName: child.name) { [weak self] (object, error) in
+            guard let managedContext = self?.persistentContainer.viewContext, let childEntity = object else { return }
+            do {
+                managedContext.delete(childEntity)
+                try managedContext.save()
+            } catch let error as NSError  {
+                print("Kunde inte radera \(error), \(error.userInfo)")
+            }
         }
+    }
+    
+    internal func createChild(completion: @escaping (NSManagedObject?, NSError?) -> Void) {
+        let managedContext = persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: kChildEntity, in: managedContext)!
+        let childEntity = NSManagedObject(entity: entity, insertInto: managedContext)
+        completion(childEntity, nil)
+    }
+
+    internal func fetchOrCreateChildEntity(child: Child?, completion: @escaping (NSManagedObject?, NSError?) -> Void) {
         
-        guard let childEnity = childEntity else {
-            completion(nil, NSError(domain: "DBManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Kunde inte spara"]))
+        guard let child = child else {
+            createChild(completion: completion)
             return
         }
         
-        childEnity.setValue(child.name, forKey: "name")
-        childEnity.setValue(child.personalNumber, forKey: "personal_number")
-        if let image = image {
-            childEnity.setValue(image.jpegData(compressionQuality: 1), forKey: "photo")
+        fetchChildEntity(withName: child.name) { [weak self] (object, error) in
+            guard let child = object else {
+                self?.createChild(completion: completion)
+                return
+            }
+            completion(child, error)
         }
+    }
+    
+    internal func save(child: Child, withChild oldChild: Child? = nil, image: UIImage? = nil, completion: @escaping (Child?, NSError?) -> Void) {
         
-        do {
-            try managedContext.save()
-            completion(childEnity, nil)
-        } catch let error as NSError  {
-            completion(nil, error)
+        fetchOrCreateChildEntity(child: oldChild) { [weak self] (object, error) in
+            guard let childEnity = object else {
+                completion(nil, NSError(domain: "DBManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Kunde inte spara"]))
+                return
+            }
+
+            childEnity.setValue(child.name, forKey: "name")
+            childEnity.setValue(child.personalNumber, forKey: "personal_number")
+            if let image = image {
+                childEnity.setValue(image.jpegData(compressionQuality: 1), forKey: "photo")
+            }
+            
+            do {
+                let managedContext = self?.persistentContainer.viewContext
+                try managedContext?.save()
+                completion(Child(managedObject: childEnity), nil)
+            } catch let error as NSError  {
+                completion(nil, error)
+            }
         }
     }
 }

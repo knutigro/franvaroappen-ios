@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R9p-PV-lUS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R9p-PV-lUS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,24 +28,24 @@
         <!--Om sms tjänsten-->
         <scene sceneID="QJj-T1-J7E">
             <objects>
-                <viewController id="8aw-cZ-Ej4" customClass="InfoViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" id="8aw-cZ-Ej4" customClass="InfoViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5YB-bZ-dCw"/>
                         <viewControllerLayoutGuide type="bottom" id="9Gu-Cm-LLd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qcF-JK-5zq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7CW-pg-lxE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="8aw-cZ-Ej4" id="bX8-sd-g3J"/>
                                 </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XHa-Hw-6NQ">
-                                <rect key="frame" x="177" y="291" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,11 +77,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ieR-hy-cmn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WAq-hd-axT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JkO-Zj-V5a">
-                                <rect key="frame" x="8" y="149" width="359" height="300"/>
+                                <rect key="frame" x="8" y="169" width="359" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="IfA-Id-svN"/>
@@ -106,7 +105,7 @@ knutigro.github.io</string>
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-sP-dLP" customClass="IconView" customModule="FranvaroAppen" customModuleProvider="target">
-                                <rect key="frame" x="137" y="30" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="50" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="S6P-Va-zYa"/>
@@ -144,26 +143,26 @@ knutigro.github.io</string>
         <!--Lind Grösland-->
         <scene sceneID="iN9-Ug-hYG">
             <objects>
-                <tableViewController id="CFE-nm-E4L" customClass="MenuViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MenuViewController" id="CFE-nm-E4L" customClass="MenuViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="56" sectionHeaderHeight="20" sectionFooterHeight="1" id="bUE-J1-85M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23921568627450979" green="0.46666666666666667" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="T2c-rk-aI6">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="T2c-rk-aI6">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-kL-okl" customClass="IconView" customModule="FranvaroAppen" customModuleProvider="target">
-                                    <rect key="frame" x="138" y="-12" width="100" height="100"/>
+                                    <rect key="frame" x="137.5" y="20" width="100" height="100"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="BcE-Lu-hgh"/>
                                         <constraint firstAttribute="width" constant="100" id="Y5o-vJ-Say"/>
                                     </constraints>
                                 </view>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-b8-9MM">
-                                    <rect key="frame" x="127.5" y="-22" width="120" height="120"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-b8-9MM" customClass="AvatarView" customModule="FranvaroAppen" customModuleProvider="target">
+                                    <rect key="frame" x="127.5" y="10" width="120" height="120"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="120" id="Gc0-eb-pfm"/>
                                         <constraint firstAttribute="height" constant="120" id="aAX-iE-WT0"/>
@@ -277,9 +276,6 @@ knutigro.github.io</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="8aw-cZ-Ej4" kind="show" identifier="OpenInfo" id="BxP-9a-iXP"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="IYC-tk-frV">
                                         <rect key="frame" x="0.0" y="385" width="375" height="56"/>
@@ -303,9 +299,6 @@ knutigro.github.io</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="jJD-n5-Pdv" kind="show" identifier="OpenAbout" id="AjX-SG-NdA"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="7Bo-nU-76n">
                                         <rect key="frame" x="0.0" y="441" width="375" height="56"/>
@@ -379,10 +372,12 @@ knutigro.github.io</string>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="aboutAppCell" destination="IYC-tk-frV" id="48S-Pe-mmw"/>
                         <outlet property="aboutAppLabel" destination="yVE-Z4-Xf7" id="Sju-XM-zhC"/>
                         <outlet property="aboutSMSLabel" destination="Mki-Dd-KGJ" id="9Hg-b2-qll"/>
                         <outlet property="absenceLabel" destination="79T-ot-vZO" id="0s8-5j-dSh"/>
                         <outlet property="childImageView" destination="JOp-b8-9MM" id="sq1-V0-PSq"/>
+                        <outlet property="infoCell" destination="eaR-Ao-Wi8" id="IxN-Wb-7eL"/>
                         <outlet property="infoLabel" destination="jpe-uM-fwg" id="58H-kN-JDQ"/>
                         <outlet property="reportOtherAbsenceCell" destination="ymo-5q-qZ4" id="Ka3-R0-qfW"/>
                         <outlet property="reportSickLeaveCell" destination="YS0-G0-R4g" id="8xa-Pp-8tb"/>
@@ -403,7 +398,7 @@ knutigro.github.io</string>
         <!--Barn-->
         <scene sceneID="T6n-0T-qsM">
             <objects>
-                <tableViewController id="4IW-v9-OZl" customClass="ChildListViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ChildListViewController" id="4IW-v9-OZl" customClass="ChildListViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="120" sectionHeaderHeight="18" sectionFooterHeight="18" id="EjC-0U-wmE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,22 +411,27 @@ knutigro.github.io</string>
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-76" translatesAutoresizingMaskIntoConstraints="NO" id="f3S-v2-16Q">
-                                            <rect key="frame" x="8" y="10" width="99.5" height="100"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-76" translatesAutoresizingMaskIntoConstraints="NO" id="f3S-v2-16Q" customClass="AvatarView" customModule="FranvaroAppen" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="10" width="100" height="100"/>
                                             <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="f3S-v2-16Q" secondAttribute="height" multiplier="1:1" id="f2k-iJ-juX"/>
                                                 <constraint firstAttribute="height" constant="100" id="kY7-dc-Ks0"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lind Grösland" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPk-zl-gpa">
-                                            <rect key="frame" x="115.5" y="38" width="217.5" height="24"/>
+                                            <rect key="frame" x="116" y="38" width="217" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20131113-2539" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-9X-dYD">
-                                            <rect key="frame" x="115.5" y="66" width="217.5" height="17"/>
+                                            <rect key="frame" x="116" y="66" width="217" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.62813600352112675" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -463,7 +463,7 @@ knutigro.github.io</string>
                     <navigationItem key="navigationItem" title="Barn" id="ewK-TP-acp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6gJ-p1-x7X">
                             <connections>
-                                <segue destination="t7v-Rz-Ho7" kind="show" identifier="OpenAddChild" id="NPi-qq-HdX"/>
+                                <action selector="didTapAddChild:" destination="4IW-v9-OZl" id="oVJ-9b-oMh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -576,20 +576,20 @@ knutigro.github.io</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="StE-Hg-45r">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="StE-Hg-45r">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXw-YH-IKD" customClass="IconView" customModule="FranvaroAppen" customModuleProvider="target">
-                                    <rect key="frame" x="138" y="-7" width="100" height="100"/>
+                                    <rect key="frame" x="137.5" y="25" width="100" height="100"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="hMC-tS-aan"/>
                                         <constraint firstAttribute="width" constant="100" id="lbg-JX-toY"/>
                                     </constraints>
                                 </view>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-dr-VmD">
-                                    <rect key="frame" x="123" y="-22" width="130" height="130"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-dr-VmD" customClass="AvatarView" customModule="FranvaroAppen" customModuleProvider="target">
+                                    <rect key="frame" x="122.5" y="10" width="130" height="130"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="K4i-zD-qtG"/>
@@ -597,7 +597,7 @@ knutigro.github.io</string>
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-iS-cTB">
-                                    <rect key="frame" x="123" y="-22" width="130" height="130"/>
+                                    <rect key="frame" x="122.5" y="10" width="130" height="130"/>
                                     <connections>
                                         <action selector="didTapAvatar:" destination="t7v-Rz-Ho7" eventType="touchUpInside" id="z1v-ya-fsw"/>
                                     </connections>
@@ -747,7 +747,7 @@ knutigro.github.io</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dec-iw-trP"/>
-        <segue reference="2Qw-cb-1qL"/>
-        <segue reference="PZO-46-r9v"/>
+        <segue reference="NrA-dr-WpR"/>
+        <segue reference="iw0-2x-eOi"/>
     </inferredMetricsTieBreakers>
 </document>

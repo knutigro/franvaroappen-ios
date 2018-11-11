@@ -40,7 +40,7 @@ class SendInfoViewController: UIViewController, ChildController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "Send Info")
+        Analytics.track(screen: .sendInfo)
     }
     
     @objc func keyboardWillChangeFrame(aNotification:NSNotification) {
@@ -74,7 +74,7 @@ class SendInfoViewController: UIViewController, ChildController {
         }
         
         if (MFMessageComposeViewController.canSendText()) {
-            Analytics.track(screen: "Sms")
+            Analytics.track(screen: .sms)
 
             let controller = MFMessageComposeViewController()
             controller.body = MessageHelper.messageForInformation(personalNumber: personalNumber, message: message)
@@ -85,27 +85,30 @@ class SendInfoViewController: UIViewController, ChildController {
     }
 }
 
+// MARK: MFMessageComposeViewControllerDelegate
+
 extension SendInfoViewController: MFMessageComposeViewControllerDelegate {
+    
     public func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         
-        var res = ""
+        var res: Analytics.MessageComposeResult
         switch result {
         case .cancelled:
-            res = Analytics.MessageComposeResult.cancelled.rawValue
+            res = .cancelled
             break
         case .failed:
-            res = Analytics.MessageComposeResult.failed.rawValue
+            res = .failed
             break
         case .sent:
-            res = Analytics.MessageComposeResult.sent.rawValue
+            res = .sent
             break
         }
         
-        Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res, Analytics.kSMSCategoryKey: "Message"])
+        Analytics.track(event: .didSendSMS, attributes: [Analytics.AttributesKey.result: res.rawValue, Analytics.AttributesKey.SMSCategory: Analytics.SMSCategory.message.rawValue])
         
         if (result == .sent) {
             RatingManager.userDidSignificantEvent()
-            Analytics.incrementValue(by: 1, forProfileAttribute: Analytics.kNumberOfSmsSentKey)
+            Analytics.incrementValue(by: 1, forProfileAttribute: Analytics.ProfileAttributesKey.numberOfSmsSent)
         }
         
         self.dismiss(animated: true, completion:nil)

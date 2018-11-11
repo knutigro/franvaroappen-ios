@@ -7,48 +7,63 @@
 //
 
 import UIKit
-import CoreData
 import DZNEmptyDataSet
+import RxSwift
 
-class ChildListViewController: UITableViewController, SegueHandlerType {
+class ChildListViewController: UITableViewController {
     
-    var childItems = [NSManagedObject]()
+    var disposeBag = DisposeBag()
+    var applicationRouter: ApplicationRouter?
+    var dataSource: ChildListDataSource? {
+        didSet {
+            if let dataSource = dataSource {
+                tableView.dataSource = dataSource
+                tableView.emptyDataSetSource = dataSource
+            }
+        }
+    }
     var viewControllerIsFirstTimeLoading = true
     var childPersistenceController: ChildPersistenceProtocol?
-    
-    enum SegueIdentifier: String {
-        case OpenAddChild = "OpenAddChild"
-        case OpenAddChildNoAnimation = "OpenAddChildNoAnimation"
-        case OpenChildMenu = "OpenChildMenu"
-        case OpenChildMenuNoAnimation = "OpenChildMenuNoAnimation"
-    }
+    fileprivate let viewModel: ChildListViewModel = ChildListViewModel()
 
     // MARK: View
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        self.title = NSLocalizedString("Barn", comment: "")
-        
-        self.tableView.emptyDataSetSource = self
-        self.tableView.emptyDataSetDelegate = self
-        
-        updateData()
-        
-        if childItems.count == 0 {
-            performSegueWithIdentifier(.OpenAddChildNoAnimation, sender: nil)
-        } else if childItems.count == 1 {
-            performSegueWithIdentifier(.OpenChildMenuNoAnimation, sender: childItems.first)
+        title = NSLocalizedString("Barn", comment: "")
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        guard let childPersistenceController = childPersistenceController else {
+            assertionFailure("childPersistenceController can't be nil")
+            return
         }
-        
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.NSManagedObjectContextObjectsDidChange, object: nil, queue: nil) { [weak self] note in
+
+        tableView.emptyDataSetDelegate = self
+
+        applicationRouter = ApplicationRouter(viewController: self.navigationController ?? self, childPersistenceController: childPersistenceController)
+        dataSource = ChildListDataSource(childPersistenceController: childPersistenceController)
+        guard let dataSource = dataSource else { return }
+
+        dataSource.models.asObservable().subscribe(onNext: { [weak self] _ in
+            guard let children = self?.dataSource?.models.value else { return }
+            if !children.isEmpty {
+                let childrenNames = children.map{ $0.name} as NSArray
+                Analytics.trackValue(value: childrenNames, forProfileAttribute: Analytics.ProfileAttributesKey.children)
+            }
+            Analytics.trackValue(value: NSNumber(integerLiteral: children.count), forProfileAttribute: Analytics.ProfileAttributesKey.numberOfChildren)
             DispatchQueue.main.async(execute: { [weak self] () in
-                self?.updateData()
+                self?.tableView.reloadData()
             });
-        }
+        }).disposed(by: disposeBag)
         
-        assert(childPersistenceController != nil, "childPersistenceController must have a value")
+        dataSource.update()
+        
+        if dataSource.models.value.isEmpty {
+            applicationRouter?.presentAddChildViewController(animated: false)
+        } else if dataSource.models.value.count == 1, let child = dataSource.models.value.first {
+            applicationRouter?.presentMenuViewController(with: child, animated: false)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,103 +72,38 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
         if viewControllerIsFirstTimeLoading {
             viewControllerIsFirstTimeLoading = false
         } else {
-            updateData()
+            dataSource?.update()
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "Child list")
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueIdentifierForSegue(segue) {
-        case .OpenAddChild, .OpenAddChildNoAnimation:
-            if let controller = segue.destination as? EditChildViewController {
-                controller.title = NSLocalizedString("Lägg till barn", comment: "")
-                controller.childPersistenceController = childPersistenceController
-            }
-        case .OpenChildMenu, .OpenChildMenuNoAnimation:
-            if let controller = segue.destination as? MenuViewController {
-                controller.childEntity = sender as? NSManagedObject
-                controller.childPersistenceController = childPersistenceController
-            }
-        }
+        Analytics.track(screen: .childList)
     }
     
-    func updateData() {
-        childPersistenceController?.fetchAllChildren(completion: { [weak self] (objects, error) in
-            if let error = error {
-                print("Could not fetch \(error), \(error.userInfo)")
-                return
-            }
-            
-            let childrenNames = objects.map{ Child(managedObject: $0).name } as NSArray
-            if (childrenNames.count > 0) {
-                Analytics.trackValue(value: childrenNames, forProfileAttribute: "Children")
-            }
-            Analytics.trackValue(value: NSNumber(integerLiteral: childrenNames.count), forProfileAttribute: "Number of children")
-            self?.childItems = objects
-            self?.tableView.reloadData()
-        })
+    @IBAction func didTapAddChild(_ button: UIBarButtonItem) {
+        applicationRouter?.presentAddChildViewController(animated: true)
     }
 }
-
-// MARK: UITableViewDataSource
-
-extension ChildListViewController {
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return childItems.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChildCell") as! ChildCell
-        let child = childItems[indexPath.row]
-        
-        cell.update(child: Child(managedObject: child))
-        
-        return cell
-    }
-}
-
-// MARK: CoreData
-
-extension ChildListViewController {
-    
-    func delete(child: NSManagedObject) {
-        childPersistenceController?.delete(child: child)
-    }
-}
-
 
 // MARK: TableViewDelegate
 
 extension ChildListViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegueWithIdentifier(.OpenChildMenu, sender: childItems[indexPath.row])
+        if let child = dataSource?.models.value[indexPath.row] {
+            applicationRouter?.presentMenuViewController(with: child, animated: true)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let child = childItems[indexPath.row]
         let delete = UITableViewRowAction(style: .normal, title: "Radera") { [weak self] action, index in
-            self?.delete(child: child)
+            self?.dataSource?.delete(atIndexPath: indexPath)
         }
         delete.backgroundColor = UIColor.red
         
         return [delete]
-    }
-}
-
-// MARK: DZNEmptyDataSetSource
-
-extension ChildListViewController: DZNEmptyDataSetSource {
-    
-    func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControl.State) -> NSAttributedString {
-        return NSAttributedString(string: NSLocalizedString("Lägg till barn", comment: ""), attributes: [NSAttributedString.Key.foregroundColor:UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24)])
     }
 }
 
@@ -166,8 +116,6 @@ extension ChildListViewController: DZNEmptyDataSetDelegate {
     }
     
     func emptyDataSetDidTapButton(_ scrollView: UIScrollView) {
-        performSegueWithIdentifier(.OpenAddChild, sender: self)
+        applicationRouter?.presentAddChildViewController(animated: true)
     }
 }
-
-

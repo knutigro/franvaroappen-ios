@@ -12,20 +12,9 @@ class ChildCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel?
     @IBOutlet weak var personalNumberLabel: UILabel?
-    @IBOutlet weak var avatarImageView: UIImageView?
+    @IBOutlet weak var avatarImageView: AvatarView?
     
     var child: Child?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        if let imageView = avatarImageView {
-            imageView.layer.cornerRadius = imageView.bounds.size.width / 2
-        }
-        
-        avatarImageView?.layer.borderWidth = 1
-        avatarImageView?.layer.borderColor = UIColor.lightGray.cgColor
-    }
     
     func update(child: Child) {
         self.child = child

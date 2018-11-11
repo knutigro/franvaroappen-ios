@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class MessageHelper {
     
     static let PhoneNumber = "0769446000"

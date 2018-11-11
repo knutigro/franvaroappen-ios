@@ -7,18 +7,9 @@
 //
 
 import UIKit
-import CoreData
-
-extension String {
-    var isValidPersonalNumber: Bool {
-        let pat = "\\d\\d\\d\\d\\d\\d-\\w\\w\\w\\w"
-        let regex = try! NSRegularExpression(pattern: pat, options: [])
-        return regex.numberOfMatches(in: self, options: [], range: NSRange(location: 0, length: self.count)) == 1
-    }
-}
 
 protocol EditChildViewControllerDelegate {
-    func editChildViewController(_ controller: EditChildViewController, didFinishWithChild child: NSManagedObject?);
+    func editChildViewController(_ controller: EditChildViewController, didFinishWithChild child: Child?);
 }
 
 class EditChildViewController: UITableViewController {
@@ -27,11 +18,12 @@ class EditChildViewController: UITableViewController {
     @IBOutlet weak var personNumberLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var personalNumberTextField: UITextField!
-    @IBOutlet weak var imageView: UIImageView?
+    @IBOutlet weak var imageView: AvatarView?
     @IBOutlet weak var cancelButton: UIBarButtonItem!
 
-    var childEntity: NSManagedObject?
+    var child: Child?
     var delegate: EditChildViewControllerDelegate?
+    var applicationRouter: ApplicationRouter?
     var childPersistenceController: ChildPersistenceProtocol?
 
     // MARK: View
@@ -41,22 +33,12 @@ class EditChildViewController: UITableViewController {
         
         self.navigationItem.backBarButtonItem = self.cancelButton
         
+        if let childPersistenceController = childPersistenceController {
+            applicationRouter = ApplicationRouter(viewController: self.navigationController ?? self, childPersistenceController: childPersistenceController)
+        }
+
         nameLabel.text = NSLocalizedString("Namn", comment: "")
         personNumberLabel.text = NSLocalizedString("Person nummer", comment: "")
-
-        view.layoutIfNeeded()
-        
-        if let imageView = imageView {
-            imageView.layer.cornerRadius = imageView.bounds.size.width / 2
-        }
-        
-        imageView?.layer.borderWidth = 1
-        imageView?.layer.borderColor = UIColor.white.cgColor
-        
-        var child: Child?
-        if let childEntity = childEntity {
-            child = Child(managedObject: childEntity)
-        }
         
         if let child = child {
             self.title = child.name
@@ -74,7 +56,7 @@ class EditChildViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "Edit child")
+        Analytics.track(screen: .editChild)
     }
 
     func showAlert(message: String) {
@@ -82,7 +64,7 @@ class EditChildViewController: UITableViewController {
                                       message: message,
                                       preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -94,34 +76,30 @@ extension EditChildViewController {
         let _ = self.navigationController?.popViewController(animated: true)
     }
     
-    func childFromData() -> Child? {
+    func childFromData() -> (child: Child?, errorMessage: String?) {
         let name = nameTextField?.text ?? ""
         let personalNumber = personalNumberTextField?.text ?? ""
-        
         guard !name.isEmpty else {
-            showAlert(message: NSLocalizedString("Namn kan inte vara tomt", comment: ""))
-            return nil
+            return (child: nil, errorMessage: NSLocalizedString("Namn kan inte vara tomt", comment: ""))
         }
-        
         guard !personalNumber.isEmpty else {
-            showAlert(message: NSLocalizedString("Person nummer kan inte vara tomt", comment: ""))
-            return nil
+            return (child: nil, errorMessage: NSLocalizedString("Person nummer kan inte vara tomt", comment: ""))
         }
-        
         guard personalNumber.isValidPersonalNumber else {
-            showAlert(message: NSLocalizedString("Person nummer måste ha formen ÅÅMMDD-NNNN.", comment: ""))
-            return nil
+            return (child: nil, errorMessage: NSLocalizedString("Person nummer måste ha formen ÅÅMMDD-NNNN.", comment: ""))
         }
-        
-        return  Child(name: name, personalNumber: personalNumber, image: nil)
+        return (child: Child(name: name, personalNumber: personalNumber, image: nil), errorMessage: nil)
     }
     
     @IBAction func didTapSave(_ objects: AnyObject?) {
-        guard let child = childFromData() else { return }
-        let previousObject = childEntity
+        let data = childFromData()
+        guard let child = data.child else {
+            showAlert(message: data.errorMessage ?? "Fel")
+            return
+        }
         let image = imageView?.image
         
-        childPersistenceController?.save(child: child, image: image, previousObject: previousObject, completion: { [weak self] (object, error) in
+        childPersistenceController?.save(child: child, withChild: self.child, image: image, completion: { [weak self] (object, error) in
             
             if let object = object {
                 self?.delegate?.editChildViewController(self!, didFinishWithChild: object)
@@ -133,18 +111,7 @@ extension EditChildViewController {
     }
     
     @IBAction func didTapAvatar(_ sender: AnyObject?) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        if (UIDevice.current.userInterfaceIdiom == .pad) {
-            imagePicker.modalPresentationStyle = .popover
-        }
-        present(imagePicker, animated: true, completion: nil)
-        if (UIDevice.current.userInterfaceIdiom == .pad) {
-            let popper = imagePicker.popoverPresentationController
-            popper?.sourceView = self.view
-        }
+        applicationRouter?.presentImagePickerController(from: self, sourceView: view, delegate: self, animated: true)
     }
 }
 
@@ -195,7 +162,6 @@ extension EditChildViewController: UITextFieldDelegate {
         return true
     }
 }
-
 
 // Helper function inserted by Swift 4.2 migrator.
 fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {

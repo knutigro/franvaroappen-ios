@@ -14,16 +14,21 @@ PODS:
   - FBSDKShareKit (4.38.0):
     - FBSDKCoreKit
   - Localytics (5.3.0)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
   - StaticDataTableViewController (2.5.0)
   - XLForm (4.0.0)
 
 DEPENDENCIES:
   - Crashlytics
-  - DZNEmptyDataSet
+  - DZNEmptyDataSet (~> 1.8)
   - Fabric
   - FBSDKCoreKit (~> 4.38)
   - FBSDKShareKit (~> 4.38)
   - Localytics (~> 5.3)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
   - StaticDataTableViewController (~> 2.5)
   - XLForm (~> 4.0)
 
@@ -36,6 +41,8 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKShareKit
     - Localytics
+    - RxCocoa
+    - RxSwift
     - StaticDataTableViewController
     - XLForm
 
@@ -47,9 +54,11 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 2ab7fdbf600dc6b628ba7a49aa29d357a7b4c74e
   FBSDKShareKit: 00290e3db446eed603ff80ac629dcc5e80cf8b74
   Localytics: aa49adf35bd480a598c98f525a86d4c5b91debe8
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   StaticDataTableViewController: 0c5c4a47861446dd3cfd52530ae801ec7662ce26
   XLForm: 04110197c12187dd28a6c7295d3d8b95f4fdb4de
 
-PODFILE CHECKSUM: 7aa44d780b10b5d538293a3956c2adba07a186ad
+PODFILE CHECKSUM: 8fcbdcfd5342707e2daacf84f936e5db3c25d541
 
 COCOAPODS: 1.5.3

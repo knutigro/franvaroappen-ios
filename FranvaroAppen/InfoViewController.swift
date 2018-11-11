@@ -9,6 +9,7 @@
 import UIKit
 
 class InfoViewController: UIViewController, UIWebViewDelegate {
+    
     @IBOutlet weak var webView: UIWebView?
     @IBOutlet weak var actInd: UIActivityIndicatorView?
     
@@ -17,15 +18,14 @@ class InfoViewController: UIViewController, UIWebViewDelegate {
 
         title = NSLocalizedString("Om sms tjänsten", comment: "")
         
-        if let pdf = Bundle.main.url(forResource: "info", withExtension: "pdf", subdirectory: nil, localization: nil)  {
-            let req = NSURLRequest(url: pdf)
-            webView?.loadRequest(req as URLRequest)
+        if let pdfURL = Bundle.main.url(forResource: "info", withExtension: "pdf", subdirectory: nil, localization: nil)  {
+            webView?.loadRequest(URLRequest(url: pdfURL))
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "About sms")
+        Analytics.track(screen: .aboutSms)
     }
 
     func webViewDidFinishLoad(_ webView: UIWebView) {

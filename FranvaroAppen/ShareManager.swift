@@ -16,15 +16,15 @@ class ShareManager: NSObject {
         
         let alert = UIAlertController(title: NSLocalizedString("Facebook", comment: ""), message:nil, preferredStyle: UIAlertController.Style.actionSheet)
         alert.addAction(UIAlertAction(title: NSLocalizedString("Skicka appen till vänner", comment: ""), style: UIAlertAction.Style.default, handler:  { [weak self](action) in
-            Analytics.track(event: Analytics.kShareButtonTappedEvent, attributes: [Analytics.kResultKey: "Message on Facebook", Analytics.kLocationKey: String(describing: type(of: viewController))])
+            Analytics.track(event: .didTapShareButton, attributes: [Analytics.AttributesKey.result: "Message on Facebook", Analytics.AttributesKey.location: String(describing: type(of: viewController))])
             self?.sendMessageOnFacebook()
         }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("Dela appen på Facebook", comment: ""), style: UIAlertAction.Style.default, handler:  { [weak self](action) in
-            Analytics.track(event: Analytics.kShareButtonTappedEvent, attributes: [Analytics.kResultKey: "Share on Facebook", Analytics.kLocationKey: String(describing: type(of: viewController))])
+            Analytics.track(event: .didTapShareButton, attributes: [Analytics.AttributesKey.result: "Share on Facebook", Analytics.AttributesKey.location: String(describing: type(of: viewController))])
             self?.shareOnFacebook(viewController: viewController)
         }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertAction.Style.default, handler: {(action) in
-            Analytics.track(event: Analytics.kShareButtonTappedEvent, attributes: [Analytics.kResultKey: "Cancelled", Analytics.kLocationKey: String(describing: type(of: viewController))])
+            Analytics.track(event: .didTapShareButton, attributes: [Analytics.AttributesKey.result: "Cancelled", Analytics.AttributesKey.location: String(describing: type(of: viewController))])
         }))
         
         if let popoverPresentationController = alert.popoverPresentationController {
@@ -76,22 +76,22 @@ class ShareManager: NSObject {
 
 extension ShareManager: FBSDKSharingDelegate {
     func sharer(_ sharer: FBSDKSharing!, didCompleteWithResults results: [AnyHashable : Any]!) {
-        Analytics.track(event: facebookEvent(results: results), attributes: [Analytics.kResultKey: Analytics.Result.success.rawValue])
+        Analytics.track(event: facebookEvent(results: results), attributes: [Analytics.AttributesKey.result: Analytics.Result.success.rawValue])
     }
     
     func sharer(_ sharer: FBSDKSharing!, didFailWithError error: Error!) {
-        Analytics.track(event: "Facebook error", attributes: [Analytics.kResultKey: Analytics.Result.fail.rawValue, Analytics.kErrorKey: error.localizedDescription])
+        Analytics.track(event: .facebookError, attributes: [Analytics.AttributesKey.result: Analytics.Result.fail.rawValue, Analytics.AttributesKey.error: error.localizedDescription])
     }
     
     func sharerDidCancel(_ sharer: FBSDKSharing!) {
-        Analytics.track(event: "Facebook error", attributes: [Analytics.kResultKey: Analytics.Result.fail.rawValue, Analytics.kErrorKey: "Cancelled by user"])
+        Analytics.track(event: .facebookError, attributes: [Analytics.AttributesKey.result: Analytics.Result.fail.rawValue, Analytics.AttributesKey.error: "Cancelled by user"])
     }
     
-    func facebookEvent(results: [AnyHashable : Any]!) -> String {
+    func facebookEvent(results: [AnyHashable : Any]!) -> Analytics.Event {
         if let completionGesture = results["completionGesture"] as? String, completionGesture == "message" {
-            return "Facebook message"
+            return Analytics.Event.facebookMessage
         } else {
-            return "Facebook share"
+            return Analytics.Event.facebookShare
         }
     }
 }

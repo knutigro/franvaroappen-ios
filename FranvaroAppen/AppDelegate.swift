@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var fetchedChild: Child?
         dbManager.fetchChild(withName: name) { (object, error) in
             guard let object = object else { return }
-            fetchedChild = Child(managedObject: object)
+            fetchedChild = object
         }
 
         guard let child = fetchedChild else { return false }
@@ -80,10 +80,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             approuter.presentSendInfoViewController(with: child, animated: false)
             return true
         case .reportSickleave:
-            approuter.presentReportSickLeaveViewController(with: child, animated: false)
+            approuter.presentReportViewController(with: child, type: .sickLeave, animated: false)
             return true
         case .reportAbsence:
-            approuter.presentReportAbsenceViewController(with: child, animated: false)
+            approuter.presentReportViewController(with: child, type: .absence, animated: false)
             return true
         }
     }

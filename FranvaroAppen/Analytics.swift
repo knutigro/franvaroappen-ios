@@ -9,22 +9,60 @@
 import Foundation
 import Localytics
 
+extension Dictionary where Key == Analytics.AttributesKey, Value == String {
+    func mapKeys() -> Dictionary<String, String> {
+        var newDict = Dictionary<String, String>()
+        keys.forEach { (key) in
+            newDict[key.rawValue] = self[key]
+        }
+        return newDict
+    }
+}
+
 struct Analytics {
+
+    enum Screen : String {
+        case childList = "Child list"
+        case menu = "Menu"
+        case editChild = "Edit child"
+        case sendInfo = "Send Info"
+        case sms = "Sms"
+        case report = "Report"
+        case aboutSms = "About sms"
+        case aboutApp = "About app"
+    }
+
+    enum SMSCategory : String {
+        case message = "Message"
+        case sickLeave = "Sick Leave"
+        case absence = "Absence"
+    }
+
+    enum AttributesKey : String {
+        case SMSCategory = "Category"
+        case result = "Result"
+        case error = "Error"
+        case location = "Location"
+    }
     
-    // Keys
-    static let kSMSCategoryKey = "Category"
-    static let kResultKey = "Result"
-    static let kErrorKey = "Error"
-    static let kNumberOfSmsSentKey = "Number of SMS"
-    static let kLocationKey = "Location"
+    enum ProfileAttributesKey : String {
+        case image = "Image"
+        case numberOfSmsSent = "Number of SMS"
+        case children = "Children"
+        case numberOfChildren = "Number of children"
+    }
+    
+    enum Event: String {
+        case ratingDialog = "Rate app dialog"
+        case didTapReviewCell = "Tapped review app cell"
+        case didTapShareButton = "Tapped share button"
+        case didSendSMS = "Did send sms"
+        case facebookMessage = "Facebook message"
+        case facebookShare = "Facebook share"
+        case facebookError = "Facebook error"
+    }
 
-    // Events
-    static let kRatingDialogEvent = "Rate app dialog"
-    static let kDidTapReviewCellEvent = "Tapped review app cell"
-    static let kShareButtonTappedEvent = "Tapped share button"
-
-    // Enums
-    enum MessageComposeResult : String {
+    enum MessageComposeResult: String {
         case cancelled = "cancelled"
         case sent = "sent"
         case failed = "failed"
@@ -44,24 +82,24 @@ struct Analytics {
         #endif
     }
     
-    static func track(event: String) {
+    static func track(event: Event) {
         Analytics.track(event: event, attributes: nil)
     }
     
-    static func track(event: String, attributes: [String: String]?) {
-        Localytics.tagEvent(event, attributes: attributes)
+    static func track(event: Event, attributes: [AttributesKey: String]?) {
+        Localytics.tagEvent(event.rawValue, attributes: attributes?.mapKeys())
     }
 
-    static func trackValue(value: NSObject, forProfileAttribute: String) {
-        Localytics.setValue(value, forProfileAttribute: forProfileAttribute)
+    static func trackValue(value: NSObject, forProfileAttribute: ProfileAttributesKey) {
+        Localytics.setValue(value, forProfileAttribute: forProfileAttribute.rawValue)
     }
 
-    static func incrementValue(by value: Int, forProfileAttribute attribute: String) {
-        Localytics.incrementValue(by: value, forProfileAttribute: attribute)
+    static func incrementValue(by value: Int, forProfileAttribute attribute: ProfileAttributesKey) {
+        Localytics.incrementValue(by: value, forProfileAttribute: attribute.rawValue)
     }
     
-    static func track(screen: String) {
-        Localytics.tagScreen(screen)
+    static func track(screen: Screen) {
+        Localytics.tagScreen(screen.rawValue)
     }
 
     static func didRequestUserNotificationAuthorization(withOptions options: UInt, granted: Bool) {

@@ -24,7 +24,6 @@
 		493B14B01DD3831F007882C5 /* EditChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14AF1DD3831F007882C5 /* EditChildViewController.swift */; };
 		493B14B31DD3E22B007882C5 /* ChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B21DD3E22B007882C5 /* ChildCell.swift */; };
 		493B14B51DD3E530007882C5 /* ChildListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B41DD3E530007882C5 /* ChildListViewController.swift */; };
-		493B14B91DD4A6B9007882C5 /* ChildGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B14B81DD4A6B9007882C5 /* ChildGridCell.swift */; };
 		49434CE62135429E00CD3D0D /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49434CE52135429E00CD3D0D /* ApplicationRouter.swift */; };
 		49434CEA2135575300CD3D0D /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49434CE92135575300CD3D0D /* DBManager.swift */; };
 		495886D61DF75CB0007AB93E /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495886D51DF75CB0007AB93E /* AboutAppViewController.swift */; };
@@ -44,6 +43,10 @@
 		49C63E571DD5E6F60087A148 /* info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C63E561DD5E6F60087A148 /* info.pdf */; };
 		49C63E591DD5E7530087A148 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C63E581DD5E7530087A148 /* InfoViewController.swift */; };
 		49D48FD185D1FB8BE8077422 /* Pods_FranvaroAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A845E52E9986868944A57 /* Pods_FranvaroAppen.framework */; };
+		49DFC8BA218BA58600453F72 /* String+PersonalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFC8B9218BA58600453F72 /* String+PersonalNumber.swift */; };
+		49DFC8BC218BA62100453F72 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFC8BB218BA62000453F72 /* AvatarView.swift */; };
+		49E10F8E2188FE5800DDCDA8 /* ChildListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E10F8D2188FE5800DDCDA8 /* ChildListViewModel.swift */; };
+		49E10F912189022E00DDCDA8 /* ChildListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E10F902189022E00DDCDA8 /* ChildListDataSource.swift */; };
 		49ED43BE1DE8D89B004FB1BC /* DateValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */; };
 		753FCDF5FD1664F2A50A12C4 /* Pods_FranvaroAppenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A035787C726D3FC6A3FCC46 /* Pods_FranvaroAppenTests.framework */; };
 		7DF8D251DA97E98208E382D0 /* Pods_FranvaroAppenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD11E43C30475B03AD84F37 /* Pods_FranvaroAppenUITests.framework */; };
@@ -92,7 +95,6 @@
 		493B14AF1DD3831F007882C5 /* EditChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditChildViewController.swift; sourceTree = "<group>"; };
 		493B14B21DD3E22B007882C5 /* ChildCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCell.swift; sourceTree = "<group>"; };
 		493B14B41DD3E530007882C5 /* ChildListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildListViewController.swift; sourceTree = "<group>"; };
-		493B14B81DD4A6B9007882C5 /* ChildGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildGridCell.swift; sourceTree = "<group>"; };
 		49434CE52135429E00CD3D0D /* ApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
 		49434CE92135575300CD3D0D /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		495886D51DF75CB0007AB93E /* AboutAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,10 @@
 		49C5139E1E905A4D00CD0487 /* RatingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
 		49C63E561DD5E6F60087A148 /* info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = info.pdf; sourceTree = "<group>"; };
 		49C63E581DD5E7530087A148 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		49DFC8B9218BA58600453F72 /* String+PersonalNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+PersonalNumber.swift"; sourceTree = "<group>"; };
+		49DFC8BB218BA62000453F72 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		49E10F8D2188FE5800DDCDA8 /* ChildListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildListViewModel.swift; sourceTree = "<group>"; };
+		49E10F902189022E00DDCDA8 /* ChildListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildListDataSource.swift; sourceTree = "<group>"; };
 		49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueTransformer.swift; sourceTree = "<group>"; };
 		49F35EA71E983B46003C0521 /* FranvaroAppen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FranvaroAppen.entitlements; sourceTree = "<group>"; };
 		4BD11E43C30475B03AD84F37 /* Pods_FranvaroAppenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,13 +201,13 @@
 				49434CE52135429E00CD3D0D /* ApplicationRouter.swift */,
 				495886D71DFA0EBB007AB93E /* ShareManager.swift */,
 				49C5139E1E905A4D00CD0487 /* RatingManager.swift */,
-				49888D3D1DFFFB6300F0EBA0 /* IconView.swift */,
 				499E6FF721348E740054328D /* NSUserActivity+FranvaroAppen.swift */,
 				495AEBEB2187A86700CB914F /* Secrets.swift */,
-				496CE7C1218879C9002FF42A /* Storyboard.swift */,
-				493B14AE1DD36F9A007882C5 /* ViewControllers */,
+				49DFC8B9218BA58600453F72 /* String+PersonalNumber.swift */,
+				49E10F8F2189020800DDCDA8 /* DataSources */,
+				49E10F8C2188FDF900DDCDA8 /* ViewModels */,
+				493B14AE1DD36F9A007882C5 /* Views */,
 				492B00011DD369A900867896 /* Models */,
-				492BFFFA1DD35E1400867896 /* Categories */,
 				49C63E551DD5E6DE0087A148 /* Supporting Files */,
 			);
 			path = FranvaroAppen;
@@ -227,36 +233,23 @@
 			path = FranvaroAppenUITests;
 			sourceTree = "<group>";
 		};
-		492BFFFA1DD35E1400867896 /* Categories */ = {
+		493B14AE1DD36F9A007882C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				492BFFFB1DD35E3100867896 /* UIViewController+Utils.swift */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-		493B14AE1DD36F9A007882C5 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				493B14B11DD3E219007882C5 /* Cells */,
 				492BFFCD1DD34C7E00867896 /* Main.storyboard */,
-				493B14B41DD3E530007882C5 /* ChildListViewController.swift */,
-				4987BAE11DD600920053BC98 /* NavigationController.swift */,
-				492BFFCB1DD34C7E00867896 /* MenuViewController.swift */,
-				492BFFFD1DD363A900867896 /* SendInfoViewController.swift */,
-				493B14AF1DD3831F007882C5 /* EditChildViewController.swift */,
-				49C63E581DD5E7530087A148 /* InfoViewController.swift */,
-				495886D51DF75CB0007AB93E /* AboutAppViewController.swift */,
-				4987BAE31DD612F10053BC98 /* ReportViewController.swift */,
+				496CE7C1218879C9002FF42A /* Storyboard.swift */,
+				49E10F8B2188FCFE00DDCDA8 /* Controllers */,
+				493B14B11DD3E219007882C5 /* Cells */,
+				49888D3D1DFFFB6300F0EBA0 /* IconView.swift */,
+				49DFC8BB218BA62000453F72 /* AvatarView.swift */,
 			);
-			name = ViewControllers;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		493B14B11DD3E219007882C5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				493B14B21DD3E22B007882C5 /* ChildCell.swift */,
-				493B14B81DD4A6B9007882C5 /* ChildGridCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -272,6 +265,38 @@
 				495AEBE92187A7EE00CB914F /* Secrets.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49E10F8B2188FCFE00DDCDA8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				492BFFFB1DD35E3100867896 /* UIViewController+Utils.swift */,
+				4987BAE11DD600920053BC98 /* NavigationController.swift */,
+				493B14B41DD3E530007882C5 /* ChildListViewController.swift */,
+				492BFFCB1DD34C7E00867896 /* MenuViewController.swift */,
+				493B14AF1DD3831F007882C5 /* EditChildViewController.swift */,
+				492BFFFD1DD363A900867896 /* SendInfoViewController.swift */,
+				4987BAE31DD612F10053BC98 /* ReportViewController.swift */,
+				49C63E581DD5E7530087A148 /* InfoViewController.swift */,
+				495886D51DF75CB0007AB93E /* AboutAppViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		49E10F8C2188FDF900DDCDA8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				49E10F8D2188FE5800DDCDA8 /* ChildListViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		49E10F8F2189020800DDCDA8 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				49E10F902189022E00DDCDA8 /* ChildListDataSource.swift */,
+			);
+			name = DataSources;
 			sourceTree = "<group>";
 		};
 		801E2F2E7EC02B683BA3183D /* Frameworks */ = {
@@ -532,6 +557,8 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${PODS_ROOT}/Localytics/Localytics-iOS-5.3.0/Localytics.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/StaticDataTableViewController/StaticDataTableViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/XLForm/XLForm.framework",
 			);
@@ -542,6 +569,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localytics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StaticDataTableViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLForm.framework",
 			);
@@ -557,20 +586,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DFC8BC218BA62100453F72 /* AvatarView.swift in Sources */,
 				4987BAE41DD612F10053BC98 /* ReportViewController.swift in Sources */,
 				492BFFFC1DD35E3100867896 /* UIViewController+Utils.swift in Sources */,
 				49C5139F1E905A4D00CD0487 /* RatingManager.swift in Sources */,
 				493B14B51DD3E530007882C5 /* ChildListViewController.swift in Sources */,
 				493B14B01DD3831F007882C5 /* EditChildViewController.swift in Sources */,
+				49E10F912189022E00DDCDA8 /* ChildListDataSource.swift in Sources */,
 				49434CEA2135575300CD3D0D /* DBManager.swift in Sources */,
 				492B00001DD3667D00867896 /* MessageHelper.swift in Sources */,
+				49E10F8E2188FE5800DDCDA8 /* ChildListViewModel.swift in Sources */,
 				496CE7C2218879C9002FF42A /* Storyboard.swift in Sources */,
 				495886D61DF75CB0007AB93E /* AboutAppViewController.swift in Sources */,
 				49434CE62135429E00CD3D0D /* ApplicationRouter.swift in Sources */,
 				4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */,
 				49ED43BE1DE8D89B004FB1BC /* DateValueTransformer.swift in Sources */,
 				495AEBEC2187A86800CB914F /* Secrets.swift in Sources */,
-				493B14B91DD4A6B9007882C5 /* ChildGridCell.swift in Sources */,
 				49888D3E1DFFFB6300F0EBA0 /* IconView.swift in Sources */,
 				493B14B31DD3E22B007882C5 /* ChildCell.swift in Sources */,
 				4925AC211DD7C47200BE8881 /* Analytics.swift in Sources */,
@@ -578,6 +609,7 @@
 				499E6FF821348E740054328D /* NSUserActivity+FranvaroAppen.swift in Sources */,
 				492BFFCC1DD34C7E00867896 /* MenuViewController.swift in Sources */,
 				492BFFCA1DD34C7E00867896 /* AppDelegate.swift in Sources */,
+				49DFC8BA218BA58600453F72 /* String+PersonalNumber.swift in Sources */,
 				492BFFD21DD34C7E00867896 /* FranvaroAppen.xcdatamodeld in Sources */,
 				492B00031DD369BB00867896 /* Child.swift in Sources */,
 				49C63E591DD5E7530087A148 /* InfoViewController.swift in Sources */,

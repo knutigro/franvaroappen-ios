@@ -27,7 +27,7 @@ class AboutAppViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "About app")
+        Analytics.track(screen: .aboutApp)
     }
     
     @IBAction func didTapShareButton(_ barButton: UIBarButtonItem) {

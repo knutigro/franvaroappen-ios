@@ -79,7 +79,7 @@ class ReportViewController: XLFormViewController, ChildController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "Report")
+        Analytics.track(screen: .report)
     }
 
     func initializeForm() {
@@ -182,7 +182,7 @@ extension ReportViewController {
         }
         
         if (MFMessageComposeViewController.canSendText()) {
-            Analytics.track(screen: "Sms")
+            Analytics.track(screen: .sms)
 
             let controller = MFMessageComposeViewController()
             controller.body = body
@@ -218,13 +218,12 @@ extension ReportViewController: MFMessageComposeViewControllerDelegate {
             break
         }
         
-        let category = reportType == ReportType.sickLeave ? "Sick Leave" : "Absence"
-        
-        Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res, Analytics.kSMSCategoryKey: category])
+        let category = reportType == ReportType.sickLeave ? Analytics.SMSCategory.sickLeave : Analytics.SMSCategory.absence
+        Analytics.track(event: .didSendSMS, attributes: [Analytics.AttributesKey.result: res, Analytics.AttributesKey.SMSCategory: category.rawValue])
 
         if (result == .sent) {
             RatingManager.userDidSignificantEvent()
-            Analytics.incrementValue(by: 1, forProfileAttribute: Analytics.kNumberOfSmsSentKey)
+            Analytics.incrementValue(by: 1, forProfileAttribute: Analytics.ProfileAttributesKey.numberOfSmsSent)
         }
 
         self.dismiss(animated: true, completion:nil)

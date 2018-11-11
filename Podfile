@@ -13,6 +13,8 @@ target 'FranvaroAppen' do
   pod 'XLForm', '~> 4.0'
   pod 'FBSDKShareKit', '~> 4.38'
   pod 'FBSDKCoreKit', '~> 4.38'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
  
   target 'FranvaroAppenTests' do
     inherit! :search_paths
