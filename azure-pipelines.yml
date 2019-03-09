@@ -10,7 +10,12 @@ pool:
   vmImage: 'macOS-10.13'
 
 steps:
+
 - task: CocoaPods@0
+  inputs:
+    forceRepoUpdate: true
+  displayName: 'pod install using the CocoaPods task with defaults'
+
 - task: Xcode@5
   inputs:
     actions: 'build'
@@ -19,3 +24,5 @@ steps:
     configuration: 'Release'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+
+
