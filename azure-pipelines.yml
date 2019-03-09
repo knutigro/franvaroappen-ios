@@ -11,10 +11,6 @@ pool:
 
 steps:
 - task: CocoaPods@0
-  inputs:
-    #workingDirectory: # Optional
-    forceRepoUpdate: 
-    #projectDirectory: # Optional
 - task: Xcode@5
   inputs:
     actions: 'build'
