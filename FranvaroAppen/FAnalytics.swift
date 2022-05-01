@@ -39,7 +39,7 @@ struct FAnalytics {
     }
     
     static func track(event: String, attributes: [String: String]? = nil) {
-        FAnalytics.track(event: event, attributes: attributes)
+        Analytics.logEvent(event, parameters: attributes)
     }
 
     static func trackValue(value: NSObject, forProfileAttribute: String) {
