@@ -97,6 +97,8 @@ extension SendInfoViewController: MFMessageComposeViewControllerDelegate {
         case .sent:
             res = FAnalytics.MessageComposeResult.sent.rawValue
             break
+        @unknown default:
+            fatalError()
         }
         
         FAnalytics.track(event: "Did send sms", attributes: [FAnalytics.kResultKey: res, FAnalytics.kSMSCategoryKey: "Message"])

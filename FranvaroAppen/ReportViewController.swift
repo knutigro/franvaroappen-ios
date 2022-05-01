@@ -213,6 +213,8 @@ extension ReportViewController: MFMessageComposeViewControllerDelegate {
         case .sent:
             res = FAnalytics.MessageComposeResult.sent.rawValue
             break
+        @unknown default:
+            fatalError()
         }
         
         let category = reportType == ReportType.sickLeave ? "Sick Leave" : "Absence"
