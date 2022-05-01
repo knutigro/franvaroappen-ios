@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import Localytics
+import FirebaseAnalytics
 
-struct Analytics {
+struct FAnalytics {
     
     // Keys
     static let kSMSCategoryKey = "Category"
@@ -36,35 +36,27 @@ struct Analytics {
     }
     
     static func autoIntegrate(_ launchOptions: [AnyHashable: Any]?) {
-        #if DEBUG
-        #else
-            if let key = Secrets.localyticsAPIKey {
-                Localytics.autoIntegrate(key, launchOptions: launchOptions)
-            }
-        #endif
     }
     
-    static func track(event: String) {
-        Analytics.track(event: event, attributes: nil)
-    }
-    
-    static func track(event: String, attributes: [String: String]?) {
-        Localytics.tagEvent(event, attributes: attributes)
+    static func track(event: String, attributes: [String: String]? = nil) {
+        FAnalytics.track(event: event, attributes: attributes)
     }
 
     static func trackValue(value: NSObject, forProfileAttribute: String) {
-        Localytics.setValue(value, forProfileAttribute: forProfileAttribute)
+        #warning("DEACTIVATED")
+//        Analytics.logEvent(event, parameters: attributes)
+//        Localytics.setValue(value, forProfileAttribute: forProfileAttribute)
     }
 
     static func incrementValue(by value: Int, forProfileAttribute attribute: String) {
-        Localytics.incrementValue(by: value, forProfileAttribute: attribute)
+#warning("DEACTIVATED")
+
+//        Localytics.incrementValue(by: value, forProfileAttribute: attribute)
     }
     
     static func track(screen: String) {
-        Localytics.tagScreen(screen)
-    }
+#warning("DEACTIVATED")
 
-    static func didRequestUserNotificationAuthorization(withOptions options: UInt, granted: Bool) {
-        Localytics.didRequestUserNotificationAuthorization(withOptions: options, granted: granted)
+//        Localytics.tagScreen(screen)
     }
 }

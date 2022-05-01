@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import Fabric
-import Crashlytics
-import FBSDKCoreKit
+import Firebase
 import UserNotifications
 
 @UIApplicationMain
@@ -24,10 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AppDelegate.originalAppDelegate = self
         
-        Theme.applyTheme()
+        Theme.applyTheme(window: window)
         
-        Analytics.autoIntegrate(launchOptions)
-        Fabric.with([Crashlytics.self])
+        FirebaseApp.configure()
         
         RatingManager.daysUntilPromt = 5
         RatingManager.significantEventsUntilPrompt = 3
@@ -39,16 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let options: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: options) { (granted, error) in
-            Analytics.didRequestUserNotificationAuthorization(withOptions: options.rawValue, granted: granted)
         }
-        
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         return true
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        FBSDKAppEvents.activateApp()
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
@@ -86,11 +79,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             approuter.presentReportAbsenceViewController(with: child, animated: false)
             return true
         }
-    }
-
-    // MARK: App switching
-    
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 }

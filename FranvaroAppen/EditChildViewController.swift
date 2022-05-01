@@ -73,7 +73,7 @@ class EditChildViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "Edit child")
+        FAnalytics.track(screen: "Edit child")
     }
 
     func showAlert(message: String) {

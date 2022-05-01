@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R9p-PV-lUS">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R9p-PV-lUS">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +12,7 @@
             <objects>
                 <navigationController id="R9p-PV-lUS" customClass="NavigationController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="eVd-sV-cr3">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -35,18 +32,18 @@
                         <viewControllerLayoutGuide type="bottom" id="9Gu-Cm-LLd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qcF-JK-5zq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7CW-pg-lxE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="8aw-cZ-Ej4" id="bX8-sd-g3J"/>
                                 </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XHa-Hw-6NQ">
-                                <rect key="frame" x="177" y="291" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="301.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,7 +75,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ieR-hy-cmn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WAq-hd-axT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JkO-Zj-V5a">
@@ -106,7 +103,7 @@ knutigro.github.io</string>
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-sP-dLP" customClass="IconView" customModule="FranvaroAppen" customModuleProvider="target">
-                                <rect key="frame" x="137" y="30" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="30" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="S6P-Va-zYa"/>
@@ -125,13 +122,7 @@ knutigro.github.io</string>
                             <constraint firstItem="JkO-Zj-V5a" firstAttribute="centerY" secondItem="WAq-hd-axT" secondAttribute="centerY" priority="750" id="fUX-Oc-cvq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Om appen" id="tOX-wt-5jz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Vjy-IH-wch">
-                            <connections>
-                                <action selector="didTapShareButton:" destination="jJD-n5-Pdv" id="PUf-a0-SLW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Om appen" id="tOX-wt-5jz"/>
                     <connections>
                         <outlet property="iconView" destination="MVC-sP-dLP" id="mXV-6q-hrN"/>
                         <outlet property="infoTextView" destination="JkO-Zj-V5a" id="LUk-tM-VDx"/>
@@ -146,16 +137,16 @@ knutigro.github.io</string>
             <objects>
                 <tableViewController id="CFE-nm-E4L" customClass="MenuViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="56" sectionHeaderHeight="20" sectionFooterHeight="1" id="bUE-J1-85M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23921568627450979" green="0.46666666666666667" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="T2c-rk-aI6">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="T2c-rk-aI6">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-kL-okl" customClass="IconView" customModule="FranvaroAppen" customModuleProvider="target">
-                                    <rect key="frame" x="138" y="-12" width="100" height="100"/>
+                                    <rect key="frame" x="137.5" y="20" width="100" height="100"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="BcE-Lu-hgh"/>
@@ -163,7 +154,7 @@ knutigro.github.io</string>
                                     </constraints>
                                 </view>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-b8-9MM">
-                                    <rect key="frame" x="127.5" y="-22" width="120" height="120"/>
+                                    <rect key="frame" x="127.5" y="10" width="120" height="120"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="120" id="Gc0-eb-pfm"/>
                                         <constraint firstAttribute="height" constant="120" id="aAX-iE-WT0"/>
@@ -182,14 +173,14 @@ knutigro.github.io</string>
                             <tableViewSection id="Uzq-Ca-3y8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="YS0-G0-R4g">
-                                        <rect key="frame" x="0.0" y="140" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="160" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YS0-G0-R4g" id="NEY-ag-Ydw">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350.5" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anmäl sjukfrånvaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t5-Nm-fa8">
-                                                    <rect key="frame" x="8" y="0.0" width="325" height="55.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="334.5" height="56"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -206,14 +197,14 @@ knutigro.github.io</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="ymo-5q-qZ4">
-                                        <rect key="frame" x="0.0" y="196" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="216" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ymo-5q-qZ4" id="ddM-zC-wqY">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350.5" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anmäl ledighet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79T-ot-vZO">
-                                                    <rect key="frame" x="8" y="0.0" width="325" height="55.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="334.5" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -229,14 +220,14 @@ knutigro.github.io</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="O0T-fx-pMv">
-                                        <rect key="frame" x="0.0" y="252" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="272" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0T-fx-pMv" id="Vnn-q4-T9C">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350.5" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skicka information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpe-uM-fwg">
-                                                    <rect key="frame" x="8" y="0.0" width="325" height="55.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="334.5" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -256,14 +247,14 @@ knutigro.github.io</string>
                             <tableViewSection id="cGK-o4-V5G">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="eaR-Ao-Wi8">
-                                        <rect key="frame" x="0.0" y="329" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="349" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eaR-Ao-Wi8" id="eWL-RI-sXC">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350.5" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Om sms tjänsten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mki-Dd-KGJ">
-                                                    <rect key="frame" x="8" y="0.0" width="325" height="55.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="334.5" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -282,14 +273,14 @@ knutigro.github.io</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="IYC-tk-frV">
-                                        <rect key="frame" x="0.0" y="385" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="405" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IYC-tk-frV" id="sFV-Hr-uSh">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350.5" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Om appen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVE-Z4-Xf7">
-                                                    <rect key="frame" x="8" y="0.0" width="325" height="55.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="334.5" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -308,20 +299,20 @@ knutigro.github.io</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="7Bo-nU-76n">
-                                        <rect key="frame" x="0.0" y="441" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="461" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Bo-nU-76n" id="LzD-Pi-Ktl">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350.5" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betygsätt i Appstore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4K-T8-j5F">
-                                                    <rect key="frame" x="8" y="0.0" width="295" height="55.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="304.5" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVK-hB-Ogw">
-                                                    <rect key="frame" x="313" y="18" width="20" height="20"/>
+                                                    <rect key="frame" x="322.5" y="18" width="20" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0F-oi-vyB">
                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -366,11 +357,6 @@ knutigro.github.io</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lind Grösland" id="lPC-5w-8sr">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="1dF-Qc-tgd">
-                            <connections>
-                                <action selector="didTapShareButton:" destination="CFE-nm-E4L" id="iVM-wG-VMq"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="9VR-K4-G1Y">
                             <connections>
                                 <action selector="didTapEditButton:" destination="CFE-nm-E4L" id="dn5-FB-jLq"/>
@@ -405,19 +391,19 @@ knutigro.github.io</string>
             <objects>
                 <tableViewController id="4IW-v9-OZl" customClass="ChildListViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="120" sectionHeaderHeight="18" sectionFooterHeight="18" id="EjC-0U-wmE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChildCell" id="ash-vD-nhs" customClass="ChildCell" customModule="FranvaroAppen" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="49.5" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ash-vD-nhs" id="39m-ct-hKy">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="119.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="350.5" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-76" translatesAutoresizingMaskIntoConstraints="NO" id="f3S-v2-16Q">
-                                            <rect key="frame" x="8" y="10" width="99.5" height="100"/>
+                                            <rect key="frame" x="8" y="10" width="100" height="100"/>
                                             <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="f3S-v2-16Q" secondAttribute="height" multiplier="1:1" id="f2k-iJ-juX"/>
@@ -425,13 +411,13 @@ knutigro.github.io</string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lind Grösland" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPk-zl-gpa">
-                                            <rect key="frame" x="115.5" y="38" width="217.5" height="24"/>
+                                            <rect key="frame" x="116" y="38" width="226.5" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20131113-2539" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-9X-dYD">
-                                            <rect key="frame" x="115.5" y="66" width="217.5" height="17"/>
+                                            <rect key="frame" x="116" y="66" width="226.5" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.62813600352112675" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -483,7 +469,7 @@ knutigro.github.io</string>
             <objects>
                 <tableViewController storyboardIdentifier="ReportViewController" id="BZz-hF-N3D" customClass="ReportViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="56" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ppy-DT-z0C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections/>
@@ -514,7 +500,7 @@ knutigro.github.io</string>
                         <viewControllerLayoutGuide type="bottom" id="38V-mF-Qwr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e5f-s8-zM8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjT-aW-ikN">
@@ -524,7 +510,7 @@ knutigro.github.io</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mla-eq-V0A">
-                                <rect key="frame" x="8" y="19" width="359" height="576"/>
+                                <rect key="frame" x="8" y="19" width="359" height="596"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -573,15 +559,15 @@ knutigro.github.io</string>
             <objects>
                 <tableViewController storyboardIdentifier="EditChildViewController" id="t7v-Rz-Ho7" userLabel="Edit Child" customClass="EditChildViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="56" sectionHeaderHeight="18" sectionFooterHeight="5" id="U2U-5z-iJn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="StE-Hg-45r">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="StE-Hg-45r">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXw-YH-IKD" customClass="IconView" customModule="FranvaroAppen" customModuleProvider="target">
-                                    <rect key="frame" x="138" y="-7" width="100" height="100"/>
+                                    <rect key="frame" x="137.5" y="25" width="100" height="100"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="hMC-tS-aan"/>
@@ -589,15 +575,15 @@ knutigro.github.io</string>
                                     </constraints>
                                 </view>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-dr-VmD">
-                                    <rect key="frame" x="123" y="-22" width="130" height="130"/>
+                                    <rect key="frame" x="122.5" y="10" width="130" height="130"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="K4i-zD-qtG"/>
                                         <constraint firstAttribute="height" constant="130" id="b4W-k9-ahd"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-iS-cTB">
-                                    <rect key="frame" x="123" y="-22" width="130" height="130"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-iS-cTB">
+                                    <rect key="frame" x="122.5" y="10" width="130" height="130"/>
                                     <connections>
                                         <action selector="didTapAvatar:" destination="t7v-Rz-Ho7" eventType="touchUpInside" id="z1v-ya-fsw"/>
                                     </connections>
@@ -633,14 +619,14 @@ knutigro.github.io</string>
                             <tableViewSection id="fSR-MX-93s">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gCN-XD-y4a">
-                                        <rect key="frame" x="0.0" y="150" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="168" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gCN-XD-y4a" id="Edt-6V-SIN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Namn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKH-E9-p1Y">
-                                                    <rect key="frame" x="10" y="0.0" width="110" height="55.5"/>
+                                                    <rect key="frame" x="10" y="0.0" width="110" height="56"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="97m-AB-Fjk"/>
                                                     </constraints>
@@ -649,7 +635,7 @@ knutigro.github.io</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Namn" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfD-ua-mRU">
-                                                    <rect key="frame" x="120" y="0.0" width="245" height="55.5"/>
+                                                    <rect key="frame" x="120" y="0.0" width="245" height="56"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
@@ -670,14 +656,14 @@ knutigro.github.io</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AzP-Il-GzB">
-                                        <rect key="frame" x="0.0" y="206" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="224" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AzP-Il-GzB" id="I8z-TQ-XpM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ÅÅMMDD-NNNN" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L68-Zy-N5V">
-                                                    <rect key="frame" x="120" y="0.0" width="245" height="55.5"/>
+                                                    <rect key="frame" x="120" y="0.0" width="245" height="56"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numbersAndPunctuation"/>
@@ -686,7 +672,7 @@ knutigro.github.io</string>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person nummer" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPa-a0-zcj">
-                                                    <rect key="frame" x="10" y="0.0" width="110" height="55.5"/>
+                                                    <rect key="frame" x="10" y="0.0" width="110" height="56"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="9ra-ql-jci"/>
                                                     </constraints>
@@ -742,12 +728,12 @@ knutigro.github.io</string>
             <point key="canvasLocation" x="993" y="-967"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Icon-76" width="76" height="76"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dec-iw-trP"/>
         <segue reference="2Qw-cb-1qL"/>
         <segue reference="PZO-46-r9v"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Icon-76" width="76" height="76"/>
+    </resources>
 </document>

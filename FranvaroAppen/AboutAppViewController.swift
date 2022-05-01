@@ -13,8 +13,6 @@ class AboutAppViewController: UIViewController {
     @IBOutlet weak var infoTextView: UITextView?
     @IBOutlet weak var iconView: IconView?
     
-    let shareManager = ShareManager()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,10 +25,9 @@ class AboutAppViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "About app")
+        FAnalytics.track(screen: "About app")
     }
     
     @IBAction func didTapShareButton(_ barButton: UIBarButtonItem) {
-        shareManager.openShareSelector(style: .actionSheet, viewController: self, barButton: barButton)
     }
 }

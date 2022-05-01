@@ -76,7 +76,7 @@ class ReportViewController: XLFormViewController, ChildController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "Report")
+        FAnalytics.track(screen: "Report")
     }
 
     func initializeForm() {
@@ -179,7 +179,7 @@ extension ReportViewController {
         }
         
         if (MFMessageComposeViewController.canSendText()) {
-            Analytics.track(screen: "Sms")
+            FAnalytics.track(screen: "Sms")
 
             let controller = MFMessageComposeViewController()
             controller.body = body
@@ -205,23 +205,23 @@ extension ReportViewController: MFMessageComposeViewControllerDelegate {
         var res = ""
         switch result {
         case .cancelled:
-            res = Analytics.MessageComposeResult.cancelled.rawValue
+            res = FAnalytics.MessageComposeResult.cancelled.rawValue
             break
         case .failed:
-            res = Analytics.MessageComposeResult.failed.rawValue
+            res = FAnalytics.MessageComposeResult.failed.rawValue
             break
         case .sent:
-            res = Analytics.MessageComposeResult.sent.rawValue
+            res = FAnalytics.MessageComposeResult.sent.rawValue
             break
         }
         
         let category = reportType == ReportType.sickLeave ? "Sick Leave" : "Absence"
         
-        Analytics.track(event: "Did send sms", attributes: [Analytics.kResultKey: res, Analytics.kSMSCategoryKey: category])
+        FAnalytics.track(event: "Did send sms", attributes: [FAnalytics.kResultKey: res, FAnalytics.kSMSCategoryKey: category])
 
         if (result == .sent) {
             RatingManager.userDidSignificantEvent()
-            Analytics.incrementValue(by: 1, forProfileAttribute: Analytics.kNumberOfSmsSentKey)
+            FAnalytics.incrementValue(by: 1, forProfileAttribute: FAnalytics.kNumberOfSmsSentKey)
         }
 
         self.dismiss(animated: true, completion:nil)

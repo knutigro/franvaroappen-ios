@@ -10,17 +10,23 @@ import UIKit
 
 class Theme {
     
-    class func applyTheme() {
+    class func applyTheme(window: UIWindow?) {
         
-        // Changing the status bar's colour to white
-        UIApplication.shared.statusBarStyle = .default
-        
-        // Changing the colour of the bar button items
+        UINavigationBar.appearance().barTintColor = UIColor.App.blue
         UINavigationBar.appearance().tintColor = UIColor.App.blue
-        
-        // Changing the navigation controller's background colour
-        UINavigationBar.appearance().barTintColor = UIColor.white
-        
+
+        if #available(iOS 13.0, *) {
+            if let navigationController = window?.rootViewController as? UINavigationController {
+                    let appearance = UINavigationBarAppearance()
+                    appearance.configureWithOpaqueBackground()
+                    appearance.backgroundColor = UIColor.white
+                    appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.App.blue]
+                    navigationController.navigationBar.standardAppearance = appearance
+                    navigationController.navigationBar.scrollEdgeAppearance = navigationController.navigationBar.standardAppearance
+                navigationController.navigationBar.barTintColor = UIColor.App.blue
+            }
+        }
+
         // Changing the navigation controller's title colour
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.App.blue, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         
