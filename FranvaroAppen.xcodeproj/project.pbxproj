@@ -112,6 +112,7 @@
 		7CD9FF90EB6471453CFDAC61 /* Pods-FranvaroAppenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A035787C726D3FC6A3FCC46 /* Pods_FranvaroAppenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24DC14281F340600C45B4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA4068F528200C6200FE0144 /* azure-pipelines.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "azure-pipelines.yml"; sourceTree = "<group>"; };
 		E23A845E52E9986868944A57 /* Pods_FranvaroAppen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7C28A90FEE8FB30DEB1353 /* Pods-FranvaroAppenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				495AEBED2187B3C000CB914F /* README.md */,
+				CA4068F528200C6200FE0144 /* azure-pipelines.yml */,
 				492BFFC81DD34C7E00867896 /* FranvaroAppen */,
 				492BFFE01DD34C7E00867896 /* FranvaroAppenTests */,
 				492BFFEB1DD34C7E00867896 /* FranvaroAppenUITests */,
