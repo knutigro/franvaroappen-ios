@@ -21,7 +21,7 @@ steps:
     actions: 'build'
     scheme: 'FranvaroAppen'
     sdk: 'iphoneos'
-    configuration: 'Release'
+    configuration: 'Debug' #Release
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
 
