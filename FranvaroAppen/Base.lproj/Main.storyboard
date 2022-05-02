@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,33 +35,9 @@
                     <view key="view" contentMode="scaleToFill" id="qcF-JK-5zq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7CW-pg-lxE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="delegate" destination="8aw-cZ-Ej4" id="bX8-sd-g3J"/>
-                                </connections>
-                            </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XHa-Hw-6NQ">
-                                <rect key="frame" x="177.5" y="301.5" width="20" height="20"/>
-                            </activityIndicatorView>
-                        </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="XHa-Hw-6NQ" firstAttribute="centerX" secondItem="qcF-JK-5zq" secondAttribute="centerX" id="0QI-EV-4Wd"/>
-                            <constraint firstItem="7CW-pg-lxE" firstAttribute="leading" secondItem="qcF-JK-5zq" secondAttribute="leading" id="1em-Bv-1Oh"/>
-                            <constraint firstAttribute="trailing" secondItem="7CW-pg-lxE" secondAttribute="trailing" id="AJm-LN-4ZT"/>
-                            <constraint firstItem="9Gu-Cm-LLd" firstAttribute="top" secondItem="7CW-pg-lxE" secondAttribute="bottom" id="R1I-fS-aom"/>
-                            <constraint firstItem="7CW-pg-lxE" firstAttribute="top" secondItem="5YB-bZ-dCw" secondAttribute="bottom" id="crU-aa-QCQ"/>
-                            <constraint firstItem="XHa-Hw-6NQ" firstAttribute="centerY" secondItem="qcF-JK-5zq" secondAttribute="centerY" id="dFa-dn-nAv"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Om sms tjänsten" id="sc7-XM-qBI"/>
-                    <connections>
-                        <outlet property="actInd" destination="XHa-Hw-6NQ" id="sYd-mt-xgz"/>
-                        <outlet property="webView" destination="7CW-pg-lxE" id="0ob-XA-B8S"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFB-TD-MmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,14 +354,14 @@ knutigro.github.io</string>
                         <outlet property="sendInfoCell" destination="O0T-fx-pMv" id="2hD-3j-LQQ"/>
                         <outlet property="sickLeaveLabel" destination="2t5-Nm-fa8" id="cFo-BX-D68"/>
                         <segue destination="yr6-qT-Bxc" kind="show" identifier="OpenSendInfo" id="uGc-iN-wSR"/>
-                        <segue destination="BZz-hF-N3D" kind="show" identifier="OpenReportSickLeave" id="2Qw-cb-1qL"/>
-                        <segue destination="BZz-hF-N3D" kind="show" identifier="OpenReportOtherAbsence" id="NrA-dr-WpR"/>
                         <segue destination="t7v-Rz-Ho7" kind="show" identifier="OpenEditChild" id="dec-iw-trP"/>
+                        <segue destination="g6Z-ZF-mtT" kind="show" identifier="OpenReportOtherAbsence" id="a4Q-pc-zWg"/>
+                        <segue destination="g6Z-ZF-mtT" kind="show" identifier="OpenReportSickLeave" id="0qG-9K-MgX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMK-R8-IZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="84.107946026986511"/>
+            <point key="canvasLocation" x="250" y="73"/>
         </scene>
         <!--Barn-->
         <scene sceneID="T6n-0T-qsM">
@@ -465,31 +442,30 @@ knutigro.github.io</string>
             <point key="canvasLocation" x="-150" y="-684"/>
         </scene>
         <!--Anmäl-->
-        <scene sceneID="TLE-Df-sBJ">
+        <scene sceneID="oOR-pl-Hfn">
             <objects>
-                <tableViewController storyboardIdentifier="ReportViewController" id="BZz-hF-N3D" customClass="ReportViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="56" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ppy-DT-z0C">
+                <viewController storyboardIdentifier="CreateReportViewController" id="g6Z-ZF-mtT" customClass="CreateReportViewController" customModule="FranvaroAppen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sgh-w4-hMQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="RkS-P5-xON"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lTT-Fg-Xga">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.23921568630000001" green="0.46666666670000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="BZz-hF-N3D" id="Xmm-fv-I8k"/>
-                            <outlet property="delegate" destination="BZz-hF-N3D" id="2wg-JF-bsm"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Anmäl" id="g1p-na-CXp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="gu3-eb-Ppc">
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Anmäl" id="82T-ae-OZu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="f3e-zw-Nla">
                             <connections>
-                                <action selector="didTapSendButton:" destination="BZz-hF-N3D" id="OQb-I3-YaC"/>
+                                <action selector="didTapSendButton:" destination="g6Z-ZF-mtT" id="GBb-fF-axr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VxI-xB-fLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tH6-U8-SH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="145"/>
+            <point key="canvasLocation" x="1210" y="-111"/>
         </scene>
         <!--Skicka information-->
         <scene sceneID="czE-1C-AXj">
@@ -730,10 +706,13 @@ knutigro.github.io</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="dec-iw-trP"/>
-        <segue reference="2Qw-cb-1qL"/>
+        <segue reference="0qG-9K-MgX"/>
         <segue reference="PZO-46-r9v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Icon-76" width="76" height="76"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

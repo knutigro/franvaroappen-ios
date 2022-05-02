@@ -7,9 +7,7 @@ target 'FranvaroAppen' do
 
   # Pods for FranvaroAppen
   pod 'DZNEmptyDataSet', '1.8.1'
-  pod 'StaticDataTableViewController', '~> 2.0'
   pod 'Firebase/Analytics', '~>  8.10'
-  pod 'XLForm', '~> 4.3'
  
   target 'FranvaroAppenTests' do
     inherit! :search_paths

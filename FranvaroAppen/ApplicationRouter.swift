@@ -24,8 +24,8 @@ class ApplicationRouter {
         return storyBoard.instantiateViewController(withIdentifier: String(describing: SendInfoViewController.self)) as! SendInfoViewController
     }
 
-    fileprivate var reportViewController: ReportViewController {
-        return storyBoard.instantiateViewController(withIdentifier: String(describing: ReportViewController.self)) as! ReportViewController
+    fileprivate var reportViewController: CreateReportViewController {
+        return storyBoard.instantiateViewController(withIdentifier: String(describing: CreateReportViewController.self)) as! CreateReportViewController
     }
     
     fileprivate func present(viewController: UIViewController, animated: Bool) {
@@ -48,15 +48,13 @@ class ApplicationRouter {
     
     func presentReportSickLeaveViewController(with child: Child, animated: Bool) {
         let controller = reportViewController
-        controller.reportType = .sickLeave
-        controller.child =  child
+        controller.viewModel = ReportViewModel(reportType: .sickLeave, child: child)
         present(viewController: controller, animated: animated)
     }
     
     func presentReportAbsenceViewController(with child: Child, animated: Bool) {
         let controller = reportViewController
-        controller.reportType = .absence
-        controller.child =  child
+        controller.viewModel = ReportViewModel(reportType: .absence, child: child)
         present(viewController: controller, animated: animated)
     }
 }

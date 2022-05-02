@@ -32,7 +32,6 @@
 		4987BADE1DD5FDD90053BC98 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADD1DD5FDD90053BC98 /* Theme.swift */; };
 		4987BAE01DD5FE780053BC98 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BADF1DD5FE780053BC98 /* UIColor+App.swift */; };
 		4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE11DD600920053BC98 /* NavigationController.swift */; };
-		4987BAE41DD612F10053BC98 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987BAE31DD612F10053BC98 /* ReportViewController.swift */; };
 		49888D3E1DFFFB6300F0EBA0 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49888D3D1DFFFB6300F0EBA0 /* IconView.swift */; };
 		499E6FF821348E740054328D /* NSUserActivity+FranvaroAppen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E6FF721348E740054328D /* NSUserActivity+FranvaroAppen.swift */; };
 		49BBACA81E945978000FFAE2 /* RatingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBACA71E945978000FFAE2 /* RatingManagerTests.swift */; };
@@ -44,6 +43,9 @@
 		AB056E02856552A860FDE0B9 /* Pods_FranvaroAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278449C7BF2F10A1CBF91DB0 /* Pods_FranvaroAppen.framework */; };
 		B3520FFC87FBA1C8ADBF7087 /* Pods_FranvaroAppenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B4F762700EC8268140D0D2 /* Pods_FranvaroAppenUITests.framework */; };
 		CA24DC15281F340600C45B4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA24DC14281F340600C45B4B /* GoogleService-Info.plist */; };
+		CA4068F72820682100FE0144 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4068F62820682100FE0144 /* ReportView.swift */; };
+		CA4068F92820683000FE0144 /* ReportView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4068F82820683000FE0144 /* ReportView+ViewModel.swift */; };
+		CA4068FB28206CEA00FE0144 /* CreateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4068FA28206CEA00FE0144 /* CreateReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +100,6 @@
 		4987BADD1DD5FDD90053BC98 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4987BADF1DD5FE780053BC98 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		4987BAE11DD600920053BC98 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		4987BAE31DD612F10053BC98 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		49888D3D1DFFFB6300F0EBA0 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		499E6FF721348E740054328D /* NSUserActivity+FranvaroAppen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+FranvaroAppen.swift"; sourceTree = "<group>"; };
 		49BBACA71E945978000FFAE2 /* RatingManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingManagerTests.swift; sourceTree = "<group>"; };
@@ -113,6 +114,9 @@
 		B4BC732931EE46BFCA7D783E /* Pods_FranvaroAppenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24DC14281F340600C45B4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA4068F528200C6200FE0144 /* azure-pipelines.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "azure-pipelines.yml"; sourceTree = "<group>"; };
+		CA4068F62820682100FE0144 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		CA4068F82820683000FE0144 /* ReportView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportView+ViewModel.swift"; sourceTree = "<group>"; };
+		CA4068FA28206CEA00FE0144 /* CreateReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportViewController.swift; sourceTree = "<group>"; };
 		D2B4F762700EC8268140D0D2 /* Pods_FranvaroAppenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F42BBDFC910561EA1DD483 /* Pods-FranvaroAppenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenTests.release.xcconfig"; path = "Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +159,6 @@
 				26646435D200130D1C2B4BAC /* Pods-FranvaroAppenUITests.debug.xcconfig */,
 				1832D6E152B08C3E61EA2278 /* Pods-FranvaroAppenUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -265,7 +268,9 @@
 				493B14AF1DD3831F007882C5 /* EditChildViewController.swift */,
 				49C63E581DD5E7530087A148 /* InfoViewController.swift */,
 				495886D51DF75CB0007AB93E /* AboutAppViewController.swift */,
-				4987BAE31DD612F10053BC98 /* ReportViewController.swift */,
+				CA4068FA28206CEA00FE0144 /* CreateReportViewController.swift */,
+				CA4068F62820682100FE0144 /* ReportView.swift */,
+				CA4068F82820683000FE0144 /* ReportView+ViewModel.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -518,8 +523,6 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/StaticDataTableViewController/StaticDataTableViewController.framework",
-				"${BUILT_PRODUCTS_DIR}/XLForm/XLForm.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -531,8 +534,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StaticDataTableViewController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLForm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,7 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4987BAE41DD612F10053BC98 /* ReportViewController.swift in Sources */,
+				CA4068F92820683000FE0144 /* ReportView+ViewModel.swift in Sources */,
 				492BFFFC1DD35E3100867896 /* UIViewController+Utils.swift in Sources */,
 				49C5139F1E905A4D00CD0487 /* RatingManager.swift in Sources */,
 				493B14B51DD3E530007882C5 /* ChildListViewController.swift in Sources */,
@@ -587,7 +588,9 @@
 				4987BAE21DD600920053BC98 /* NavigationController.swift in Sources */,
 				499E6FF821348E740054328D /* NSUserActivity+FranvaroAppen.swift in Sources */,
 				492BFFCC1DD34C7E00867896 /* MenuViewController.swift in Sources */,
+				CA4068F72820682100FE0144 /* ReportView.swift in Sources */,
 				492BFFCA1DD34C7E00867896 /* AppDelegate.swift in Sources */,
+				CA4068FB28206CEA00FE0144 /* CreateReportViewController.swift in Sources */,
 				492BFFD21DD34C7E00867896 /* FranvaroAppen.xcdatamodeld in Sources */,
 				492B00031DD369BB00867896 /* Child.swift in Sources */,
 				49C63E591DD5E7530087A148 /* InfoViewController.swift in Sources */,
@@ -703,7 +706,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
@@ -762,7 +765,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

@@ -88,19 +88,14 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
-  - StaticDataTableViewController (2.5.0)
-  - XLForm (4.3.0)
 
 DEPENDENCIES:
   - DZNEmptyDataSet (= 1.8.1)
   - Firebase/Analytics (~> 8.10)
-  - StaticDataTableViewController (~> 2.0)
-  - XLForm (~> 4.3)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - DZNEmptyDataSet
-    - StaticDataTableViewController
   trunk:
     - Firebase
     - FirebaseAnalytics
@@ -112,7 +107,6 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
-    - XLForm
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -126,9 +120,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  StaticDataTableViewController: 0c5c4a47861446dd3cfd52530ae801ec7662ce26
-  XLForm: a439f9512078ed538e8335c8b06d3f3286bbfd37
 
-PODFILE CHECKSUM: 40c06ff074143415204994174bcb9f9debe9113a
+PODFILE CHECKSUM: 770e0d37b1367510ca291386e9c6578e5675874a
 
 COCOAPODS: 1.11.3
