@@ -39,10 +39,10 @@
 		49C5139F1E905A4D00CD0487 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5139E1E905A4D00CD0487 /* RatingManager.swift */; };
 		49C63E571DD5E6F60087A148 /* info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C63E561DD5E6F60087A148 /* info.pdf */; };
 		49C63E591DD5E7530087A148 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C63E581DD5E7530087A148 /* InfoViewController.swift */; };
-		49D48FD185D1FB8BE8077422 /* Pods_FranvaroAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A845E52E9986868944A57 /* Pods_FranvaroAppen.framework */; };
 		49ED43BE1DE8D89B004FB1BC /* DateValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */; };
-		753FCDF5FD1664F2A50A12C4 /* Pods_FranvaroAppenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A035787C726D3FC6A3FCC46 /* Pods_FranvaroAppenTests.framework */; };
-		7DF8D251DA97E98208E382D0 /* Pods_FranvaroAppenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD11E43C30475B03AD84F37 /* Pods_FranvaroAppenUITests.framework */; };
+		4BBB7B51E99548FFD6BE051B /* Pods_FranvaroAppenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BC732931EE46BFCA7D783E /* Pods_FranvaroAppenTests.framework */; };
+		AB056E02856552A860FDE0B9 /* Pods_FranvaroAppen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278449C7BF2F10A1CBF91DB0 /* Pods_FranvaroAppen.framework */; };
+		B3520FFC87FBA1C8ADBF7087 /* Pods_FranvaroAppenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B4F762700EC8268140D0D2 /* Pods_FranvaroAppenUITests.framework */; };
 		CA24DC15281F340600C45B4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA24DC14281F340600C45B4B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0403B388726FCC299A793C78 /* Pods-FranvaroAppen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppen.release.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.release.xcconfig"; sourceTree = "<group>"; };
-		0BE0AFD309BBAFC2D3FDAA52 /* Pods-FranvaroAppenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1832D6E152B08C3E61EA2278 /* Pods-FranvaroAppenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenUITests.release.xcconfig"; path = "Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		26646435D200130D1C2B4BAC /* Pods-FranvaroAppenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenUITests.debug.xcconfig"; path = "Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		278449C7BF2F10A1CBF91DB0 /* Pods_FranvaroAppen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49080EB31DD9DFD800673D11 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../SnapshotHelper.swift; sourceTree = "<group>"; };
 		4925AC201DD7C47200BE8881 /* FAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAnalytics.swift; sourceTree = "<group>"; };
 		492B00021DD369BB00867896 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
@@ -106,15 +107,14 @@
 		49C63E581DD5E7530087A148 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		49ED43BD1DE8D89B004FB1BC /* DateValueTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueTransformer.swift; sourceTree = "<group>"; };
 		49F35EA71E983B46003C0521 /* FranvaroAppen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FranvaroAppen.entitlements; sourceTree = "<group>"; };
-		4BD11E43C30475B03AD84F37 /* Pods_FranvaroAppenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B646E7CE0CABD0C8B32E549 /* Pods-FranvaroAppenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenUITests/Pods-FranvaroAppenUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7B77778A8AC0B4F9245EEC36 /* Pods-FranvaroAppen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.debug.xcconfig"; sourceTree = "<group>"; };
-		7CD9FF90EB6471453CFDAC61 /* Pods-FranvaroAppenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8A035787C726D3FC6A3FCC46 /* Pods_FranvaroAppenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC82F11F3EED6B547A0CB27 /* Pods-FranvaroAppenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenTests.debug.xcconfig"; path = "Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C4BAD469E49A43E192B1BD5 /* Pods-FranvaroAppen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppen.release.xcconfig"; path = "Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.release.xcconfig"; sourceTree = "<group>"; };
+		B2083A40C5A981DD14D97A8C /* Pods-FranvaroAppen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppen.debug.xcconfig"; path = "Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen.debug.xcconfig"; sourceTree = "<group>"; };
+		B4BC732931EE46BFCA7D783E /* Pods_FranvaroAppenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24DC14281F340600C45B4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA4068F528200C6200FE0144 /* azure-pipelines.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "azure-pipelines.yml"; sourceTree = "<group>"; };
-		E23A845E52E9986868944A57 /* Pods_FranvaroAppen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7C28A90FEE8FB30DEB1353 /* Pods-FranvaroAppenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests.release.xcconfig"; sourceTree = "<group>"; };
+		D2B4F762700EC8268140D0D2 /* Pods_FranvaroAppenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FranvaroAppenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F42BBDFC910561EA1DD483 /* Pods-FranvaroAppenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FranvaroAppenTests.release.xcconfig"; path = "Target Support Files/Pods-FranvaroAppenTests/Pods-FranvaroAppenTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49D48FD185D1FB8BE8077422 /* Pods_FranvaroAppen.framework in Frameworks */,
+				AB056E02856552A860FDE0B9 /* Pods_FranvaroAppen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753FCDF5FD1664F2A50A12C4 /* Pods_FranvaroAppenTests.framework in Frameworks */,
+				4BBB7B51E99548FFD6BE051B /* Pods_FranvaroAppenTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,13 +138,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF8D251DA97E98208E382D0 /* Pods_FranvaroAppenUITests.framework in Frameworks */,
+				B3520FFC87FBA1C8ADBF7087 /* Pods_FranvaroAppenUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		152D7926216CFF4D9550D2E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2083A40C5A981DD14D97A8C /* Pods-FranvaroAppen.debug.xcconfig */,
+				4C4BAD469E49A43E192B1BD5 /* Pods-FranvaroAppen.release.xcconfig */,
+				4AC82F11F3EED6B547A0CB27 /* Pods-FranvaroAppenTests.debug.xcconfig */,
+				E2F42BBDFC910561EA1DD483 /* Pods-FranvaroAppenTests.release.xcconfig */,
+				26646435D200130D1C2B4BAC /* Pods-FranvaroAppenUITests.debug.xcconfig */,
+				1832D6E152B08C3E61EA2278 /* Pods-FranvaroAppenUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		29D9A6074901577B084E3F8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				278449C7BF2F10A1CBF91DB0 /* Pods_FranvaroAppen.framework */,
+				B4BC732931EE46BFCA7D783E /* Pods_FranvaroAppenTests.framework */,
+				D2B4F762700EC8268140D0D2 /* Pods_FranvaroAppenUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		492B00011DD369A900867896 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,8 +186,8 @@
 				492BFFE01DD34C7E00867896 /* FranvaroAppenTests */,
 				492BFFEB1DD34C7E00867896 /* FranvaroAppenUITests */,
 				492BFFC71DD34C7E00867896 /* Products */,
-				8CD66CD9B6F6BF670D880B89 /* Pods */,
-				801E2F2E7EC02B683BA3183D /* Frameworks */,
+				152D7926216CFF4D9550D2E6 /* Pods */,
+				29D9A6074901577B084E3F8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,29 +291,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		801E2F2E7EC02B683BA3183D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E23A845E52E9986868944A57 /* Pods_FranvaroAppen.framework */,
-				8A035787C726D3FC6A3FCC46 /* Pods_FranvaroAppenTests.framework */,
-				4BD11E43C30475B03AD84F37 /* Pods_FranvaroAppenUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8CD66CD9B6F6BF670D880B89 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7B77778A8AC0B4F9245EEC36 /* Pods-FranvaroAppen.debug.xcconfig */,
-				0403B388726FCC299A793C78 /* Pods-FranvaroAppen.release.xcconfig */,
-				7CD9FF90EB6471453CFDAC61 /* Pods-FranvaroAppenTests.debug.xcconfig */,
-				FB7C28A90FEE8FB30DEB1353 /* Pods-FranvaroAppenTests.release.xcconfig */,
-				5B646E7CE0CABD0C8B32E549 /* Pods-FranvaroAppenUITests.debug.xcconfig */,
-				0BE0AFD309BBAFC2D3FDAA52 /* Pods-FranvaroAppenUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,12 +298,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 492BFFF11DD34C7E00867896 /* Build configuration list for PBXNativeTarget "FranvaroAppen" */;
 			buildPhases = (
-				09A3FC626271E5625BE29390 /* [CP] Check Pods Manifest.lock */,
+				98C5B9AA3E2DE0884B065A70 /* [CP] Check Pods Manifest.lock */,
 				492BFFC21DD34C7E00867896 /* Sources */,
 				492BFFC31DD34C7E00867896 /* Frameworks */,
 				492BFFC41DD34C7E00867896 /* Resources */,
-				E74D2694136BFF8A573853F2 /* [CP] Embed Pods Frameworks */,
 				49080EB51DD9F36200673D11 /* Fabric */,
+				8619E2E89F3B3BEF442676D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,7 +318,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 492BFFF41DD34C7E00867896 /* Build configuration list for PBXNativeTarget "FranvaroAppenTests" */;
 			buildPhases = (
-				2671EAFB9C0B3CEC58A3E650 /* [CP] Check Pods Manifest.lock */,
+				37B4B0B1280754B69B049F22 /* [CP] Check Pods Manifest.lock */,
 				492BFFD91DD34C7E00867896 /* Sources */,
 				492BFFDA1DD34C7E00867896 /* Frameworks */,
 				492BFFDB1DD34C7E00867896 /* Resources */,
@@ -336,7 +337,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 492BFFF71DD34C7E00867896 /* Build configuration list for PBXNativeTarget "FranvaroAppenUITests" */;
 			buildPhases = (
-				3CAF09B56A5A4C784481FD17 /* [CP] Check Pods Manifest.lock */,
+				5EC55BC63F92AA2491CE7FD1 /* [CP] Check Pods Manifest.lock */,
 				492BFFE41DD34C7E00867896 /* Sources */,
 				492BFFE51DD34C7E00867896 /* Frameworks */,
 				492BFFE61DD34C7E00867896 /* Resources */,
@@ -445,54 +446,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09A3FC626271E5625BE29390 /* [CP] Check Pods Manifest.lock */ = {
+		37B4B0B1280754B69B049F22 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FranvaroAppen-checkManifestLockResult.txt",
+			outputFileListPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2671EAFB9C0B3CEC58A3E650 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-FranvaroAppenTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3CAF09B56A5A4C784481FD17 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FranvaroAppenUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -511,10 +480,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
-		E74D2694136BFF8A573853F2 /* [CP] Embed Pods Frameworks */ = {
+		5EC55BC63F92AA2491CE7FD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FranvaroAppenUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8619E2E89F3B3BEF442676D2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -548,6 +538,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FranvaroAppen/Pods-FranvaroAppen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98C5B9AA3E2DE0884B065A70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FranvaroAppen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -762,7 +774,7 @@
 		};
 		492BFFF21DD34C7E00867896 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B77778A8AC0B4F9245EEC36 /* Pods-FranvaroAppen.debug.xcconfig */;
+			baseConfigurationReference = B2083A40C5A981DD14D97A8C /* Pods-FranvaroAppen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FranvaroAppen/FranvaroAppen.entitlements;
@@ -785,7 +797,7 @@
 		};
 		492BFFF31DD34C7E00867896 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0403B388726FCC299A793C78 /* Pods-FranvaroAppen.release.xcconfig */;
+			baseConfigurationReference = 4C4BAD469E49A43E192B1BD5 /* Pods-FranvaroAppen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FranvaroAppen/FranvaroAppen.entitlements;
@@ -807,7 +819,7 @@
 		};
 		492BFFF51DD34C7E00867896 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CD9FF90EB6471453CFDAC61 /* Pods-FranvaroAppenTests.debug.xcconfig */;
+			baseConfigurationReference = 4AC82F11F3EED6B547A0CB27 /* Pods-FranvaroAppenTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -823,7 +835,7 @@
 		};
 		492BFFF61DD34C7E00867896 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB7C28A90FEE8FB30DEB1353 /* Pods-FranvaroAppenTests.release.xcconfig */;
+			baseConfigurationReference = E2F42BBDFC910561EA1DD483 /* Pods-FranvaroAppenTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -839,7 +851,7 @@
 		};
 		492BFFF81DD34C7E00867896 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B646E7CE0CABD0C8B32E549 /* Pods-FranvaroAppenUITests.debug.xcconfig */;
+			baseConfigurationReference = 26646435D200130D1C2B4BAC /* Pods-FranvaroAppenUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2PRW676NCQ;
@@ -854,7 +866,7 @@
 		};
 		492BFFF91DD34C7E00867896 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BE0AFD309BBAFC2D3FDAA52 /* Pods-FranvaroAppenUITests.release.xcconfig */;
+			baseConfigurationReference = 1832D6E152B08C3E61EA2278 /* Pods-FranvaroAppenUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2PRW676NCQ;
