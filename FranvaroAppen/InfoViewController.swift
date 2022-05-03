@@ -7,28 +7,32 @@
 //
 
 import UIKit
+import WebKit
 
 class InfoViewController: UIViewController, UIWebViewDelegate {
-    @IBOutlet weak var webView: UIWebView?
-    @IBOutlet weak var actInd: UIActivityIndicatorView?
     
+    lazy var webView: WKWebView = {
+        let webViewConfiguration = WKWebViewConfiguration()
+        let webView = WKWebView(frame: .zero, configuration: webViewConfiguration)
+        return webView
+    }()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view = webView
 
         title = NSLocalizedString("Om sms tjänsten", comment: "")
         
         if let pdf = Bundle.main.url(forResource: "info", withExtension: "pdf", subdirectory: nil, localization: nil)  {
-            let req = NSURLRequest(url: pdf)
-            webView?.loadRequest(req as URLRequest)
+            let req = URLRequest(url: pdf)
+            webView.load(req)
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "About sms")
+        FAnalytics.track(screen: "About sms")
     }
 
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        actInd?.stopAnimating()
-    }
 }

@@ -23,8 +23,6 @@ class MenuViewController: UITableViewController, SegueHandlerType {
     @IBOutlet weak var aboutSMSLabel: UILabel?
     @IBOutlet weak var aboutAppLabel: UILabel?
 
-    let shareManager = ShareManager()
-
     var child: Child?
     
     var childEntity: NSManagedObject? {
@@ -74,11 +72,11 @@ class MenuViewController: UITableViewController, SegueHandlerType {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "Menu")
+        FAnalytics.track(screen: "Menu")
         
         if RatingManager.shouldRequestReview {
             RatingManager.requestReview()
-            Analytics.track(event: Analytics.kRatingDialogEvent)
+            FAnalytics.track(event: FAnalytics.kRatingDialogEvent)
         }
     }
     
@@ -87,7 +85,7 @@ class MenuViewController: UITableViewController, SegueHandlerType {
         childImageView?.image = child?.image
         
         let hasImage = child?.image != nil ? NSNumber(value: 1) : NSNumber(value: 0)
-        Analytics.trackValue(value: hasImage, forProfileAttribute: "Image")
+        FAnalytics.trackValue(value: hasImage, forProfileAttribute: "Image")
 
         let didTapReviewLink = RatingManager.didTapReviewLink
         reviewOnAppstoreReminderBadge?.isHidden = didTapReviewLink
@@ -102,14 +100,12 @@ class MenuViewController: UITableViewController, SegueHandlerType {
                 controller.delegate = self
             }
         case .OpenReportSickLeave:
-            if let controller = segue.destination as? ReportViewController {
-                controller.child = child
-                controller.reportType = .sickLeave
+            if let controller = segue.destination as? CreateReportViewController {
+                controller.viewModel = ReportViewModel(reportType: .sickLeave, child: child)
             }
         case .OpenReportOtherAbsence:
-            if let controller = segue.destination as? ReportViewController {
-                controller.child = child
-                controller.reportType = .absence
+            if let controller = segue.destination as? CreateReportViewController {
+                controller.viewModel = ReportViewModel(reportType: .absence, child: child)
             }
         case .OpenSendInfo:
             if let controller = segue.destination as? SendInfoViewController {
@@ -144,7 +140,6 @@ extension MenuViewController {
     }
 
     @IBAction func didTapShareButton(_ barButton: UIBarButtonItem) {
-        shareManager.openShareSelector(style: .actionSheet, viewController: self, barButton: barButton)
     }
 }
 
@@ -185,7 +180,7 @@ extension MenuViewController {
             RatingManager.didTapReviewLink = true
             updateUI()
             UIApplication.shared.open(URL(string:"https://itunes.apple.com/se/app/anm%C3%A4l-fr%C3%A5nvaro-lidk%C3%B6ping/id1175852934?action=write-review")!, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([String: Any]()), completionHandler: nil)
-            Analytics.track(event: Analytics.kDidTapReviewCellEvent)
+            FAnalytics.track(event: FAnalytics.kDidTapReviewCellEvent)
         }
         
         tableView.deselectRow(at: indexPath, animated: true)

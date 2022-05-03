@@ -60,7 +60,7 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.track(screen: "Child list")
+        FAnalytics.track(screen: "Child list")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,9 +86,9 @@ class ChildListViewController: UITableViewController, SegueHandlerType {
             
             let childrenNames = objects.map{ Child(managedObject: $0).name } as NSArray
             if (childrenNames.count > 0) {
-                Analytics.trackValue(value: childrenNames, forProfileAttribute: "Children")
+                FAnalytics.trackValue(value: childrenNames, forProfileAttribute: "Children")
             }
-            Analytics.trackValue(value: NSNumber(integerLiteral: childrenNames.count), forProfileAttribute: "Number of children")
+            FAnalytics.trackValue(value: NSNumber(integerLiteral: childrenNames.count), forProfileAttribute: "Number of children")
             self?.childItems = objects
             self?.tableView.reloadData()
         })
